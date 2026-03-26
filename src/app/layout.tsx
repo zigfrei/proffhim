@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://proffhim.by/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'ПроффХим',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ПроффХим',
     description: 'Моющие средства для предприятий.',
-    images: ['https://proffhim.by/twitter-image.png'],
+    images: ['/twitter-image.png'],
   },
   icons: {
     icon: [
