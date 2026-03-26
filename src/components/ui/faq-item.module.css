@@ -1,0 +1,68 @@
+.plusminus {
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+.plusminus:before,
+.plusminus:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.35s;
+  width: 21px;
+  height: 3px;
+  border-radius: 0;
+}
+
+/* Для нечётных элементов */
+:global(.faq-container) > :nth-child(odd) .plusminus:before,
+:global(.faq-container) > :nth-child(odd) .plusminus:after {
+  background-color: var(--color-primary);
+}
+
+/* Для чётных элементов */
+:global(.faq-container) > :nth-child(even) .plusminus:before,
+:global(.faq-container) > :nth-child(even) .plusminus:after {
+  background-color: var(--color-secondary);
+}
+
+.plusminus:before {
+  transform: translate(-50%, -50%);
+}
+
+.plusminus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.plusminus.active:before {
+  opacity: 0;
+}
+
+.plusminus.active:after {
+  transform: translate(-50%, -50%) rotate(180deg);
+  height: 3px;
+  width: 21px;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.contentOpen {
+  max-height: 1000px;
+}
