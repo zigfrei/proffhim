@@ -8,7 +8,8 @@
   --color-primary: #f5c702;
   --color-secondary: #00c2c8;
   --color-tertiary: #ff3d00;
-  
+  --color-quaternary: #bddb19;
+
   /* Fonts */
   --text-h1-mobile: 3rem;
   --text-h1-mobile--line-height: 1.12;
@@ -201,6 +202,10 @@
     box-shadow: 4px 4px 0 0 var(--color-base-black);
     translate: 1px 1px;
   }
+}
+
+@utility base-shadow {
+  box-shadow: 0 0 20px 5px var(--color-primary); 
 }
 /* :root {
   --background: #ffffff;

@@ -1,8 +1,11 @@
+import BeforeAndAfter from "@/components/sections/main/before-after";
 import CTA from "@/components/sections/main/cta";
 import FAQ from "@/components/sections/main/faq";
 import { faqItems } from "@/components/sections/main/faq-items";
 import Hero from "@/components/sections/main/hero";
 import Numbers from "@/components/sections/main/numbers";
+import Partners from "@/components/sections/main/partners";
+import Scope from "@/components/sections/main/scope";
 
 export default function Home() {
   const faqSchema = {
@@ -29,6 +32,9 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center w-full">
         <Hero />
         <Numbers />
+        <Scope />
+        <Partners />
+        <BeforeAndAfter />
         <FAQ />
         <CTA />
       </main>
