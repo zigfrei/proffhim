@@ -1,0 +1,40 @@
+/* .card {
+  position: relative;
+} */
+
+.cardImageWrapper {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.cardImageWrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--color-secondary);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:nth-child(even) .cardImageWrapper::after {
+  background: var(--color-primary);
+}
+
+.cardImage {
+  object-fit: cover;
+  /* filter: grayscale(1) contrast(1.05);
+  transition: filter 0.3s ease;
+  will-change: filter; */
+}
+
+.card:hover .cardImageWrapper::after {
+  opacity: 0;
+}
+
+.card:hover .cardImage {
+  /* filter: grayscale(0) contrast(1); */
+}

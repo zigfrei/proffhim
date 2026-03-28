@@ -1,0 +1,61 @@
+import clsx from 'clsx';
+import { LinkButton } from '@/components/ui/links';
+import Image from 'next/image';
+import type { ComponentPropsWithoutRef } from 'react';
+import styles from './card.module.css';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+  label?: string;
+}
+
+type CardProps = ComponentPropsWithoutRef<'div'> & Product;
+
+export function Card({
+  name,
+  description,
+  image,
+  link,
+  label,
+  className,
+  ...rest
+}: CardProps) {
+  return (
+    <div
+      {...rest}
+      className={clsx(
+        'w-full p-2 flex flex-col items-start base-frame gap-2',
+        styles.card,
+        className,
+      )}
+    >
+      <div
+        className={clsx(
+          'w-full aspect-square shrink-0 border-2 border-base-black',
+          styles.cardImageWrapper,
+        )}
+      >
+        <Image
+          src={image}
+          alt={name}
+          fill
+          sizes='(min-width: 768px) 50vw, 100vw'
+          className={styles.cardImage}
+        />
+      </div>
+      <div className='w-full flex-1 min-h-0 flex flex-col justify-between gap-2 mt-auto'>
+        <h3 className='typo-h4'>{name}</h3>
+        <p className='typo-b2 line-clamp-3 font-regular'>{description}</p>
+      </div>
+        <LinkButton href={link} className='group w-full items-center justify-center gap-2 bg-base-black! text-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '>
+          Подробнее 
+          <ArrowRightIcon className='h-6 w-6 transition-transform duration-300 ease-out group-hover:translate-x-1 [&>path]:stroke-[2]' />
+        </LinkButton>
+    </div>
+  );
+}

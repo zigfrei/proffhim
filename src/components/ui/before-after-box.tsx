@@ -20,6 +20,7 @@ export default function BeforeAndAfterItem() {
               src='/after.png'
               alt='После'
               fill
+              sizes='75vw'
               className='object-cover'
               priority
             />
@@ -31,6 +32,7 @@ export default function BeforeAndAfterItem() {
                 src='/before.png' 
                 alt='До'
                 fill
+                sizes='75vw'
                 className='object-cover brightness-[.75] contrast-125 saturate-75'
                 priority
               />

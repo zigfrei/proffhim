@@ -20,7 +20,7 @@ export default function Hero() {
             Связаться с нами
           </BigLinkButton>
         </div>
-        <div className='w-full flex items-center justify-center'>
+        <div className='relative w-full flex items-center justify-center'>
           <Image
             src='/hero.png'
             alt='Hero image'
