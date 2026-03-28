@@ -12,17 +12,19 @@ export function Header() {
         <nav>
           <ul className='flex gap-8'>
             <li>
-              <Link href='/#' className='typo-h5 text-base-black/70 hover:text-base-black transition-colors duration-200'>
+              <Link href='/#' 
+              className="typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black"
+              >
                 Продукция
               </Link>
             </li>
             <li>
-              <Link href='/#' className='typo-h5 text-base-black/70 hover:text-base-black transition-colors duration-200'>
+              <Link href='/#' className='typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black'>
                 О компании
               </Link>
             </li>
             <li>
-              <Link href='/#' className='typo-h5 text-base-black/70 hover:text-base-black transition-colors duration-200'>
+              <Link href='/#' className='typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black'>
                 Контакты
               </Link>
             </li>

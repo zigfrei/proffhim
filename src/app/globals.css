@@ -61,7 +61,7 @@
 @utility typo-h1 {
   font-size: var(--text-h1-mobile);
   line-height: var(--text-h1-mobile--line-height);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-family: var(--font-unbounded);
@@ -75,7 +75,7 @@
 @utility typo-h2 {
   font-size: var(--text-h2-mobile);
   line-height: var(--text-h2-mobile--line-height);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-family: var(--font-unbounded);
@@ -89,7 +89,7 @@
 @utility typo-h3 {
   font-size: var(--text-h3-mobile);
   line-height: var(--text-h3-mobile--line-height);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-family: var(--font-unbounded);
@@ -103,7 +103,7 @@
 @utility typo-h4 {
   font-size: var(--text-h4-mobile);
   line-height: var(--text-h4-mobile--line-height);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-family: var(--font-unbounded);
@@ -117,7 +117,7 @@
 @utility typo-h5 {
   font-size: var(--text-h5-mobile);
   line-height: var(--text-h5-mobile--line-height);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-family: var(--font-unbounded);
@@ -157,7 +157,7 @@
 @utility typo-b3 {
   font-size: var(--text-b3);
   line-height: 133%;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: var(--font-manrope);
@@ -179,7 +179,7 @@
 @utility typo-buttons {
   font-size: var(--text-buttons);
   line-height: var(--text-buttons--line-height);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.02em;
   font-family: var(--font-manrope);
   text-transform: uppercase;
