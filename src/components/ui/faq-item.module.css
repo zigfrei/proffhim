@@ -16,7 +16,7 @@
 
 .plusminus:before,
 .plusminus:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 50%;
@@ -65,4 +65,10 @@
 
 .contentOpen {
   max-height: 1000px;
+}
+
+@media (max-width: 768px) {
+  .plusminus {
+    right: 8px;
+  }
 }

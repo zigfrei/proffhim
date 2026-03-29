@@ -7,33 +7,33 @@ export default function BeforeAndAfter() {
     <SectionBlock>
       <div className='flex w-full flex-col items-start justify-center gap-8'>
         <h2 className='typo-h2'>До и после</h2>
-        <div className='grid w-full grid-cols-1 gap-8 md:grid-cols-12'>
-          <div className='md:col-span-7'>
+        <div className='grid w-full grid-cols-1 gap-8 lg:grid-cols-12'>
+          <div className='lg:col-span-7'>
             <BeforeAndAfterItem />
           </div>
-          <div className='w-full flex flex-col items-center justify-center gap-8 md:col-span-5'>
-              <div className='flex flex-col items-start justify-center gap-4 p-8 base-frame-big'>
+          <div className='flex flex-col items-center justify-center gap-8 lg:col-span-5'>
+              <div className='w-full max-w-[550px] flex flex-col items-start justify-center gap-4 p-4 lg:p-8 base-frame lg:base-frame-big'>
                 <h3 className='typo-h5 xl:typo-h4'>Эффективность в действии</h3>
                 <div className='flex items-center justify-center gap-2'>
                   <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
-                    <CheckIcon className='h-5 w-5 text-base-white [&>path]:stroke-[2.5]' />
+                    <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                   </div>
                   <p className='typo-b3 xl:typo-b2 uppercase'>Удаление 99% загрязнений</p>
                 </div>
                 <div className='flex items-center justify-center gap-2'>
                   <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
-                    <CheckIcon className='h-5 w-5 text-base-white [&>path]:stroke-[2.5]' />
+                    <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                   </div>
                   <p className='typo-b3 xl:typo-b2 uppercase'>Защитный полимерный слой</p>
                 </div>
                 <div className='flex items-center justify-center gap-2'>
                   <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
-                    <CheckIcon className='h-5 w-5 text-base-white [&>path]:stroke-[2.5]' />
+                    <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                   </div>
                   <p className='typo-b3 xl:typo-b2 uppercase'>Срок службы +5 лет</p>
                 </div>
               </div>
-              <p className='typo-b2 xl:typo-body'>Используйте слайдер, чтобы увидеть разницу в состоянии оборудования до и после применения нашего средства КВ-95.</p>
+              <p className='typo-b2 xl:typo-body max-w-[550px]'>Используйте слайдер, чтобы увидеть разницу в состоянии оборудования до и после применения нашего средства КВ-95.</p>
             </div>
         </div>
       </div>

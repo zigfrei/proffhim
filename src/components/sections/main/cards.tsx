@@ -35,15 +35,17 @@ const products: Product[] = [
 
 export default function Cards() {
     return(
-    <SectionBlock>
+    <SectionBlock> 
       <div className='flex w-full flex-col items-start justify-center gap-8'>
         <h2 className='typo-h2'>Продукция</h2>
 
-        <div className='w-full grid grid-cols-4 gap-4'>
-            {products.map((product) => (
-                <Card key={product.id} {...product} />
-            ))}
-        </div>
+<div
+  className='w-full grid grid-flow-col auto-cols-[minmax(280px,85%)] gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-4 lg:overflow-visible'
+>
+  {products.map((product) => (
+    <Card key={product.id} {...product} />
+  ))}
+</div>
 
 
         <BigLinkButton href='/#' className='self-center' >

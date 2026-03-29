@@ -1,0 +1,161 @@
+'use client';
+
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
+import Link from 'next/link';
+import { useEffect, useId, useState } from 'react';
+import { LinkButton } from '../ui/links';
+import Logo from '@/assets/icons/logo.svg';
+
+type MobileMenuItem = {
+  href: string;
+  label: string;
+};
+
+interface MobileMenuProps {
+  items: MobileMenuItem[];
+  contactHref: string;
+}
+
+export function MobileMenu({ items, contactHref }: MobileMenuProps) {
+  const animationDurationMs = 300;
+  const [isMounted, setIsMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const dialogId = useId();
+
+  const openMenu = () => {
+    setIsMounted(true);
+  };
+
+  const closeMenu = () => {
+    setIsVisible(false);
+  };
+
+  useEffect(() => {
+    if (!isMounted) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMounted]);
+
+  useEffect(() => {
+    if (!isMounted) {
+      return;
+    }
+
+    const frameId = requestAnimationFrame(() => {
+      setIsVisible(true);
+    });
+
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
+  }, [isMounted]);
+
+  useEffect(() => {
+    if (!isMounted || isVisible) {
+      return;
+    }
+
+    const closeTimeoutId = window.setTimeout(() => {
+      setIsMounted(false);
+    }, animationDurationMs);
+
+    return () => {
+      window.clearTimeout(closeTimeoutId);
+    };
+  }, [animationDurationMs, isMounted, isVisible]);
+
+  return (
+    <>
+      <button
+        type='button'
+        aria-label='Открыть меню'
+        aria-expanded={isMounted}
+        aria-controls={dialogId}
+        className='flex h-10 w-10 items-center justify-center border-[3px] border-base-black bg-primary'
+        onClick={openMenu}
+      >
+        <Bars3Icon className='h-6 w-6 [&>path]:stroke-[2]' />
+      </button>
+
+      {isMounted && (
+        <div
+          id={dialogId}
+          role='dialog'
+          aria-modal='true'
+          aria-label='Мобильное меню'
+          className='fixed inset-0 z-[70] lg:hidden'
+        >
+          <button
+            type='button'
+            aria-label='Закрыть меню'
+            className={clsx(
+              'absolute inset-0 bg-base-black/45 transition-opacity duration-300 ease-out',
+              isVisible ? 'opacity-100' : 'opacity-0',
+            )}
+            onClick={closeMenu}
+          />
+          <div
+            className={clsx(
+              'relative z-10 ml-auto flex h-auto w-full max-w-md flex-col gap-8 bg-primary p-4 transition-all duration-300 ease-out',
+              isVisible ? 'opacity-100' : 'opacity-0',
+            )}
+          >
+            <div className='flex items-center justify-between'>
+              <Link href='/' aria-label='На главную' className='inline-block'>
+                <Logo className='w-[195px] h-[44px] [&_path]:fill-[var(--color-base-black)]' />
+              </Link>
+              <button
+                type='button'
+                aria-label='Закрыть меню'
+                className='flex h-10 w-10 items-center justify-center border-[3px] border-base-black bg-primary'
+                onClick={closeMenu}
+              >
+                <XMarkIcon className='h-6 w-6 [&>path]:stroke-[2]' />
+              </button>
+            </div>
+
+            <nav className='py-8'>
+              <ul className='flex flex-col gap-6'>
+                {items.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className='typo-h4 text-[1.75rem]'
+                      onClick={closeMenu}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <LinkButton
+              href={contactHref}
+              onClick={closeMenu}
+              className={clsx('w-full justify-center mb-4')}
+            >
+              Связаться
+            </LinkButton>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

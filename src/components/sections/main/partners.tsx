@@ -29,20 +29,20 @@ const partners: Partner[] = [
 export default function Partners() {
   return (
     <SectionBlock>
-      <div className='w-full flex flex-col items-start justify-center gap-16'>
+      <div className='w-full flex flex-col items-start justify-center gap-4 lg:gap-16'>
         <h2 className='typo-h2'>Наши партнеры</h2>
-        <div className='w-full flex items-center justify-center gap-4 flex-wrap'>
+        <div className='w-full flex items-center justify-between lg:justify-center gap-3 lg:gap-4 flex-wrap'>
           {partners.map((partner, index) => (
             <div
               key={index}
-              className='group flex items-center justify-center w-[200px] h-[150px] bg-base-white base-frame'
+              className='group flex items-center justify-center w-[100px] h-[100px] lg:w-[200px] lg:h-[150px] bg-base-white base-frame'
             >
               <Image
                 src={partner.src}
                 alt={partner.alt}
                 width={partner.width}
                 height={partner.height}
-                className='block w-[100px] grayscale group-hover:grayscale-0 transition-all duration-300'
+                className='block w-[70px] lg:w-[100px] lg:grayscale group-hover:grayscale-0 transition-all duration-300'
               />
             </div>
           ))}
