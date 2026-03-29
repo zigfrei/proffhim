@@ -22,11 +22,11 @@ export default function FAQItem({
   };
 
   return (
-    <div className='w-full flex items-center justify-center relative base-frame md:base-frame-interactive'>
+    <div className='w-full flex items-center justify-center relative base-frame lg:base-frame-interactive'>
       <details
         open={isOpen}
         className={clsx(
-          'w-full bg-white p-8 pr-16 flex flex-col items-start justify-start',
+          'w-full bg-white p-4 lg:p-8 pr-9 lg:pr-16 flex flex-col items-start justify-start',
           className, isOpen && 'gap-4'
         )}
         {...rest}

@@ -38,7 +38,7 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
 
 function StatItem({ value, suffix = '', label }: StatItemProps) {
   return (
-    <div className='w-full flex flex-col items-center justify-center border-r-[2px] border-primary last:border-0'>
+    <div className='w-full p-4 lg:p-0 flex flex-col items-center justify-center border-b-[2px] lg:border-b-0 lg:border-r-[2px] border-primary last:border-0'>
       <AnimatedNumber value={value} suffix={suffix} />
       <p className='typo-body text-main-background'>{label}</p>
     </div>
@@ -54,9 +54,9 @@ const STATS: StatItemProps[] = [
 export default function Numbers() {
   return (
     <SectionBlock className='bg-black'>
-      <div className='w-full flex flex-col items-start justify-center gap-16 my-16'>
-        <div className='w-full h-[5px] bg-primary'></div>
-        <div className='w-full flex items-start justify-center gap-16'>
+      <div className='w-full flex flex-col items-start justify-center lg:gap-16 lg:my-16'>
+        <div className='w-full hidden lg:block h-[5px] bg-primary'></div>
+        <div className='w-full flex flex-col lg:flex-row items-start justify-center lg:gap-16'>
           {STATS.map((stat, index) => (
             <StatItem key={index} {...stat} />
           ))}

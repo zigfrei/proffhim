@@ -7,8 +7,8 @@ export function Footer() {
 
   return (
     <footer className='w-full bg-primary border-t-[5px] border-base-black'>
-      <div className='w-full px-12 py-16 max-w-[1440px] flex flex-col items-start justify-start mx-auto'>
-        <div className='flex items-start justify-between mx-auto gap-16'>
+      <div className='w-full px-4 py-6 lg:px-12 lg:py-16 max-w-[1440px] flex flex-col items-start justify-start mx-auto'>
+        <div className='flex flex-col lg:flex-row items-start justify-between mx-auto gap-4 lg:gap-16'>
           <div className='w-full flex flex-col items-start justify-start gap-4'>
             <Link href='/' aria-label='На главную'>
               <LogoBlack className='w-[250px] h-[56px] transition-transform duration-300 ease-out hover:scale-105 cursor-pointer' />
@@ -74,7 +74,7 @@ export function Footer() {
                     href='https://www.instagram.com/proffhim.by/'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-12 h-12 flex items-center justify-center bg-base-black base-frame md:base-frame-interactive'
+                    className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
                   >
                     <InstagramIcon className='w-6 h-6 inline-block text-white' />
                   </a>
@@ -84,7 +84,7 @@ export function Footer() {
                     href='https://vk.com/public182349785'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-12 h-12 flex items-center justify-center bg-base-black base-frame md:base-frame-interactive'
+                    className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
                   >
                     <VKIcon className='w-6 h-6 inline-block text-white' />
                   </a>
@@ -93,9 +93,9 @@ export function Footer() {
             </nav>
           </div>
         </div>
-        <div className='w-full h-[2px] bg-base-black mt-16 mb-8'></div>
-        <div className='w-full flex items-center justify-start gap-4'>
-          <p className='typo-b3 text-center font-bold'>
+        <div className='w-full h-[2px] bg-base-black my-6 lg:mt-16 lg:mb-8'></div>
+        <div className='w-full flex items-start lg:items-center justify-start gap-4'>
+          <p className='typo-b3 lg:text-center font-bold'>
             © {new Date().getFullYear()} ООО «ПроффХим». Все права защищены.
           </p>
         </div>

@@ -8,7 +8,7 @@ export default function BeforeAndAfterItem() {
   const sliderId = useId();
 
   return (
-        <div className='relative w-full overflow-hidden base-frame-big'>
+        <div className='relative w-full overflow-hidden base-frame lg:base-frame-big'>
           <div className='relative aspect-[16/9] w-full select-none'>
           <div className='absolute top-2 left-2 z-2 flex items-center justify-center px-4 py-2 bg-base-black'> 
               <p className='typo-h5 text-base-white'>До</p>

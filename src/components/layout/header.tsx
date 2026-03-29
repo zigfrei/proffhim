@@ -1,39 +1,52 @@
 import Link from 'next/link';
 import { LinkButton } from '../ui/links';
 import Logo from '@/assets/icons/logo.svg';
+import { MobileMenu } from './mobile-menu';
+
+const menuItems = [
+  {
+    href: '/#',
+    label: 'Продукция',
+  },
+  {
+    href: '/#',
+    label: 'О компании',
+  },
+  {
+    href: '/#',
+    label: 'Контакты',
+  },
+];
 
 export function Header() {
   return (
-    <header className='sticky top-0 z-50 w-full bg-main-background border-b-[5px] border-base-black'>
-      <div className='w-full px-12 h-24 max-w-[1440px] flex items-center justify-between mx-auto'>
+    <header className='sticky top-0 z-50 w-full bg-main-background border-b-[4px] lg:border-b-[5px] border-base-black'>
+      <div className='w-full p-4 lg:px-12 lg:py-0 h-19 lg:h-24 max-w-[1440px] flex items-center justify-between mx-auto'>
         <Link href='/' aria-label='На главную' className='inline-block'>
-          <Logo className='w-[320px] h-[72px] transition-transform duration-300 ease-out hover:scale-105 cursor-pointer' />
+          <Logo className='w-[195px] h-[44px] lg:w-[320px] lg:h-[72px] transition-transform duration-300 ease-out hover:scale-105 cursor-pointer' />
         </Link>
-        <nav>
+        <nav className='hidden lg:flex items-center justify-center'>
           <ul className='flex gap-8'>
-            <li>
-              <Link href='/#' 
-              className="typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black"
-              >
-                Продукция
-              </Link>
-            </li>
-            <li>
-              <Link href='/#' className='typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black'>
-                О компании
-              </Link>
-            </li>
-            <li>
-              <Link href='/#' className='typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black'>
-                Контакты
-              </Link>
-            </li>
+            {menuItems.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className='typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black'
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        <LinkButton href='/#' className='px-6 py-2'>
+        <LinkButton href='/#' className='px-6 py-2 hidden lg:flex'>
           Связаться
         </LinkButton>
+
+        <div className='lg:hidden'>
+          <MobileMenu items={menuItems} contactHref='/#' />
+        </div>
       </div>
     </header>
   );
