@@ -361,7 +361,7 @@ export default function Scope() {
                   src={item.imageSrc}
                   alt={item.title}
                   fill
-                  sizes='(min-width: 768px) 10vw, 50vw'
+                  sizes='(min-width: 768px) 10vw, 25vw'
                   className='object-cover'
                 />
               </div>
