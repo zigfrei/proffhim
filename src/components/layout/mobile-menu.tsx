@@ -3,22 +3,20 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useId, useState } from 'react';
 import { LinkButton } from '../ui/links';
 import Logo from '@/assets/icons/logo.svg';
-
-type MobileMenuItem = {
-  href: string;
-  label: string;
-};
+import { isMenuItemActive, type MenuItem } from './menu-item';
 
 interface MobileMenuProps {
-  items: MobileMenuItem[];
+  items: MenuItem[];
   contactHref: string;
 }
 
 export function MobileMenu({ items, contactHref }: MobileMenuProps) {
   const animationDurationMs = 300;
+  const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const dialogId = useId();
@@ -112,7 +110,7 @@ export function MobileMenu({ items, contactHref }: MobileMenuProps) {
           />
           <div
             className={clsx(
-              'relative z-10 ml-auto flex h-auto w-full max-w-md flex-col gap-8 bg-primary p-4 transition-all duration-300 ease-out',
+              'relative z-10 ml-auto flex h-auto w-full flex-col gap-8 bg-primary p-4 transition-all duration-300 ease-out',
               isVisible ? 'opacity-100' : 'opacity-0',
             )}
           >
@@ -132,17 +130,24 @@ export function MobileMenu({ items, contactHref }: MobileMenuProps) {
 
             <nav className='py-8'>
               <ul className='flex flex-col gap-6'>
-                {items.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className='typo-h4 text-[1.75rem]'
-                      onClick={closeMenu}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
+                {items.map((item) => {
+                  const isActive = isMenuItemActive({ href: item.href, pathname });
+
+                  return (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className={clsx(
+                          'typo-h4 p-2 text-[1.75rem] transition-colors duration-200',
+                          isActive ? 'bg-base-black text-main-background' : 'text-base-black',
+                        )}
+                        onClick={closeMenu}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
 

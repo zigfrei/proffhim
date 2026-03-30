@@ -16,17 +16,18 @@ export default function Hero() {
             Профессиональные моющие и дезинфицирующие средства «Профф». 20 лет
             совершенства, четкая логистика и стабильное европейское качество.
           </p>
-          <BigLinkButton href='/#' className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center lg:self-start'>
+          <BigLinkButton href='/contacts' className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center lg:self-start'>
             Связаться с нами
           </BigLinkButton>
         </div>
-        <div className='relative w-full hidden xl:flex items-center justify-center '>
+        <div className='relative w-full h-full hidden xl:flex items-center justify-center '>
           <Image
             src='/hero.png'
             alt='Hero image'
-            width={1024}
-            height={1024}
-            className='w-auto h-auto base-frame-big'
+                            fill
+                sizes='(min-width: 768px) 70vw, 100vw'
+             
+            className='w-auto h-auto object-cover base-frame-big'
           />
         </div>
       </div>

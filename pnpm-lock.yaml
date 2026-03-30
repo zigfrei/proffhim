@@ -11,6 +11,9 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.2.4)
+      '@yandex/ymaps3-types':
+        specifier: ^1.0.19017058
+        version: 1.0.19017058(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1254,6 +1257,20 @@ packages:
     resolution: {integrity: sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==}
     cpu: [x64]
     os: [win32]
+
+  '@yandex/ymaps3-types@1.0.19017058':
+    resolution: {integrity: sha512-YfhIOY2rOuFezspJZOROV47C1qUBLFQSCwd+pa0C2ZTPPhkikM0oN3WAwgn8yrDTNKULexmbw+bSCHKgemtBvQ==}
+    peerDependencies:
+      '@types/react': ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      '@types/react-dom': ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      '@vue/runtime-core': '3'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+      '@vue/runtime-core':
+        optional: true
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -4022,6 +4039,11 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
+
+  '@yandex/ymaps3-types@1.0.19017058(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)':
+    optionalDependencies:
+      '@types/react': 19.2.14
+      '@types/react-dom': 19.2.3(@types/react@19.2.14)
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:

@@ -5,13 +5,13 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 export default function BeforeAndAfter() {
   return (
     <SectionBlock>
-      <div className='flex w-full flex-col items-start justify-center gap-8'>
+      <div className='flex w-full flex-col items-start justify-center gap-4 lg:gap-8'>
         <h2 className='typo-h2'>До и после</h2>
-        <div className='grid w-full grid-cols-1 gap-8 lg:grid-cols-12'>
+        <div className='grid w-full grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-12'>
           <div className='lg:col-span-7'>
             <BeforeAndAfterItem />
           </div>
-          <div className='flex flex-col items-center justify-center gap-8 lg:col-span-5'>
+          <div className='flex flex-col items-center justify-center gap-4 lg:gap-8 lg:col-span-5'>
               <div className='w-full max-w-[550px] flex flex-col items-start justify-center gap-4 p-4 lg:p-8 base-frame lg:base-frame-big'>
                 <h3 className='typo-h5 xl:typo-h4'>Эффективность в действии</h3>
                 <div className='flex items-center justify-center gap-2'>
