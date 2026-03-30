@@ -26,11 +26,11 @@ export function Footer() {
                 Одельский с/с, д. Подлипки, стр. 7
               </p>
               <p className='typo-b3 text-left font-bold'>
-                Телефон/факс: <a href='tel:+375152605277'>+375 152 605277</a>
+                Телефон/факс: <a href='tel:+375152605277' className='hover:text-base-white transition-colors duration-200'>+375 152 605277</a>
               </p>
               <p className='typo-b3 text-left font-bold'>
-                Выходные дни: <a href='tel:+375296729520'>+375 (29) 6729520</a>,
-                <br /> <a href='tel:+375296729521'>+375 (29) 6729521</a>
+                Выходные дни: <a href='tel:+375296729520' className='hover:text-base-white transition-colors duration-200'>+375 (29) 6729520</a>,
+                <br /> <a href='tel:+375296729521' className='hover:text-base-white transition-colors duration-200'>+375 (29) 6729521</a>
               </p>
             </div>
           </div>
@@ -67,7 +67,6 @@ export function Footer() {
           </div>
           <div className='w-full flex flex-col items-start justify-start gap-4'>
             <p className='typo-h5'>Социальные сети</p>
-            <nav>
               <ul className='flex items-center justify-center gap-2'>
                 <li>
                   <a
@@ -90,7 +89,6 @@ export function Footer() {
                   </a>
                 </li>
               </ul>
-            </nav>
           </div>
         </div>
         <div className='w-full h-[2px] bg-base-black my-6 lg:mt-16 lg:mb-8'></div>

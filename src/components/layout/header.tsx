@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { LinkButton } from '../ui/links';
 import Logo from '@/assets/icons/logo.svg';
+import { HeaderNavLinks } from './header-nav-links';
+import { type MenuItem } from './menu-item';
 import { MobileMenu } from './mobile-menu';
 
-const menuItems = [
+const menuItems: MenuItem[] = [
   {
     href: '/#',
     label: 'Продукция',
@@ -13,7 +15,7 @@ const menuItems = [
     label: 'О компании',
   },
   {
-    href: '/#',
+    href: '/contacts',
     label: 'Контакты',
   },
 ];
@@ -26,18 +28,7 @@ export function Header() {
           <Logo className='w-[195px] h-[44px] lg:w-[320px] lg:h-[72px] transition-transform duration-300 ease-out hover:scale-105 cursor-pointer' />
         </Link>
         <nav className='hidden lg:flex items-center justify-center'>
-          <ul className='flex gap-8'>
-            {menuItems.map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className='typo-h5 border-b-[4px] border-transparent transition-colors duration-200 hover:border-base-black'
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <HeaderNavLinks items={menuItems} />
         </nav>
 
         <LinkButton href='/#' className='px-6 py-2 hidden lg:flex'>

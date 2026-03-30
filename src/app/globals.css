@@ -128,6 +128,15 @@
   }
 }
 
+@utility typo-h6 {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-family: var(--font-unbounded);
+}
+
 @utility typo-body {
   font-size: var(--text-body-mobile);
   line-height: var(--text-body-mobile--line-height);
