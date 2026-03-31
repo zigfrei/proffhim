@@ -67,7 +67,7 @@ export default function Hero() {
             </li>
           </ul>
         </div>
-        <div className='w-full self-stretch'>
+        <div className='w-full h-[400px] lg:h-auto self-stretch'>
           <Map customization={MAP_CUSTOMIZATION} />
         </div>
       </div>

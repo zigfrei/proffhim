@@ -16,7 +16,7 @@ export default function Hero() {
             Профессиональные моющие и дезинфицирующие средства «Профф». 20 лет
             совершенства, четкая логистика и стабильное европейское качество.
           </p>
-          <BigLinkButton href='/contacts' className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center lg:self-start'>
+          <BigLinkButton href='/contacts/#contact-us' className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center lg:self-start'>
             Связаться с нами
           </BigLinkButton>
         </div>
