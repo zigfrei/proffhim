@@ -21,7 +21,7 @@
   --text-h2: 4rem;
   --text-h2--line-height: 1.12;
 
-  --text-h3-mobile: 1.5rem; 
+  --text-h3-mobile: 1.5rem;
   --text-h3-mobile--line-height: 1.22;
   --text-h3: 3rem;
   --text-h3--line-height: 1.18;
@@ -55,7 +55,6 @@
 
   --text-buttons: 1.25rem;
   --text-buttons--line-height: 1.5;
-  
 }
 
 @utility typo-h1 {
@@ -205,7 +204,9 @@
 }
 
 @utility base-frame-interactive {
-  transition: box-shadow 0.2s ease, translate 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
 
   @variant hover {
     box-shadow: 4px 4px 0 0 var(--color-base-black);
@@ -214,43 +215,48 @@
 }
 
 @utility base-shadow {
-  box-shadow: 0 0 20px 5px var(--color-primary); 
+  box-shadow: 0 0 20px 5px var(--color-primary);
 }
 
-@utility base-input { 
+@utility base-input {
   width: 100%;
   background-color: var(--color-base-white);
   border: 5px solid var(--color-base-black);
   box-shadow: 5px 5px 0 0 var(--color-base-black);
   padding: 0.5rem;
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: 1.125rem;
+  line-height: 1.35;
   font-weight: 900;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em; 
   text-transform: uppercase;
   font-family: var(--font-unbounded);
-    @variant focus {
-      box-shadow: 0 0 20px 5px var(--color-primary);
-      outline: none;
-    }
-    @variant placeholder {
-      color: var(--color-base-black);
-      opacity: 1;
-    }
 
-}
+  @variant lg {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 0.005em;
+  }
+
+  @variant focus {
+    box-shadow: 0 0 20px 5px var(--color-primary);
+    outline: none;
+  }
+  @variant placeholder {
+    color: var(--color-base-black);
+    opacity: 1;
+  }
+} 
 
 @utility base-outline {
-      @variant focus {
-      box-shadow: 0 0 20px 5px var(--color-primary);
-      outline: none;
-    }
- }
-
- html {
-  scroll-behavior: smooth;
+  @variant focus {
+    box-shadow: 0 0 20px 5px var(--color-primary);
+    outline: none;
+  }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* :root {
   --background: #ffffff;
