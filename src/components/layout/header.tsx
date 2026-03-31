@@ -31,12 +31,12 @@ export function Header() {
           <HeaderNavLinks items={menuItems} />
         </nav>
 
-        <LinkButton href='/#' className='px-6 py-2 hidden lg:flex'>
+        <LinkButton href='/contacts/#contact-us' className='px-6 py-2 hidden lg:flex'>
           Связаться
         </LinkButton>
 
         <div className='lg:hidden'>
-          <MobileMenu items={menuItems} contactHref='/#' />
+          <MobileMenu items={menuItems} />
         </div>
       </div>
     </header>

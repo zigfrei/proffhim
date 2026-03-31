@@ -11,10 +11,9 @@ import { isMenuItemActive, type MenuItem } from './menu-item';
 
 interface MobileMenuProps {
   items: MenuItem[];
-  contactHref: string;
 }
 
-export function MobileMenu({ items, contactHref }: MobileMenuProps) {
+export function MobileMenu({ items }: MobileMenuProps) {
   const animationDurationMs = 300;
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
@@ -115,7 +114,7 @@ export function MobileMenu({ items, contactHref }: MobileMenuProps) {
             )}
           >
             <div className='flex items-center justify-between'>
-              <Link href='/' aria-label='На главную' className='inline-block'>
+              <Link href='/' aria-label='На главную' className='inline-block' onClick={closeMenu}>
                 <Logo className='w-[195px] h-[44px] [&_path]:fill-[var(--color-base-black)]' />
               </Link>
               <button
@@ -152,7 +151,7 @@ export function MobileMenu({ items, contactHref }: MobileMenuProps) {
             </nav>
 
             <LinkButton
-              href={contactHref}
+              href='/contacts/#contact-us'
               onClick={closeMenu}
               className={clsx('w-full justify-center mb-4')}
             >
