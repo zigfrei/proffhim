@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import CatalogMain from '@/components/sections/catalog/main';
 
 export const metadata = {
@@ -9,7 +10,9 @@ export const metadata = {
 export default function Contacts() {
   return (
     <main className='flex flex-col items-center justify-center w-full'>
-      <CatalogMain />
+      <Suspense fallback={null}>
+        <CatalogMain />
+      </Suspense>
     </main>
   );
 }
