@@ -12,6 +12,8 @@ export interface Product {
   image: string;
   link: string;
   label?: string;
+  industry?: string;
+  productType?: string;
 }
 
 type CardProps = ComponentPropsWithoutRef<'div'> & Product;
@@ -22,6 +24,8 @@ export function Card({
   image,
   link,
   label,
+  industry,
+  productType,
   className,
   ...rest
 }: CardProps) {
@@ -29,7 +33,7 @@ export function Card({
     <div
       {...rest}
       className={clsx(
-        'w-full p-2 flex flex-col items-start base-frame gap-2',
+        'w-full h-full p-2 flex flex-col items-start base-frame gap-2',
         styles.card,
         className,
       )}
@@ -43,7 +47,7 @@ export function Card({
         <Image
           src={image}
           alt={name}
-          fill 
+          fill
           sizes='(min-width: 768px) 50vw, 100vw'
           className={styles.cardImage}
         />
@@ -52,10 +56,13 @@ export function Card({
         <h3 className='typo-h4'>{name}</h3>
         <p className='typo-b2 line-clamp-3 font-regular'>{description}</p>
       </div>
-        <LinkButton href={link} className='group w-full items-center justify-center gap-2 bg-base-black! text-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '>
-          Подробнее 
-          <ArrowRightIcon className='h-6 w-6 transition-transform duration-300 ease-out group-hover:translate-x-1 [&>path]:stroke-[2]' />
-        </LinkButton>
+      <LinkButton
+        href={link}
+        className='group w-full items-center justify-center gap-2 bg-base-black! text-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '
+      >
+        Подробнее
+        <ArrowRightIcon className='h-6 w-6 transition-transform duration-300 ease-out group-hover:translate-x-1 [&>path]:stroke-[2]' />
+      </LinkButton>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { MobileMenu } from './mobile-menu';
 
 const menuItems: MenuItem[] = [
   {
-    href: '/#',
+    href: '/catalog',
     label: 'Продукция',
   },
   {
