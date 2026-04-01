@@ -40,7 +40,7 @@ export function Footer() {
               <ul className='flex flex-col items-start justify-start gap-2'>
                 <li>
                   <Link
-                    href='/#'
+                    href='/catalog'
                     className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
                   >
                     Продукция
@@ -56,7 +56,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href='/#'
+                    href='/contacts'
                     className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
                   >
                     Контакты

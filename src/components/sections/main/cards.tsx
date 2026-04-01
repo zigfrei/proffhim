@@ -39,17 +39,19 @@ const products: Product[] = [
 
 export default function Cards() {
   return (
-    <SectionBlock wrapperClassName="px-0! lg:px-12!" >
+    <SectionBlock wrapperClassName='px-0! lg:px-12!'>
       <div className='flex w-full flex-col items-start justify-center gap-4 lg:gap-8'>
         <h2 className='typo-h2 px-4 lg:px-0'>Продукция</h2>
 
-        <div className='px-4 lg:px-0 w-full grid grid-flow-col auto-cols-[minmax(280px,85%)] gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-4 lg:overflow-visible'>
+        <ul className='px-4 lg:px-0 w-full grid grid-flow-col auto-cols-[minmax(280px,85%)] gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-4 lg:overflow-visible'>
           {products.map((product) => (
-            <Card key={product.id} {...product} />
+            <li key={product.id} className='card-wrapper'>
+              <Card {...product} />
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <BigLinkButton href='/#' className='self-center'>
+        <BigLinkButton href='/catalog' className='self-center'>
           Смотреть весь каталог
         </BigLinkButton>
       </div>

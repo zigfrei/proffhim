@@ -10,7 +10,7 @@ export function Button({ children, className, ...rest }: ButtonProps) {
     <button
       {...rest}
       className={clsx(
-        'flex px-6 py-2 items-center bg-primary typo-h5 text-base-black base-frame lg:base-frame-interactive',
+        'flex px-6 py-2 items-center bg-primary typo-h5 text-base-black base-frame lg:base-frame-interactive cursor-pointer ',
         className,
       )}
     >
@@ -24,7 +24,7 @@ export function BigButton({ children, className, ...rest }: ButtonProps) {
     <button
       {...rest}
       className={clsx(
-        'flex px-6 py-4 items-center justify-center bg-primary typo-h4 text-base-black base-frame lg:base-frame-big lg:base-frame-interactive base-outline',
+        'flex px-6 py-4 items-center justify-center bg-primary typo-h4 text-base-black base-frame lg:base-frame-big lg:base-frame-interactive base-outline cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none',
         className,
       )}
     >
