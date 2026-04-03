@@ -1,40 +1,14 @@
 import SectionBlock from '@/components/ui/section';
 import { BigLinkButton } from '@/components/ui/links';
-import { Card, Product } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
+import { Product } from '@/features/catalog/products/config';
+import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
 
 const products: Product[] = [
-  {
-    id: '1',
-    name: 'Профф марки ВА',
-    description:
-      'Предназначено для пенной и непенной мойки и дезинфекции внешней поверхности различных видов технологического оборудования, инвентаря, тары, полов, стен с использованием пеногенераторов, аппаратов высокого давления или ручным способом.',
-    image: '/products/va.png',
-    link: '/products/va',
-  },
-  {
-    id: '2',
-    name: 'Профф В',
-    description:
-      'Щелочное моющее средство для удаления смолистых загрязнений, нагара, следов от копчения с поверхностей газовых и электроплит, конвектоматов, грилей, облицовочной плитки, посуды.',
-    image: '/products/v.png',
-    link: '/products/v',
-  },
-  {
-    id: '3',
-    name: 'Профф БАРЬЕР',
-    description:
-      'Предназначено для дезинфекции помещений, различных поверхностей, оборудования, стен, полов; автотранспорта, въезжающего на территорию пищевых предприятий через дезбарьеры; обуви персонала и посетителей.',
-    image: '/products/barier.png',
-    link: '/products/barier',
-  },
-  {
-    id: '4',
-    name: 'Профф АКТИВ',
-    description:
-      'Слабощелочное пенное моющее средство с высокой степенью обезжиривания. Предназначено для бесконтактной и ручной мойки различных поверхностей, оборудования на предприятиях пищевой и не пищевой отраслей промышленности, объектах агропромышленного комплекса; для мытья транспорта.',
-    image: '/products/active.png',
-    link: '/products/active',
-  },
+  CATALOG_PRODUCTS[0],
+  CATALOG_PRODUCTS[4],
+  CATALOG_PRODUCTS[9],
+  CATALOG_PRODUCTS[14],
 ];
 
 export default function Cards() {
@@ -51,7 +25,7 @@ export default function Cards() {
           ))}
         </ul>
 
-        <BigLinkButton href='/catalog' className='self-center'>
+        <BigLinkButton href='/products' className='self-center'>
           Смотреть весь каталог
         </BigLinkButton>
       </div>

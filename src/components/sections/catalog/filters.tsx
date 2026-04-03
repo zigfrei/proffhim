@@ -75,6 +75,7 @@ export default function CatalogFilters() {
               <Checkbox
                 key={item.value}
                 label={item.label}
+                className='w-full lg:border-b-2 p-2 lg:border-base-black last:border-b-0'
                 checked={selectedFilters[group.key]?.has(item.value) ?? false}
                 onChange={(payload: boolean | ChangeEvent<HTMLInputElement>) =>
                   handleFilterChange(group.key, item.value, payload)

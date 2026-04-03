@@ -23,7 +23,7 @@ export default function CatalogContent() {
   const filtered = useMemo(
     () =>
       filterBySelected(CATALOG_PRODUCTS, selected, {
-        industry: (p) => p.industry,
+        // industry: (p) => p.industry,
         'product-type': (p) => p.productType,
         // purpose: (p) => p.purpose, // просто добавишь новую группу и accessor
       }),

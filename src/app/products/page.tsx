@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 
-export default function Contacts() {
+export default function ProductsPage() {
   return (
     <main className='flex flex-col items-center justify-center w-full'>
       <Suspense fallback={null}>
