@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 
-
 type ButtonProps = React.PropsWithChildren<
     React.ButtonHTMLAttributes<HTMLButtonElement>
 >;
