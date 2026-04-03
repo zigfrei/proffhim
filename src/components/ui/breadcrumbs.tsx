@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ComponentPropsWithoutRef } from 'react';
 
 interface Breadcrumb {
   label: string;
@@ -6,13 +7,16 @@ interface Breadcrumb {
   active?: boolean;
 }
 
+type BreadcrumbsProps = ComponentPropsWithoutRef<'nav'> & {
+  breadcrumbs: Breadcrumb[];
+};
+
 export default function Breadcrumbs({
   breadcrumbs,
-}: {
-  breadcrumbs: Breadcrumb[];
-}) {
+  className,
+}: BreadcrumbsProps) {
   return (
-    <nav aria-label='Breadcrumb'>
+    <nav aria-label='Breadcrumb' className={className}>
       <ol className='flex items-center justify-start typo-b2 uppercase font-bold text-base-black'>
         {breadcrumbs.map((breadcrumb, index) => (
           <li
