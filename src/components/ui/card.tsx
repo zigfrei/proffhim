@@ -4,17 +4,7 @@ import Image from 'next/image';
 import type { ComponentPropsWithoutRef } from 'react';
 import styles from './card.module.css';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  link: string;
-  label?: string;
-  industry?: string;
-  productType?: string;
-}
+import { Product } from '@/features/catalog/products/config';
 
 type CardProps = ComponentPropsWithoutRef<'div'> & Product;
 
@@ -22,13 +12,17 @@ export function Card({
   name,
   description,
   image,
-  link,
-  label,
-  industry,
-  productType,
+  slug,
   className,
+  productType: _productType,
+  foamType: _foamType,
+  sanitationObjects: _sanitationObjects,
+  contaminationType: _contaminationType,
+  labelImage: _labelImage,
   ...rest
 }: CardProps) {
+  void [_productType, _foamType, _sanitationObjects, _contaminationType, _labelImage];
+
   return (
     <div
       {...rest}
@@ -52,12 +46,12 @@ export function Card({
           className={styles.cardImage}
         />
       </div>
-      <div className='w-full flex-1 min-h-0 flex flex-col justify-between gap-2 mt-auto'>
+      <div className='w-full flex-1 min-h-0 flex flex-col justify-start gap-2 mt-auto'>
         <h3 className='typo-h4'>{name}</h3>
-        <p className='typo-b2 line-clamp-3 font-regular'>{description}</p>
+        <p className='typo-b2 line-clamp-3 font-regular mb-auto'>{description}</p>
       </div>
       <LinkButton
-        href={link}
+        href={`/products/${slug}`}
         className='group w-full items-center justify-center gap-2 bg-base-black! text-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '
       >
         Подробнее
