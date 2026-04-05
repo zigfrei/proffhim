@@ -60,15 +60,28 @@
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-in-out;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding-top: 1rem;
 }
 
 .contentOpen {
   max-height: 1000px;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
   .plusminus {
     right: 8px;
   }
+}
+
+.details::details-content {
+  height: 0;
+  overflow-y: hidden;
+  transition: 300ms allow-discrete;
+}
+
+.details[open]::details-content {
+  height: calc-size(auto, size);
 }

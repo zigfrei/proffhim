@@ -27,7 +27,7 @@ export default function FAQItem({
         open={isOpen}
         className={clsx(
           'w-full bg-white p-4 lg:p-8 pr-9 lg:pr-16 flex flex-col items-start justify-start',
-          className, isOpen && 'gap-4'
+          className, styles.details
         )}
         {...rest}
       >

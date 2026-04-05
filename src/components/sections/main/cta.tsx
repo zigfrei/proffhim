@@ -6,7 +6,7 @@ export default function CTA() {
     <SectionBlock>
       <div className='w-full flex flex-col lg:flex-row items-stretch justify-stretch gap-4 lg:gap-16 bg-primary base-frame-big'>
         <div className='w-full flex flex-col items-start justify-start gap-4 p-4 pb-0 lg:pl-16 lg:pr-0 lg:py-16'>
-          <h2 className='w-full typo-h3 text-center lg:text-left'>
+          <h2 className='w-full text-[1.4rem] sm:text-[1.5rem] lg:text-[3rem] typo-h3 text-center lg:text-left'>
             ГОТОВЫ К СОТРУДНИЧЕСТВУ?
           </h2>
           <p className='typo-body text-center lg:text-left lg:border-l-[5px] lg:border-base-black lg:pl-4'>
