@@ -7,6 +7,8 @@ import Numbers from "@/components/sections/main/numbers";
 import Partners from "@/components/sections/main/partners";
 import Scope from "@/components/sections/main/scope";
 import Cards from "@/components/sections/main/cards";
+import Documents from "@/components/sections/main/documents";
+import B2B from "@/components/sections/main/b2b";
 
 export default function Home() {
   const faqSchema = {
@@ -34,9 +36,11 @@ export default function Home() {
         <Hero />
         <Numbers />
         <Scope />
+        <Documents />
         <Partners />
         <BeforeAndAfter />
         <Cards />
+        <B2B />
         <FAQ />
         <CTA />
       </main>

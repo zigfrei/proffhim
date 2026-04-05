@@ -1,7 +1,6 @@
-import { Suspense } from 'react';
 import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'; 
+import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
 import ProductMain from '@/components/sections/product/main';
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -37,10 +36,7 @@ export default async function ProductPage(props: PageProps) {
 
   return (
     <main className='flex flex-col items-center justify-center w-full'>
-      {/* <Suspense fallback={null}> */}
-        <ProductMain product={product} />
-      
-      {/* </Suspense> */}
+      <ProductMain product={product} />
     </main>
   );
 }

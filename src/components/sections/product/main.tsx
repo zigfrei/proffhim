@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ProductDescription from './description';
 import Link from 'next/link';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { FoamType } from "@/features/catalog/products/config";
+import { FoamType } from '@/features/catalog/products/config';
 import { Card } from '@/components/ui/card';
 import { Product } from '@/features/catalog/products/config';
 import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
@@ -20,7 +20,7 @@ export default function ProductMain({ product }: { product: Product }) {
     <SectionBlock wrapperClassName='px-0! lg:px-12!'>
       <div className='flex flex-col w-full items-start justify-center gap-4 lg:gap-8'>
         <Breadcrumbs
-        className='px-4 lg:px-0'
+          className='px-4 lg:px-0'
           breadcrumbs={[
             { label: 'Каталог', href: '/products' },
             {
@@ -50,8 +50,16 @@ export default function ProductMain({ product }: { product: Product }) {
           </div>
 
           <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-4'>
-            <Link href={product.labelImage} target='_blank' className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame lg:base-frame-interactive p-4 bg-primary'>
-              <MagnifyingGlassIcon className="h-6 w-6 [&>path]:stroke-[2]" aria-hidden="true" /> Увеличить этикетку
+            <Link
+              href={product.labelImage}
+              target='_blank'
+              className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame lg:base-frame-interactive p-4 bg-primary'
+            >
+              <MagnifyingGlassIcon
+                className='h-6 w-6 [&>path]:stroke-[2]'
+                aria-hidden='true'
+              />{' '}
+              Увеличить этикетку
             </Link>
             {product.label && (
               <div className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame p-4'>
@@ -65,18 +73,17 @@ export default function ProductMain({ product }: { product: Product }) {
             )}
           </div>
         </div>
-            <div className='w-full flex flex-col items-start justify-start gap-4'>
-              <h2 className='typo-h2 px-4 lg:px-0'>Другие товары</h2>
+        <div className='w-full flex flex-col items-start justify-start gap-4'>
+          <h2 className='typo-h2 px-4 lg:px-0'>Другие товары</h2>
 
-                      <ul className='px-4 lg:px-0 w-full grid grid-flow-col auto-cols-[minmax(280px,85%)] gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-4 lg:overflow-visible'>
-                        {products.map((product) => (
-                          <li key={product.id} className='card-wrapper'>
-                            <Card {...product} />
-                          </li>
-                        ))}
-                      </ul>
-            </div>
-
+          <ul className='px-4 lg:px-0 w-full grid grid-flow-col auto-cols-[minmax(280px,85%)] gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-4 lg:overflow-visible'>
+            {products.map((product) => (
+              <li key={product.id} className='card-wrapper'>
+                <Card {...product} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </SectionBlock>
   );
