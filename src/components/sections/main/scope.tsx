@@ -22,9 +22,9 @@ interface ScopeItem {
 
 const MOBILE_BG_CLASSES = [
   'bg-primary',
-  'bg-secondary',
-  'bg-tertiary',
-  'bg-quaternary',
+  'bg-base-white',
+  'bg-primary',
+  'bg-main-background',
 ] as const;
 
 const SCOPE_ITEMS: ScopeItem[] = [
@@ -116,7 +116,7 @@ export default function Scope() {
             lg:[grid-template-areas:'cell11_cell1_cell1_cell2_cell2''cell11_cell3_cell3_cell7_cell5''cell11_cell6_cell6_cell7_cell8''cell11_cell6_cell6_cell4_cell8''cell11_cell9_cell10_cell10_cell8']"
         >
           {/* cell 1 */}
-          <div className='bg-secondary base-frame flex items-center justify-between p-2 lg:[grid-area:cell1] gap-4'>
+          <div className='bg-base-white base-frame flex items-center justify-between p-2 lg:[grid-area:cell1] gap-4'>
             <ScopeItemIcon item={SCOPE_ITEMS[0]} className='w-22 h-22' />
             <div className='w-full flex flex-col items-start justify-start gap-1'>
               <span className='typo-h4'>{SCOPE_ITEMS[0].number}</span>
@@ -135,7 +135,7 @@ export default function Scope() {
           {/* end cell 1 */}
 
           {/* cell 2 */}
-          <div className='bg-quaternary base-frame flex items-center justify-between p-2 lg:[grid-area:cell2] gap-4'>
+          <div className='bg-base-white base-frame flex items-center justify-between p-2 lg:[grid-area:cell2] gap-4'>
             <div className='w-full flex flex-col items-start justify-start gap-1'>
               <span className='typo-h4'>{SCOPE_ITEMS[1].number}</span>
               <h3 className='typo-h5'>{SCOPE_ITEMS[1].title}</h3>
@@ -178,7 +178,7 @@ export default function Scope() {
           {/* end cell 3 */}
 
           {/* cell 4 */}
-          <div className='bg-secondary base-frame flex items-stretch justify-between p-2 lg:[grid-area:cell4] gap-4'>
+          <div className='bg-base-white base-frame flex items-stretch justify-between p-2 lg:[grid-area:cell4] gap-4'>
             <div className='w-full flex flex-col items-start justify-between gap-1'>
               <div className='w-full flex items-start justify-between gap-2'>
                 <span className='typo-h4'>{SCOPE_ITEMS[3].number}</span>
@@ -223,7 +223,7 @@ export default function Scope() {
           </div>
           {/* end cell 5 */}
           {/* cell 6 */}
-          <div className='bg-tertiary base-frame flex items-center justify-between p-2 lg:[grid-area:cell6] gap-4'>
+          <div className='bg-base-white base-frame flex items-center justify-between p-2 lg:[grid-area:cell6] gap-4'>
             <ScopeItemIcon item={SCOPE_ITEMS[5]} className='w-30 h-30' />
             <div className='w-full flex flex-col items-start justify-start gap-1'>
               <span className='typo-h4'>{SCOPE_ITEMS[5].number}</span>
@@ -264,7 +264,7 @@ export default function Scope() {
           </div>
 
           {/* cell 8 */}
-          <div className='bg-quaternary base-frame flex flex-col items-stretch justify-between p-2 lg:[grid-area:cell8] gap-4'>
+          <div className='bg-base-white base-frame flex flex-col items-stretch justify-between p-2 lg:[grid-area:cell8] gap-4'>
             <div className='w-full flex flex-col items-start justify-between gap-1'>
               <div className='w-full flex items-start justify-between gap-2'>
                 <span className='typo-h4'>{SCOPE_ITEMS[7].number}</span>
@@ -287,7 +287,7 @@ export default function Scope() {
           {/* end cell 8 */}
 
           {/* cell 9 */}
-          <div className='bg-secondary base-frame flex items-stretch justify-between p-2 lg:[grid-area:cell9] gap-4'>
+          <div className='bg-base-white base-frame flex items-stretch justify-between p-2 lg:[grid-area:cell9] gap-4'>
             <div className='w-full flex flex-col items-start justify-between gap-1'>
               <div className='w-full flex items-start justify-between gap-2'>
                 <span className='typo-h4'>{SCOPE_ITEMS[8].number}</span>

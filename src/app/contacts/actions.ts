@@ -18,7 +18,42 @@ export type CallbackActionState = {
   message: string;
 };
 
-export async function submitCallbackForm(form: CallBackFormField): Promise<CallbackActionState> {
+type CallbackData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+async function sendTelegramMessage(data: CallbackData) {
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+
+  const message = `
+📩 Заявка с формы обратной связи:
+Имя: ${data.name}
+Email: ${data.email}
+Телефон: ${data.phone}
+Сообщение: ${data.message}
+  `;
+
+  try {
+    await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+      }),
+    });
+  } catch (error) {
+    console.error('Telegram error:', error);
+  }
+}
+
+export async function submitCallbackForm(
+  form: CallBackFormField,
+): Promise<CallbackActionState> {
   const parsed = callbackFormSchema.safeParse(form);
 
   if (!parsed.success) {
@@ -28,7 +63,7 @@ export async function submitCallbackForm(form: CallBackFormField): Promise<Callb
     };
   }
 
-  console.info('Callback request:', parsed.data);
+  await sendTelegramMessage(parsed.data);
 
   return {
     success: true,

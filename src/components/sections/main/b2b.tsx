@@ -20,7 +20,7 @@ export default function B2B() {
         </div>
         <div className='w-full flex flex-col items-start gap-4 p-4 lg:p-8'>
           <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-4'>
-            <div className='p-2 base-frame flex flex-col items-start gap-2'>
+            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-primary'>
               <Experiment className='h-16 w-16' />
               <p className='typo-h5'>своя лаборатория</p>
               <p className='typo-b3'>
@@ -28,7 +28,7 @@ export default function B2B() {
               </p>
             </div>
 
-            <div className='p-2 base-frame flex flex-col items-start gap-2'>
+            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-base-white'>
               <Package className='h-16 w-16' />
               <p className='typo-h5'>Поставка в любых объемах</p>
               <p className='typo-b3'>
@@ -36,7 +36,7 @@ export default function B2B() {
               </p>
             </div>
 
-            <div className='p-2 base-frame flex flex-col items-start gap-2'>
+            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-base-white'>
               <Shipping className='h-16 w-16' />
               <p className='typo-h5'>Собственная логистика</p>
               <p className='typo-b3'>
@@ -44,7 +44,7 @@ export default function B2B() {
               </p>
             </div>
 
-            <div className='p-2 base-frame flex flex-col items-start gap-2'>
+            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-primary'>
               <Support className='h-16 w-16' />
               <p className='typo-h5'>Поддержка клиентов</p>
               <p className='typo-b3'>

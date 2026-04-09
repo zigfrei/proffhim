@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@vercel/analytics": "^2.0.1",
     "@yandex/ymaps3-types": "^1.0.19017058",
     "clsx": "^2.1.1",
     "motion": "^12.38.0",

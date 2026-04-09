@@ -3,6 +3,7 @@ import { Unbounded, Manrope } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { Analytics } from "@vercel/analytics/next"
 
 const unbounded = Unbounded({
   variable: '--font-unbounded',
