@@ -11,7 +11,7 @@ const menuItems: MenuItem[] = [
     label: 'Продукция',
   },
   {
-    href: '/#',
+    href: '/about',
     label: 'О компании',
   },
   {
