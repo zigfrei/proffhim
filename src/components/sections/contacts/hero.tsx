@@ -19,13 +19,13 @@ export default function Hero() {
           </p>
 
           <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
-            Телефон/факс:{' '}
+            {/* Телефон/факс:{' '}
             <a
               href='tel:+375152605277'
               className='hover:text-primary transition-colors duration-200'
             >
               +375 152 605277
-            </a>
+            </a> */}
             <br />
             Выходные дни:{' '}
             <a
@@ -40,7 +40,7 @@ export default function Hero() {
               href='tel:+375296729521'
               className='hover:text-primary transition-colors duration-200'
             >
-              +375 (29) 6729521
+              +375 (29) 1060587
             </a>
           </p>
 

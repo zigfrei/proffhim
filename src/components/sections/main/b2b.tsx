@@ -40,7 +40,7 @@ export default function B2B() {
               <Shipping className='h-16 w-16' />
               <p className='typo-h5'>Собственная логистика</p>
               <p className='typo-b3'>
-                Быстрая и надежная доставка по всей стране
+                Быстрая и надежная доставка
               </p>
             </div>
 

@@ -18,22 +18,22 @@ export default function BeforeAndAfter() {
                   <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                     <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                   </div>
-                  <p className='typo-b3 xl:typo-b2 uppercase'>Удаление 99% загрязнений</p>
+                  <p className='typo-b3 xl:typo-b2 uppercase'>Удаление 99.99% загрязнений</p>
                 </div>
                 <div className='flex items-center justify-center gap-2'>
                   <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                     <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                   </div>
-                  <p className='typo-b3 xl:typo-b2 uppercase'>Защитный полимерный слой</p>
+                  <p className='typo-b3 xl:typo-b2 uppercase'>Защитный антиприлипающий слой</p>
                 </div>
                 <div className='flex items-center justify-center gap-2'>
                   <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                     <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                   </div>
-                  <p className='typo-b3 xl:typo-b2 uppercase'>Срок службы +5 лет</p>
+                  <p className='typo-b3 xl:typo-b2 uppercase'>На основе зеленых ПАВов</p>
                 </div>
               </div>
-              <p className='typo-b2 xl:typo-body max-w-[550px]'>Используйте слайдер, чтобы увидеть разницу в состоянии оборудования до и после применения нашего средства КВ-95.</p>
+              <p className='typo-b2 xl:typo-body max-w-[550px]'>Используйте слайдер, чтобы увидеть разницу в состоянии оборудования до и после применения наших средств.</p>
             </div>
         </div>
       </div>

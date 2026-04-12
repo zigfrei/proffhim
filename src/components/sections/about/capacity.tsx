@@ -21,7 +21,7 @@ export default function Capacity() {
           <div className='w-full flex flex-col items-start gap-2'>
             <p className='typo-h5 text-base-black'>Объем производства</p>
             <p className='typo-b2 text-base-black'>
-              Ежемесячно мы производим более 100 тонн продукции, что позволяет
+              Ежемесячно мы производим более 300 тонн продукции, что позволяет
               нам удовлетворять потребности наших клиентов и поддерживать
               стабильные поставки на рынке.
             </p>

@@ -5,10 +5,10 @@ import { Product } from '@/features/catalog/products/config';
 import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
 
 const products: Product[] = [
-  CATALOG_PRODUCTS[0],
-  CATALOG_PRODUCTS[4],
+  CATALOG_PRODUCTS[2],
+  CATALOG_PRODUCTS[6],
+  CATALOG_PRODUCTS[15],
   CATALOG_PRODUCTS[9],
-  CATALOG_PRODUCTS[14],
 ];
 
 export default function Cards() {
