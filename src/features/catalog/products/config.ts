@@ -1,7 +1,7 @@
 export enum ProductType {
   ACID_CLEANERS = 'Кислотные моющие средства',
   ALKALINE_AND_DISINFECTING = 'Щелочные моющие и дезинфицирующие средства',
-  MILD_ALKALINE_AND_NEUTRAL = 'Слабощелочные и нейтральные средства',
+  MILD_ALKALINE_AND_NEUTRAL = 'Нейтральные средства',
   DISINFECTANTS = 'Дезинфицирующие средства',
 }
 

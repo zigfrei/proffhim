@@ -10,7 +10,7 @@ export default function CTA() {
             ГОТОВЫ К СОТРУДНИЧЕСТВУ?
           </h2>
           <p className='typo-body text-center lg:text-left lg:border-l-[5px] lg:border-base-black lg:pl-4'>
-            Мы принимаем вызовы любой сложности. Ваш индустриальный успех
+            Мы принимаем вызовы любой сложности. Успех вашего бизнеса
             начинается с одного точного решения.
           </p>
         </div>

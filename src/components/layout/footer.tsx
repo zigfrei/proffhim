@@ -25,12 +25,12 @@ export function Footer() {
                 Адрес: Беларусь, Гродненская область, Гродненский район,
                 Одельский с/с, д. Подлипки, стр. 7
               </p>
-              <p className='typo-b3 text-left font-bold'>
+              {/* <p className='typo-b3 text-left font-bold'>
                 Телефон/факс: <a href='tel:+375152605277' className='hover:text-base-white transition-colors duration-200'>+375 152 605277</a>
-              </p>
+              </p> */}
               <p className='typo-b3 text-left font-bold'>
                 Выходные дни: <a href='tel:+375296729520' className='hover:text-base-white transition-colors duration-200'>+375 (29) 6729520</a>,
-                <br /> <a href='tel:+375296729521' className='hover:text-base-white transition-colors duration-200'>+375 (29) 6729521</a>
+                <br /> <a href='tel:+375291060587' className='hover:text-base-white transition-colors duration-200'>+375 (29) 1060587</a>
               </p>
             </div>
           </div>

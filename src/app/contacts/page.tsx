@@ -4,6 +4,29 @@ import Form from '@/components/sections/contacts/form';
 export const metadata = {
   title: "Контакты | ПроффХим",
   description: "Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.",
+  openGraph: {
+    title: 'Контакты | ПроффХим',
+    description:
+      'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
+    url: 'https://proffhim.by/contacts',
+    siteName: 'ПроффХим',
+    locale: 'ru_RU',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png', 
+        width: 1200,
+        height: 630,
+        alt: 'ПроффХим',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Контакты | ПроффХим',
+    description: 'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
+    images: ['/twitter-image.png'],
+  },
 };
 
 
