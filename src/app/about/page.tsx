@@ -18,7 +18,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image-about.png', 
+        url: '/og-image.png', 
         width: 1200,
         height: 630,
         alt: 'ПроффХим',
@@ -29,7 +29,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'О компании | ПроффХим',
     description: 'О компании «ПроффХим»: белорусский производитель средств «Профф», команда профессионалов с европейскими стандартами качества и экологичным подходом.',
-    images: ['/twitter-image-about.png'],
+    images: ['/twitter-image.png'],
   },
 };
 

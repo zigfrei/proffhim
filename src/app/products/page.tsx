@@ -14,7 +14,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image-catalog.png', 
+        url: '/og-image.png', 
         width: 1200,
         height: 630,
         alt: 'ПроффХим',
@@ -25,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Продукция | ПроффХим',
     description: 'Каталог продукции ПроффХим: карточки товаров с характеристиками и удобной фильтрацией по категориям, назначению и параметрам. Широкий ассортимент моющих, чистящих и дезинфицирующих средств, пищевых добавок и промышленной химии для предприятий. Найдите идеальное решение для вашего бизнеса с ПроффХим.',
-    images: ['/twitter-image-catalog.png'],
+    images: ['/twitter-image.png'],
   },
 };
 
