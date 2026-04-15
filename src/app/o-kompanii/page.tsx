@@ -12,7 +12,7 @@ export const metadata = {
     title: 'О компании | ПроффХим',
     description:
       'О компании «ПроффХим»: белорусский производитель средств «Профф», команда профессионалов с европейскими стандартами качества и экологичным подходом.',
-    url: 'https://proffhim.by/about',
+    url: 'https://proffhim.by/o-kompanii',
     siteName: 'ПроффХим',
     locale: 'ru_RU',
     type: 'website',
@@ -36,7 +36,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className='flex flex-col items-center justify-center w-full'>
+    <main className='flex flex-col items-center justify-center w-full scroll-mt-22 lg:scroll-mt-32'>
       {/* <Suspense fallback={null}> */}
         <AboutHero />
         <History />

@@ -32,7 +32,7 @@ export default function Home() {
           __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
         }}
       />
-      <main className="flex flex-col items-center justify-center w-full">
+      <main className="flex flex-col items-center justify-center w-full scroll-mt-22 lg:scroll-mt-32">
         <Hero />
         <Numbers />
         <Scope />

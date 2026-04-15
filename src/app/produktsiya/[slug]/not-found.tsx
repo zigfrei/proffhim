@@ -14,10 +14,10 @@ export default async function NotFound() {
         <Breadcrumbs
           className='px-4 lg:px-0'
           breadcrumbs={[
-            { label: 'Каталог', href: '/products' },
+            { label: 'Каталог', href: '/produktsiya' },
             {
               label: `Товар не найден`,
-              href: `/products/unknown`,
+              href: `/produktsiya/unknown`,
               active: true,
             },
           ]}
@@ -41,7 +41,7 @@ export default async function NotFound() {
 
           <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-4'>
             <Link
-              href='/products'
+              href='/produktsiya'
               className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame lg:base-frame-interactive p-4 bg-primary'
             >
               В каталог товаров

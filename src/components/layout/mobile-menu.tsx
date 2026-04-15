@@ -151,7 +151,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
             </nav>
 
             <LinkButton
-              href='/contacts/#contact-us'
+              href='/kontakty/#obraschenie'
               onClick={closeMenu}
               className={clsx('w-full justify-center mb-4')}
             >

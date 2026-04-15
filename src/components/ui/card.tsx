@@ -51,7 +51,7 @@ export function Card({
         <p className='typo-b2 line-clamp-3 font-regular mb-auto'>{description}</p>
       </div>
       <LinkButton
-        href={`/products/${slug}`}
+        href={`/produktsiya/${slug}`}
         className='group w-full items-center justify-center gap-2 bg-base-black! text-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '
       >
         Подробнее

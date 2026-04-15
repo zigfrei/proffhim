@@ -7,15 +7,15 @@ import { MobileMenu } from './mobile-menu';
 
 const menuItems: MenuItem[] = [
   {
-    href: '/products',
+    href: '/produktsiya',
     label: 'Продукция',
   },
   {
-    href: '/about',
+    href: '/o-kompanii',
     label: 'О компании',
   },
   {
-    href: '/contacts',
+    href: '/kontakty',
     label: 'Контакты',
   },
 ];
@@ -31,7 +31,7 @@ export function Header() {
           <HeaderNavLinks items={menuItems} />
         </nav>
 
-        <LinkButton href='/contacts/#contact-us' className='px-6 py-2 hidden lg:flex'>
+        <LinkButton href='/kontakty/#obraschenie' className='px-6 py-2 hidden lg:flex'>
           Связаться
         </LinkButton>
 

@@ -25,7 +25,7 @@ export default function Cards() {
           ))}
         </ul>
 
-        <BigLinkButton href='/products' className='self-center'>
+        <BigLinkButton href='/produktsiya' className='self-center'>
           Смотреть весь каталог
         </BigLinkButton>
       </div>

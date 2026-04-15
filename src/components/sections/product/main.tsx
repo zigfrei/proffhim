@@ -22,10 +22,10 @@ export default function ProductMain({ product }: { product: Product }) {
         <Breadcrumbs
           className='px-4 lg:px-0'
           breadcrumbs={[
-            { label: 'Каталог', href: '/products' },
+            { label: 'Каталог', href: '/produktsiya' },
             {
               label: product.name,
-              href: `/products/${product.slug}`,
+              href: `/produktsiya/${product.slug}`,
               active: true,
             },
           ]}

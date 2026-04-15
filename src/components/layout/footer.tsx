@@ -23,7 +23,7 @@ export function Footer() {
             <div className='flex flex-col items-start justify-start gap-2'>
               <p className='typo-b3 text-left font-bold'>
                 Адрес: Беларусь, Гродненская область, Гродненский район,
-                Одельский с/с, д. Подлипки, стр. 7
+                Одельский сельсовет, деревня Подлипки, строение 7
               </p>
               {/* <p className='typo-b3 text-left font-bold'>
                 Телефон/факс: <a href='tel:+375152605277' className='hover:text-base-white transition-colors duration-200'>+375 152 605277</a>
@@ -40,7 +40,7 @@ export function Footer() {
               <ul className='flex flex-col items-start justify-start gap-2'>
                 <li>
                   <Link
-                    href='/products'
+                    href='/produktsiya'
                     className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
                   >
                     Продукция
@@ -48,7 +48,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href='/about'
+                    href='/o-kompanii'
                     className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
                   >
                     О компании
@@ -56,10 +56,18 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href='/contacts'
+                    href='/kontakty'
                     className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
                   >
                     Контакты
+                  </Link>
+                </li>
+                                <li>
+                  <Link
+                    href='/sertifikaty'
+                    className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
+                  >
+                    Сертификаты
                   </Link>
                 </li>
               </ul>
