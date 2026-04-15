@@ -113,7 +113,7 @@ export function CertificateCallbackForm() {
                   aria-invalid={Boolean(errors.name)}
                   placeholder='Ваше имя'
                   className={clsx(
-                    'base-input',
+                    'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                     errors.name && 'border-tertiary',
                   )}
                   {...register('name', {
@@ -141,7 +141,7 @@ export function CertificateCallbackForm() {
                   aria-invalid={Boolean(errors.phone)}
                   placeholder='Ваш телефон'
                   className={clsx(
-                    'base-input',
+                    'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                     errors.phone && 'border-tertiary',
                   )}
                   {...register('phone', {
@@ -172,7 +172,7 @@ export function CertificateCallbackForm() {
                 aria-invalid={Boolean(errors.email)}
                 placeholder='Ваш email'
                 className={clsx(
-                  'base-input',
+                  'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                   errors.email && 'border-tertiary',
                 )}
                 {...register('email', {
@@ -204,7 +204,7 @@ export function CertificateCallbackForm() {
                 aria-invalid={Boolean(errors.company)}
                 placeholder='Название вашей компании'
                 className={clsx(
-                  'base-input',
+                  'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                   errors.company && 'border-tertiary',
                 )}
                 {...register('company', {
@@ -231,7 +231,7 @@ export function CertificateCallbackForm() {
                 aria-invalid={Boolean(errors.message)}
                 placeholder='Какой документ вас интересует и&nbsp;какая информация нужна?'
                 className={clsx(
-                  'base-input',
+                  'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                   errors.message && 'border-tertiary',
                 )}
                 rows={4}
@@ -259,7 +259,7 @@ export function CertificateCallbackForm() {
               </p>
             ) : null}
             <BigButton
-              className='w-full bg-secondary'
+              className='w-full bg-secondary focus:shadow-[0_0_20px_5px_var(--color-secondary)]'
               type='submit'
               disabled={isSubmitting || isInvalidCooldown}
             >
