@@ -3,12 +3,12 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { useForm, SubmitHandler, SubmitErrorHandler } from 'react-hook-form';
-import { CallBackFormField } from '../../lib/definitions';
+import { CertificateCallBackFormField } from '../../lib/definitions';
 import { BigButton } from '@/components/ui/buttons';
-import { submitCallbackForm } from '@/app/kontakty/actions';
+import { submitCallbackForm } from '@/app/sertifikaty/actions';
 import clsx from 'clsx';
 
-export function CallbackForm() {
+export function CertificateCallbackForm() {
   const [serverError, setServerError] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isInvalidCooldown, setIsInvalidCooldown] = useState(false);
@@ -19,16 +19,17 @@ export function CallbackForm() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<CallBackFormField>({
+  } = useForm<CertificateCallBackFormField>({
     defaultValues: {
       name: '',
       email: '',
       phone: '',
+      company: '',
       message: '',
     },
   });
 
-  const onSubmit: SubmitHandler<CallBackFormField> = async (values) => {
+  const onSubmit: SubmitHandler<CertificateCallBackFormField> = async (values) => {
     setServerError(null);
 
     const response = await submitCallbackForm(values);
@@ -42,7 +43,7 @@ export function CallbackForm() {
     reset();
   };
 
-  const onInvalidSubmit: SubmitErrorHandler<CallBackFormField> = () => {
+  const onInvalidSubmit: SubmitErrorHandler<CertificateCallBackFormField> = () => {
     setIsInvalidCooldown(true);
     setInvalidSubmitAttempt((previous) => previous + 1);
   };
@@ -193,14 +194,42 @@ export function CallbackForm() {
             </div>
 
             <div className='w-full flex flex-col items-start justify-start'>
+              <label htmlFor='company' className='sr-only'>
+                Название вашей компании
+              </label>
+              <input
+                id='company'
+                type='text'
+                aria-describedby='company-error'
+                aria-invalid={Boolean(errors.company)}
+                placeholder='Название вашей компании'
+                className={clsx(
+                  'base-input',
+                  errors.company && 'border-tertiary',
+                )}
+                {...register('company', {
+                  required: 'Введите название компании',
+                })}
+              />
+              <p
+                id='company-error'
+                className='w-full typo-caption lg:typo-b2 text-tertiary h-8 lg:h-10 pt-2 uppercase'
+                aria-live='polite'
+              >
+                {''}
+                {errors.company?.message}
+              </p>
+            </div>
+
+            <div className='w-full flex flex-col items-start justify-start'>
               <label htmlFor='message' className='sr-only'>
-                Ваше сообщение
+                Какой документ вас интересует и&nbsp;какая информация нужна?
               </label>
               <textarea
                 id='message'
                 aria-describedby='message-error'
                 aria-invalid={Boolean(errors.message)}
-                placeholder='Ваше сообщение'
+                placeholder='Какой документ вас интересует и&nbsp;какая информация нужна?'
                 className={clsx(
                   'base-input',
                   errors.message && 'border-tertiary',
@@ -230,7 +259,7 @@ export function CallbackForm() {
               </p>
             ) : null}
             <BigButton
-              className='w-full'
+              className='w-full bg-secondary'
               type='submit'
               disabled={isSubmitting || isInvalidCooldown}
             >

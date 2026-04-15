@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Контакты | ПроффХим',
     description:
       'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
-    url: 'https://proffhim.by/contacts',
+    url: 'https://proffhim.by/kontakty',
     siteName: 'ПроффХим',
     locale: 'ru_RU',
     type: 'website',
@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function Contacts() {
   return (
-    <main className='flex flex-col items-center justify-center w-full'>
+    <main className='flex flex-col items-center justify-center w-full scroll-mt-22 lg:scroll-mt-32'>
       <Hero />
       <Form />
     </main>

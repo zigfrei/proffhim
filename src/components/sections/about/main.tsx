@@ -30,7 +30,7 @@ export default function AboutHero() {
         <div className='relative w-full h-full flex items-stretch justify-center grayscale'>
           <Image
             src='/about.png'
-            alt='About image'
+            alt='О компании ПроффХим'
             width={512}
             height={512}
             sizes='(min-width: 768px) 50vw, 100vw'

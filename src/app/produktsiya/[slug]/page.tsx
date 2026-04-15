@@ -35,7 +35,7 @@ export default async function ProductPage(props: PageProps) {
   if (!product) notFound();
 
   return (
-    <main className='flex flex-col items-center justify-center w-full'>
+    <main className='flex flex-col items-center justify-center w-full scroll-mt-22 lg:scroll-mt-32'>
       <ProductMain product={product} />
     </main>
   );

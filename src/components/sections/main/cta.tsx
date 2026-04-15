@@ -16,7 +16,7 @@ export default function CTA() {
         </div>
         <div className='self-stretch lg:bg-base-black flex items-center justify-center px-4'>
           <BigLinkButton
-            href='/contacts/#contact-us'
+            href='/kontakty/#obraschenie'
             className='mb-4 lg:mb-0 lg:!border-base-white lg:shadow-[8px_8px_0_0_var(--color-base-white)]! lg:hover:shadow-[7px_7px_0_0_var(--color-base-white)]! text-center  bg-secondary!'
           >
             Связаться с нами

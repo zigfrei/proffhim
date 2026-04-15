@@ -19,7 +19,7 @@ export default function Hero() {
             совершенства, четкая логистика и стабильное европейское качество.
           </p>
           <BigLinkButton
-            href='/contacts/#contact-us'
+            href='/kontakty/#obraschenie'
             className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center lg:self-start'
           >
             Связаться с нами

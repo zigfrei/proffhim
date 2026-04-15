@@ -5,6 +5,7 @@ import EEU from '@/assets/icons/documents/Emblem_of_the_Eurasian_Economic_Union.
 import SMK from '@/assets/icons/documents/smk.svg';
 import EAC from '@/assets/icons/documents/eac.svg';
 import TISI from '@/assets/icons/documents/tisi.svg';
+import Halal from '@/assets/icons/documents/halal.svg';
 
 export default function Documents() {
   return (
@@ -24,7 +25,7 @@ export default function Documents() {
               <EAC className='w-30 h-30' />
             </div>
             <div className='w-full flex items-center justify-center gap-4 p-4 base-frame'>
-            <TISI className='w-30 h-30' />
+            <Halal className='w-30 h-30' />
           </div>
         </div>
         <p className='w-full border-l-[5px] border-base-black pl-4 typo-body'>
@@ -33,7 +34,7 @@ export default function Documents() {
           цикл производства и оптовых поставок.
         </p>
         <BigLinkButton
-          href='/#'
+          href='/sertifikaty'
           className='group self-center flex items-center justify-center gap-2'
         >
           Перейти к документам
