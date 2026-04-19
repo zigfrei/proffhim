@@ -1,4 +1,5 @@
 import { SectionBlockSmall } from '@/components/ui/section';
+import { BigLinkButton } from '@/components/ui/links';
 import Image from 'next/image';
 import {
   LightBulbIcon,
@@ -27,7 +28,7 @@ export default function Model() {
               </p>
               <div className='w-full flex items-center justify-center lg:justify-start gap-2'>
                 <LightBulbIcon className='w-5 h-5 lg:h-6 lg:w-6 text-base-black [&>path]:stroke-[2]' />
-                <p className='typo-body uppercase text-base-black'>
+                <p className='typo-body uppercase text-base-black w-min min-[395px]:w-auto'>
                   Индивидуальная рецептура
                 </p>
               </div>
@@ -54,6 +55,12 @@ export default function Model() {
               sizes='(min-width: 768px) 50vw, 100vw'
               className='w-full h-auto object-cover base-frame'
             />
+            <BigLinkButton
+              href='/kontakty/#obraschenie'
+              className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center '
+            >
+              свой брэнд
+            </BigLinkButton>
           </div>
           <div className='w-full flex flex-col items-center justify-start gap-4 bg-base-black border-[4px] border-primary p-4 lg:p-6'>
             <h3 className='typo-h3 text-primary text-center'>
@@ -92,6 +99,12 @@ export default function Model() {
               sizes='(min-width: 768px) 50vw, 100vw'
               className='w-full h-auto object-cover base-frame border-primary! shadow-[5px_5px_0_0_var(--color-primary)]! mt-auto'
             />
+            <BigLinkButton
+              href='/kontakty/#obraschenie'
+              className='mt-auto mb-8 lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center self-center bg-base-black! text-primary! border-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '
+            >
+              готовое решение
+            </BigLinkButton>
           </div>
         </div>
       </div>

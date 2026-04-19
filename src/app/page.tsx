@@ -1,10 +1,10 @@
 import BeforeAndAfter from "@/components/sections/main/before-after";
 import CTA from "@/components/sections/main/cta";
 import FAQ from "@/components/sections/main/faq";
-import { faqItems } from "@/components/sections/main/faq-items";
+import { faqItems } from '@/lib/faq';
 import Hero from "@/components/sections/main/hero";
 import Numbers from "@/components/sections/main/numbers";
-import Partners from "@/components/sections/main/partners";
+// import Partners from "@/components/sections/main/partners";
 import Scope from "@/components/sections/main/scope";
 import Cards from "@/components/sections/main/cards";
 import Documents from "@/components/sections/main/documents";
