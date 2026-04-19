@@ -3,6 +3,9 @@ import Production from '@/components/sections/b2b/production';
 import Model from '@/components/sections/b2b/model';
 import HowWeWork from '@/components/sections/b2b/work';
 import FAQ from '@/components/sections/b2b/faq';
+import WhyWe from '@/components/sections/b2b/why';
+import CTA from '@/components/sections/b2b/cta';
+import { faqItemsB2B } from '@/lib/faq';
 
 export const metadata = {
   title:
@@ -38,13 +41,35 @@ export const metadata = {
 };
 
 export default function ContractManufacturing() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItemsB2B.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
   return (
-    <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
-      <Hero />
-      <Production />
-      <Model />
-      <HowWeWork />
-      <FAQ />
-    </main>
+    <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+      <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
+        <Hero />
+        <Production />
+        <Model />
+        <HowWeWork />
+        <WhyWe />
+        <FAQ />
+        <CTA />
+      </main>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import { SectionBlockSmall } from '@/components/ui/section';
 import FAQItem from '@/components/ui/faq-item';
-import { faqItemsB2B } from '@/components/sections/main/faq-items';
+import { faqItemsB2B } from '@/lib/faq';
 
 export default function FAQ() {
   return (
