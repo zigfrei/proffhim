@@ -120,10 +120,16 @@ export function Footer() {
           </div>
         </div>
         <div className='w-full h-[2px] bg-base-black my-6 lg:mt-16 lg:mb-8'></div>
-        <div className='w-full flex items-start lg:items-center justify-start gap-4'>
+        <div className='w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4'>
           <p className='typo-b3 lg:text-center font-bold'>
             © {new Date().getFullYear()} ООО «ПроффХим». Все права защищены.
           </p>
+          <Link
+            href='/politika-konfidencialnosti'
+            className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
+          >
+            Политика конфиденциальности
+          </Link>
         </div>
       </div>
     </footer>

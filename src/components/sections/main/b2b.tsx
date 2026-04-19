@@ -53,7 +53,7 @@ export default function B2B() {
             </div>
           </div>
           <LinkButton
-            href='/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv'
+            href='/kontakty/#obraschenie'
             className='group flex items-center justify-center gap-2 p-3! h-auto!'
           >
             Запросить коммерческое предложение
