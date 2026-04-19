@@ -4,7 +4,6 @@ import InstagramIcon from '@/assets/icons/instagram.svg';
 import VKIcon from '@/assets/icons/vkontakte.svg';
 
 export function Footer() {
-
   return (
     <footer className='w-full bg-primary border-t-[5px] border-base-black'>
       <div className='w-full px-4 py-6 lg:px-12 lg:py-16 max-w-[1440px] flex flex-col items-start justify-start mx-auto'>
@@ -29,8 +28,21 @@ export function Footer() {
                 Телефон/факс: <a href='tel:+375152605277' className='hover:text-base-white transition-colors duration-200'>+375 152 605277</a>
               </p> */}
               <p className='typo-b3 text-left font-bold'>
-                Выходные дни: <a href='tel:+375296729520' className='hover:text-base-white transition-colors duration-200'>+375 (29) 6729520</a>,
-                <br /> <a href='tel:+375291060587' className='hover:text-base-white transition-colors duration-200'>+375 (29) 1060587</a>
+                Телефоны:{' '}
+                <a
+                  href='tel:+375296729520'
+                  className='hover:text-base-white transition-colors duration-200'
+                >
+                  +375 (29) 6729520
+                </a>
+                ,
+                <br />{' '}
+                <a
+                  href='tel:+375291060587'
+                  className='hover:text-base-white transition-colors duration-200'
+                >
+                  +375 (29) 1060587
+                </a>
               </p>
             </div>
           </div>
@@ -38,6 +50,14 @@ export function Footer() {
             <p className='typo-h5'>Ссылки</p>
             <nav>
               <ul className='flex flex-col items-start justify-start gap-2'>
+                <li>
+                  <Link
+                    href='/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv'
+                    className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
+                  >
+                    Контрактное производство
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href='/produktsiya'
@@ -62,7 +82,7 @@ export function Footer() {
                     Контакты
                   </Link>
                 </li>
-                                <li>
+                <li>
                   <Link
                     href='/sertifikaty'
                     className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
@@ -75,28 +95,28 @@ export function Footer() {
           </div>
           <div className='w-full flex flex-col items-start justify-start gap-4'>
             <p className='typo-h5'>Социальные сети</p>
-              <ul className='flex items-center justify-center gap-2'>
-                <li>
-                  <a
-                    href='https://www.instagram.com/proffhim.by/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
-                  >
-                    <InstagramIcon className='w-6 h-6 inline-block text-white' />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href='https://vk.com/public182349785'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
-                  >
-                    <VKIcon className='w-6 h-6 inline-block text-white' />
-                  </a>
-                </li>
-              </ul>
+            <ul className='flex items-center justify-center gap-2'>
+              <li>
+                <a
+                  href='https://www.instagram.com/proffhim.by/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <InstagramIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://vk.com/public182349785'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <VKIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className='w-full h-[2px] bg-base-black my-6 lg:mt-16 lg:mb-8'></div>

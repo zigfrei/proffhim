@@ -18,11 +18,15 @@ const menuItems: MenuItem[] = [
     href: '/kontakty',
     label: 'Контакты',
   },
+  {
+    href: '/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
+    label: 'Контрактное\nпроизводство',
+  },
 ];
 
 export function Header() {
   return (
-    <header className='sticky top-0 z-50 w-full bg-main-background border-b-[4px] lg:border-b-[5px] border-base-black'>
+    <header className='fixed top-0 z-50 w-full bg-main-background border-b-[4px] lg:border-b-[5px] border-base-black'>
       <div className='w-full p-4 lg:px-12 lg:py-0 h-19 lg:h-24 max-w-[1440px] flex items-center justify-between mx-auto'>
         <Link href='/' aria-label='На главную' className='inline-block'>
           <Logo className='w-[195px] h-[44px] lg:w-[320px] lg:h-[72px] transition-transform duration-300 ease-out hover:scale-105 cursor-pointer' />

@@ -195,14 +195,14 @@ export function CertificateCallbackForm() {
 
             <div className='w-full flex flex-col items-start justify-start'>
               <label htmlFor='company' className='sr-only'>
-                Название вашей компании
+                Ваша организация
               </label>
               <input
                 id='company'
                 type='text'
                 aria-describedby='company-error'
                 aria-invalid={Boolean(errors.company)}
-                placeholder='Название вашей компании'
+                placeholder='Ваша организация'
                 className={clsx(
                   'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                   errors.company && 'border-tertiary',
@@ -234,7 +234,7 @@ export function CertificateCallbackForm() {
                   'base-input focus:shadow-[0_0_20px_5px_var(--color-secondary)]',
                   errors.message && 'border-tertiary',
                 )}
-                rows={4}
+                rows={5}
                 {...register('message', {
                   required: 'Введите сообщение',
                 })}
