@@ -35,7 +35,7 @@ export default function Hero() {
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Производство от 200 кг</p>
+                <p className='typo-h5'>Производство от 5 тонн</p>
               </li>
                             <li className='flex items-center gap-2'>
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
