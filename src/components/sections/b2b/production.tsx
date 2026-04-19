@@ -47,22 +47,24 @@ export default function Production() {
             <ul>
               <li className='flex items-center justify-start gap-2'>
                 <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
+                <p className='typo-b3 text-base-black'>для поверхностей</p>
+              </li>
+              <li className='flex items-center justify-start gap-2'>
+                <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
                 <p className='typo-b3 text-base-black'>
-                  для поверхностей
+                  для медицинских учреждений
                 </p>
               </li>
               <li className='flex items-center justify-start gap-2'>
                 <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
-                <p className='typo-b3 text-base-black'>для медицинских учреждений</p>
-              </li>
-              <li className='flex items-center justify-start gap-2'>
-                <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
-                <p className='typo-b3 text-base-black'>для пищевых производств</p>
+                <p className='typo-b3 text-base-black'>
+                  для пищевых производств
+                </p>
               </li>
             </ul>
           </div>
 
-                    <div className='w-full flex-1 flex flex-col self-stretch gap-2 base-frame p-4'>
+          <div className='w-full flex-1 flex flex-col self-stretch gap-2 base-frame p-4'>
             <Image
               src='/b2b/card3.png'
               alt=''
@@ -74,9 +76,7 @@ export default function Production() {
             <ul>
               <li className='flex items-center justify-start gap-2'>
                 <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
-                <p className='typo-b3 text-base-black'>
-                  CIP-мойка
-                </p>
+                <p className='typo-b3 text-base-black'>CIP-мойка</p>
               </li>
               <li className='flex items-center justify-start gap-2'>
                 <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
@@ -84,7 +84,9 @@ export default function Production() {
               </li>
               <li className='flex items-center justify-start gap-2'>
                 <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-black [&>path]:stroke-[2.5]' />
-                <p className='typo-b3 text-base-black'>средства для клининга и HoReCa</p>
+                <p className='typo-b3 text-base-black'>
+                  средства для клининга и HoReCa
+                </p>
               </li>
             </ul>
           </div>
