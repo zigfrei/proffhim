@@ -1,5 +1,4 @@
 import { SectionBlockSmall } from '@/components/ui/section';
-import Image from 'next/image';
 import { Icon } from '@iconify/react';
 
 export default function WhyWe() {
@@ -7,10 +6,6 @@ export default function WhyWe() {
     <SectionBlockSmall>
       <div className='w-full flex flex-col items-start justify-center gap-4 lg:gap-8 mb-8'>
         <h2 className='w-full text-center typo-h2'>Почему выбирают нас</h2>
-        <p className='w-full text-center typo-body'>
-          Мы обеспечиваем не только производство бытовой химии, но и полное
-          сопровождение продукции:
-        </p>
         <ul className='w-full flex-1 flex flex-col lg:flex-row items-stretch gap-4'>
           <li className='w-full flex-1 flex flex-col items-center self-stretch gap-2 base-frame p-4'>
             <Icon
