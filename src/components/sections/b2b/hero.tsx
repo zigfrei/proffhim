@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <SectionBlock wrapperClassName='p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[600px] bg-[url("/b2b/hero.png")] bg-black/50 bg-blend-multiply xl:bg-none xl:bg-transparent bg-cover bg-center bg-no-repeat'>
+    <SectionBlock wrapperClassName='p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[780px] bg-[url("/b2b/hero.png")] bg-black/50 bg-blend-multiply xl:bg-none xl:bg-transparent bg-cover bg-center bg-no-repeat'>
       <div className='w-full flex-1 flex items-start justify-center gap-16'>
         <div className='w-full h-full flex flex-col items-start justify-start gap-4'>
           {/* <p className='typo-b3 py-2 px-4 xl:p-0 bg-primary xl:bg-transparent text-base-black xl:text-secondary'>
