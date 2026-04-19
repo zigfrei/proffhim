@@ -27,7 +27,7 @@ export default function Hero() {
               +375 152 605277
             </a> */}
             <br />
-            Выходные дни:{' '}
+            Телефоны:{' '}
             <a
               href='tel:+375296729520'
               className='hover:text-primary transition-colors duration-200'
@@ -37,7 +37,7 @@ export default function Hero() {
             ,
             <br />{' '}
             <a
-              href='tel:+375296729521'
+              href='tel:+375291060587'
               className='hover:text-primary transition-colors duration-200'
             >
               +375 (29) 1060587

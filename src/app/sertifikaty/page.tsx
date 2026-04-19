@@ -34,7 +34,7 @@ export const metadata = {
 
 export default function Certificates() {
   return (
-    <main className='flex flex-col items-center justify-center w-full scroll-mt-22 lg:scroll-mt-32'>
+    <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
       <CertificateMain />
       <CertificateForm />
       {/* <CTA /> */}

@@ -36,7 +36,7 @@ async function sendTelegramMessage(data: CallbackData) {
   }
 
   const message = `
-📩 Запрос на получение сертификата:
+📄 Запрос на получение сертификата:
 Имя: ${data.name}
 Email: ${data.email}
 Телефон: ${data.phone}
