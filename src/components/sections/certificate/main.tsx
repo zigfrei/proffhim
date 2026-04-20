@@ -8,17 +8,17 @@ type DocumentItem = {
 };
 
 const documents: DocumentItem[] = [
-  { title: 'Свидетельство о государственной регистрации ПроффХим', imageUrl: '/certificates/SGR_proff.JPG' },
-  { title: 'Свидетельство о государственной регистрации ПроффХимПлюс', imageUrl: '/certificates/SGR_proff_plus.pdf' },
-  { title: 'Сертификат продукции собственного производства ПроффХим часть 1', imageUrl: '/certificates/SPSP_proff.pdf' },
-  { title: 'Сертификат продукции собственного производства ПроффХим часть 2', imageUrl: '/certificates/SPSP_proff_part2.pdf' },
-  { title: 'Сертификат продукции собственного производства ПроффХим часть 3', imageUrl: '/certificates/SPSP_proff_part3.pdf' },
-  { title: 'Сертификат продукции собственного производства ПроффХимПлюс', imageUrl: '/certificates/SPSP_proff_plus.pdf' },
+  { title: 'Свидетельство о государственной регистрации ПроффХим', imageUrl: '/certificates/svidetelstvo-gosudarstvennoj-registracii-proffhim.jpg' },
+  { title: 'Свидетельство о государственной регистрации ПроффХимПлюс', imageUrl: '/certificates/svidetelstvo-gosudarstvennoj-registracii-proffhim-plus.pdf' },
+  { title: 'Сертификат продукции собственного производства ПроффХим часть 1', imageUrl: '/certificates/sertifikat-sobstvennogo-proizvodstva-proffhim-chast-1.pdf' },
+  { title: 'Сертификат продукции собственного производства ПроффХим часть 2', imageUrl: '/certificates/sertifikat-sobstvennogo-proizvodstva-proffhim-chast-2.pdf' },
+  { title: 'Сертификат продукции собственного производства ПроффХим часть 3', imageUrl: '/certificates/sertifikat-sobstvennogo-proizvodstva-proffhim-chast-3.pdf' },
+  { title: 'Сертификат продукции собственного производства ПроффХимПлюс', imageUrl: '/certificates/sertifikat-sobstvennogo-proizvodstva-proffhim-plus.pdf' },
   {
     title: 'Сертификат соответствия СТБ ISO 9001-2015',
-    imageUrl: '/certificates/iso_certificate_9001.pdf',
+    imageUrl: '/certificates/sertifikat-sootvetstviya-iso-9001-2015.pdf',
   },
-  { title: 'Сертификат соответствия ФАС ПроффХимПлюс', imageUrl: '/certificates/FAS_proff_plus.pdf' },
+  { title: 'Сертификат соответствия ФАС ПроффХимПлюс', imageUrl: '/certificates/sertifikat-sootvetstviya-fas-proffhim-plus.pdf' },
 ];
 
 export default function CertificateMain() {

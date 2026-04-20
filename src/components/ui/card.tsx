@@ -1,12 +1,12 @@
 import clsx from 'clsx';
-import { LinkButton } from '@/components/ui/links';
 import Image from 'next/image';
 import type { ComponentPropsWithoutRef } from 'react';
 import styles from './card.module.css';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Product } from '@/features/catalog/products/config';
+import Link from 'next/link';
 
-type CardProps = ComponentPropsWithoutRef<'div'> & Product;
+type CardProps = Omit<ComponentPropsWithoutRef<'a'>, 'href'> & Product;
 
 export function Card({
   name,
@@ -14,18 +14,15 @@ export function Card({
   image,
   slug,
   className,
-  productType: _productType,
-  foamType: _foamType,
-  sanitationObjects: _sanitationObjects,
-  contaminationType: _contaminationType,
-  labelImage: _labelImage,
   ...rest
 }: CardProps) {
-  void [_productType, _foamType, _sanitationObjects, _contaminationType, _labelImage];
+  void [];
 
   return (
-    <div
+    <Link
       {...rest}
+      href={`/produktsiya/${slug}`}
+      aria-label={`Подробнее о ${name}`}
       className={clsx(
         'w-full h-full p-2 flex flex-col items-start base-frame gap-2',
         styles.card,
@@ -48,15 +45,14 @@ export function Card({
       </div>
       <div className='w-full flex-1 min-h-0 flex flex-col justify-start gap-2 mt-auto'>
         <h3 className='typo-h4'>{name}</h3>
-        <p className='typo-b2 line-clamp-3 font-regular mb-auto'>{description}</p>
+        <p className='typo-b2 line-clamp-3 font-regular mb-auto'>
+          {description}
+        </p>
       </div>
-      <LinkButton
-        href={`/produktsiya/${slug}`}
-        className='group w-full items-center justify-center gap-2 bg-base-black! text-primary! shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '
-      >
+      <div aria-hidden="true" className='flex h-13.5 px-6 py-2 items-center typo-h5 base-frame lg:base-frame-interactive group w-full items-center justify-center gap-2 bg-base-black text-primary shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '>
         Подробнее
         <ArrowRightIcon className='h-6 w-6 transition-transform duration-300 ease-out group-hover:translate-x-1 [&>path]:stroke-[2]' />
-      </LinkButton>
-    </div>
+      </div>
+    </Link>
   );
 }

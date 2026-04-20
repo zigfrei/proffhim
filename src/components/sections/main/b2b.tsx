@@ -36,7 +36,7 @@ export default function B2B() {
               </p>
             </div>
 
-            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-base-white'>
+            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-primary lg:bg-base-white'>
               <Shipping className='h-16 w-16' />
               <p className='typo-h5'>Собственная логистика</p>
               <p className='typo-b3'>
@@ -44,7 +44,7 @@ export default function B2B() {
               </p>
             </div>
 
-            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-primary'>
+            <div className='p-2 base-frame flex flex-col items-start gap-2 bg-base-white lg:bg-primary'>
               <Support className='h-16 w-16' />
               <p className='typo-h5'>Поддержка клиентов</p>
               <p className='typo-b3'>
