@@ -14,19 +14,13 @@ export default function Hero() {
           </h2>
 
           <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
-            Адрес: Республика Беларусь, Гродненская область, Гродненский район,
+            Адрес: 231731, Республика Беларусь, Гродненская область, Гродненский район,
             Одельский сельсовет, деревня Подлипки, строение&nbsp;7
           </p>
-
           <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
-            {/* Телефон/факс:{' '}
-            <a
-              href='tel:+375152605277'
-              className='hover:text-primary transition-colors duration-200'
-            >
-              +375 152 605277
-            </a> */}
-            <br />
+            УНП: 591506904
+          </p>
+          <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
             Телефоны:{' '}
             <a
               href='tel:+375296729520'
@@ -34,8 +28,7 @@ export default function Hero() {
             >
               +375 (29) 6729520
             </a>
-            ,
-            <br />{' '}
+            ,{' '}
             <a
               href='tel:+375291060587'
               className='hover:text-primary transition-colors duration-200'
@@ -43,6 +36,8 @@ export default function Hero() {
               +375 (29) 1060587
             </a>
           </p>
+
+
 
           <ul className='w-full flex items-center justify-start base-frame-big p-4 lg:px-8 lg:py-6 gap-2'>
             <li>

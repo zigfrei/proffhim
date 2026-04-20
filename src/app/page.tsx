@@ -1,14 +1,14 @@
-import BeforeAndAfter from "@/components/sections/main/before-after";
-import CTA from "@/components/sections/main/cta";
-import FAQ from "@/components/sections/main/faq";
+import BeforeAndAfter from '@/components/sections/main/before-after';
+import CTA from '@/components/sections/main/cta';
+import FAQ from '@/components/sections/main/faq';
 import { faqItems } from '@/lib/faq';
-import Hero from "@/components/sections/main/hero";
-import Numbers from "@/components/sections/main/numbers";
+import Hero from '@/components/sections/main/hero';
+import Numbers from '@/components/sections/main/numbers';
 // import Partners from "@/components/sections/main/partners";
-import Scope from "@/components/sections/main/scope";
-import Cards from "@/components/sections/main/cards";
-import Documents from "@/components/sections/main/documents";
-import B2B from "@/components/sections/main/b2b";
+import Scope from '@/components/sections/main/scope';
+import Cards from '@/components/sections/main/cards';
+import Documents from '@/components/sections/main/documents';
+import B2B from '@/components/sections/main/b2b';
 
 export default function Home() {
   const faqSchema = {
@@ -24,15 +24,59 @@ export default function Home() {
     })),
   };
 
+  const OrganizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Общество с ограниченной ответственностью "ПроффХим"',
+    alternateName: 'ПроффХим, Профф',
+    url: 'https://proffhim.by',
+    logo: 'https://proffhim.by/logo.png',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+375296729520',
+        email: 'proffhimsale@mail.ru',
+        contactType: 'sales',
+        areaServed: ['BY', 'RU'],
+        availableLanguage: 'Russian',
+      },
+    ],
+    sameAs: [
+      'https://www.instagram.com/proffhim.by/',
+      'https://vk.com/public182349785',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'д. Подлипки, строение 7',
+      addressLocality: 'Гродненский район, Одельский сельсовет',
+      addressRegion: 'Гродненская область',
+      postalCode: '231731',
+      addressCountry: 'BY',
+    },
+    areaServed: [
+      {
+        '@type': 'Country',
+        name: 'BY',
+      },
+      {
+        '@type': 'Country',
+        name: 'RU',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
+          __html: JSON.stringify([faqSchema, OrganizationSchema]).replace(
+            /</g,
+            '\\u003c',
+          ),
         }}
       />
-      <main className="flex flex-col items-center justify-center w-full pt-19 lg:pt-24">
+      <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
         <Hero />
         <Numbers />
         <Scope />
