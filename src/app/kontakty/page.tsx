@@ -33,7 +33,7 @@ export const metadata = {
 
 const productionBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProductionBusiness',
+  '@type': 'LocalBusiness',
   name: 'Общество с ограниченной ответственностью "ПроффХим"',
   address: {
     '@type': 'PostalAddress',
@@ -49,7 +49,12 @@ const productionBusinessSchema = {
     longitude: '23.709074',
   },
   telephone: '+375296729520',
-  openingHours: 'Mo-Fr 08:30-18:00',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:30',
+    closes: '18:00',
+  },
   email: 'proffhimsale@mail.ru',
 
   url: 'https://proffhim.by/kontakty',
@@ -67,7 +72,7 @@ const productionBusinessSchema = {
   vatID: '591506904',
   taxID: '591506904',
   description:
-    'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
+    'Производство моющих и дезинфицирующих средств. Поставки по Беларуси и России.',
   contactPoint: [
     {
       '@type': 'ContactPoint',
