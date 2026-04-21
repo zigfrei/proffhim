@@ -8,6 +8,7 @@ import { pickRandomProducts } from '@/features/cards/pick-random';
 
 export default async function NotFound() {
   const products: Product[] = pickRandomProducts(CATALOG_PRODUCTS, 4);
+
   return (
     <SectionBlock wrapperClassName='px-0! lg:px-12!'>
       <div className='flex flex-col w-full items-start justify-center gap-4 lg:gap-8'>
@@ -16,8 +17,8 @@ export default async function NotFound() {
           breadcrumbs={[
             { label: 'Каталог', href: '/produktsiya' },
             {
-              label: `Товар не найден`,
-              href: `/produktsiya/unknown`,
+              label: 'Товар не найден',
+              href: '/produktsiya/unknown/unknown',
               active: true,
             },
           ]}

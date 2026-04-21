@@ -1,19 +1,27 @@
-import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
 import ProductMain from '@/components/sections/product/main';
+import { getProductTypeBySlug, isProductInType } from '@/features/catalog/filters';
+import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
 
-type PageProps = { params: Promise<{ slug: string }> };
+type PageProps = {
+  params: Promise<{ typeSlug: string; slug: string }>;
+};
 
 function getProductBySlug(slug: string) {
-  return CATALOG_PRODUCTS.find((p) => p.slug === slug);
+  return CATALOG_PRODUCTS.find((product) => product.slug === slug);
 }
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { typeSlug, slug } = await props.params;
+  const selectedProductType = getProductTypeBySlug(typeSlug);
   const product = getProductBySlug(slug);
 
-  if (!product) {
+  if (
+    !selectedProductType ||
+    !product ||
+    !isProductInType(product, selectedProductType)
+  ) {
     return {
       title: 'Товар не найден | ПроффХим',
       description: 'Запрошенный товар не найден в каталоге ПроффХим.',
@@ -29,10 +37,17 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 }
 
 export default async function ProductPage(props: PageProps) {
-  const { slug } = await props.params;
+  const { typeSlug, slug } = await props.params;
+  const selectedProductType = getProductTypeBySlug(typeSlug);
   const product = getProductBySlug(slug);
 
-  if (!product) notFound();
+  if (
+    !selectedProductType ||
+    !product ||
+    !isProductInType(product, selectedProductType)
+  ) {
+    notFound();
+  }
 
   return (
     <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>

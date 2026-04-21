@@ -5,21 +5,29 @@ import styles from './card.module.css';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Product } from '@/features/catalog/products/config';
 import Link from 'next/link';
+import { getProductHref } from '@/features/catalog/filters';
 
 type CardProps = Omit<ComponentPropsWithoutRef<'a'>, 'href'> & Product;
 
 export function Card({
+  id,
   name,
   description,
   image,
   slug,
+  label,
+  labelImage,
+  productType,
+  foamType,
+  sanitationObjects,
+  contaminationType,
   className,
   ...rest
 }: CardProps) {
   return (
     <Link
       {...rest}
-      href={`/produktsiya/${slug}`}
+      href={getProductHref({ slug, productType })}
       aria-label={`Подробнее о ${name}`}
       className={clsx(
         'w-full h-full p-2 flex flex-col items-start base-frame gap-2',

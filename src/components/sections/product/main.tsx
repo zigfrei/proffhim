@@ -9,12 +9,20 @@ import { Card } from '@/components/ui/card';
 import { Product } from '@/features/catalog/products/config';
 import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
 import { pickRandomProducts } from '@/features/cards/pick-random';
+import {
+  getCatalogFilterOptionByProductType,
+  getCatalogHref,
+  getProductHref,
+  getProductTypeSlug,
+} from '@/features/catalog/filters';
 
 export default function ProductMain({ product }: { product: Product }) {
   const products: Product[] = pickRandomProducts(
     CATALOG_PRODUCTS.filter((item) => item.id !== product.id),
     4,
   );
+  const productTypeSlug = getProductTypeSlug(product.productType);
+  const productTypeOption = getCatalogFilterOptionByProductType(product.productType);
 
   return (
     <SectionBlock wrapperClassName='px-0! lg:px-12!'>
@@ -22,10 +30,21 @@ export default function ProductMain({ product }: { product: Product }) {
         <Breadcrumbs
           className='px-4 lg:px-0'
           breadcrumbs={[
-            { label: 'Каталог', href: '/produktsiya' },
+            {
+              label: 'Каталог',
+              href: getCatalogHref(),
+            },
+            ...(productTypeOption && productTypeSlug
+              ? [
+                  {
+                    label: productTypeOption.label,
+                    href: getCatalogHref(productTypeSlug),
+                  },
+                ]
+              : []),
             {
               label: product.name,
-              href: `/produktsiya/${product.slug}`,
+              href: getProductHref(product),
               active: true,
             },
           ]}

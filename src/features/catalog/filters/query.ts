@@ -1,61 +1,60 @@
-import { CATALOG_FILTER_GROUPS, type CatalogFilterGroup } from './config';
+import type { Product, ProductTypeKey } from '@/features/catalog/products/config';
+import {
+  CATALOG_PRODUCT_TYPE_OPTIONS,
+  type CatalogFilterOption,
+} from './config';
 
-export type CatalogFilterState = Record<string, Set<string>>;
+const CATALOG_BASE_PATH = '/produktsiya';
 
-type SearchParamsLike = Pick<URLSearchParams, 'getAll' | 'toString'>;
-
-function createInitialState(groups: CatalogFilterGroup[]) {
-  const state: CatalogFilterState = {};
-
-  for (const group of groups) {
-    state[group.key] = new Set<string>();
-  }
-
-  return state;
+export function getCatalogFilterOptionBySlug(slug: string) {
+  return CATALOG_PRODUCT_TYPE_OPTIONS.find((option) => option.slug === slug);
 }
 
-export function parseFiltersFromSearchParams(
-  searchParams: SearchParamsLike,
-  groups: CatalogFilterGroup[] = CATALOG_FILTER_GROUPS
-): CatalogFilterState {
-  const state = createInitialState(groups);
-
-  for (const group of groups) {
-    const allowedValues = new Set(group.options.map((option) => option.value));
-    const rawValues = searchParams
-      .getAll(group.key)
-      .flatMap((value) => value.split(','))
-      .map((value) => value.trim())
-      .filter(Boolean);
-
-    for (const value of rawValues) {
-      if (allowedValues.has(value)) {
-        state[group.key].add(value);
-      }
-    }
-  }
-
-  return state;
-}
-
-export function buildSearchParamsFromFilters(
-  searchParams: SearchParamsLike,
-  selectedFilters: CatalogFilterState,
-  groups: CatalogFilterGroup[] = CATALOG_FILTER_GROUPS
+export function getCatalogFilterOptionByProductType(
+  productType: ProductTypeKey | null | undefined
 ) {
-  const params = new URLSearchParams(searchParams.toString());
+  if (!productType) return null;
 
-  for (const group of groups) {
-    params.delete(group.key);
+  return (
+    CATALOG_PRODUCT_TYPE_OPTIONS.find((option) => option.value === productType) ??
+    null
+  );
+}
 
-    const selectedSet = selectedFilters[group.key] ?? new Set<string>();
+export function getProductTypeBySlug(slug: string): ProductTypeKey | null {
+  return getCatalogFilterOptionBySlug(slug)?.value ?? null;
+}
 
-    for (const option of group.options) {
-      if (selectedSet.has(option.value)) {
-        params.append(group.key, option.value);
-      }
-    }
+export function getProductTypeSlug(
+  productType: ProductTypeKey | null | undefined
+): string | null {
+  if (!productType) return null;
+
+  return (
+    CATALOG_PRODUCT_TYPE_OPTIONS.find((option) => option.value === productType)
+      ?.slug ?? null
+  );
+}
+
+export function getCatalogHref(typeSlug?: string | null) {
+  return typeSlug ? `${CATALOG_BASE_PATH}/${typeSlug}` : CATALOG_BASE_PATH;
+}
+
+export function getProductHref(product: Pick<Product, 'slug' | 'productType'>) {
+  const typeSlug = getProductTypeSlug(product.productType);
+
+  if (!typeSlug) {
+    return `${CATALOG_BASE_PATH}/${product.slug}`;
   }
 
-  return params;
+  return `${CATALOG_BASE_PATH}/${typeSlug}/${product.slug}`;
+}
+
+export function isProductInType(
+  product: Pick<Product, 'productType'>,
+  productType: ProductTypeKey | null
+) {
+  if (!productType) return true;
+
+  return product.productType === productType;
 }

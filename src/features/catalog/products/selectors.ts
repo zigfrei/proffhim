@@ -1,29 +1,12 @@
-import type { CatalogFilterState } from '@/features/catalog/filters';
+import type { ProductTypeKey } from './config';
 
-type Accessors<T> = Record<string, (item: T) => string | string[] | undefined>;
-
-export function filterBySelected<T>(
+export function filterByProductType<T extends { productType?: ProductTypeKey }>(
   items: T[],
-  selected: CatalogFilterState,
-  accessors: Accessors<T>
+  selectedProductType: ProductTypeKey | null
 ) {
-  return items.filter((item) => {
-    return Object.entries(selected).every(([filterKey, selectedValues]) => {
-      if (!selectedValues || selectedValues.size === 0) return true;
+  if (!selectedProductType) return items;
 
-      const accessor = accessors[filterKey];
-      if (!accessor) return true;
-
-      const raw = accessor(item);
-      if (!raw) return false;
-
-      if (Array.isArray(raw)) {
-        return raw.some((v) => selectedValues.has(v));
-      }
-
-      return selectedValues.has(raw);
-    });
-  });
+  return items.filter((item) => item.productType === selectedProductType);
 }
 
 export function paginate<T>(items: T[], page: number, pageSize: number) {

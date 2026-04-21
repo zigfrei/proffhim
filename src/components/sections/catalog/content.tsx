@@ -2,32 +2,32 @@
 
 import { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { parseFiltersFromSearchParams } from '@/features/catalog/filters';
 import { CATALOG_PRODUCTS } from '@/features/catalog/products/config';
 import {
-  filterBySelected,
+  filterByProductType,
   paginate,
 } from '@/features/catalog/products/selectors';
 import CatalogPagination from '@/components/ui/pagination';
 import { Card } from '@/components/ui/card';
 import { motion, AnimatePresence } from 'motion/react';
+import type { ProductTypeKey } from '@/features/catalog/products/config';
 
 const PAGE_SIZE = 6;
 
-export default function CatalogContent() {
+type CatalogContentProps = {
+  selectedProductType?: ProductTypeKey | null;
+};
+
+export default function CatalogContent({
+  selectedProductType = null,
+}: CatalogContentProps) {
   const searchParams = useSearchParams();
-  const selected = parseFiltersFromSearchParams(searchParams);
   const page = Number(searchParams.get('page') ?? '1');
   const listKey = searchParams.toString() || `page-${page}`;
 
   const filtered = useMemo(
-    () =>
-      filterBySelected(CATALOG_PRODUCTS, selected, {
-        // industry: (p) => p.industry,
-        'product-type': (p) => p.productType,
-        // purpose: (p) => p.purpose, // просто добавишь новую группу и accessor
-      }),
-    [selected],
+    () => filterByProductType(CATALOG_PRODUCTS, selectedProductType),
+    [selectedProductType],
   );
 
   const { pageItems, totalPages, currentPage } = useMemo(
@@ -58,7 +58,7 @@ export default function CatalogContent() {
 
             return (
               <li key={product.id} className='card-wrapper'>
-                <Card {...cardProps} />
+                <Card {...cardProps} productType={product.productType} />
               </li>
             );
           })}

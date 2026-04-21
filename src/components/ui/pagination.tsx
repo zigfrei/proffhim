@@ -1,7 +1,8 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { useMemo } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 type CatalogPaginationProps = {
   currentPage: number;
@@ -35,7 +36,6 @@ export default function CatalogPagination({
   currentPage,
   totalPages,
 }: CatalogPaginationProps) {
-  const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -44,25 +44,19 @@ export default function CatalogPagination({
     [currentPage, totalPages],
   );
 
-  const goToPage = useCallback(
-    (page: number) => {
-      if (page < 1 || page > totalPages || page === currentPage) return;
+  const buildPageHref = (page: number) => {
+    const params = new URLSearchParams(searchParams.toString());
 
-      const params = new URLSearchParams(searchParams.toString());
+    if (page === 1) {
+      params.delete('page');
+    } else {
+      params.set('page', String(page));
+    }
 
-      if (page === 1) {
-        params.delete('page');
-      } else {
-        params.set('page', String(page));
-      }
+    const query = params.toString();
 
-      const query = params.toString();
-      router.replace(query ? `${pathname}?${query}` : pathname, {
-        scroll: true,
-      });
-    },
-    [currentPage, pathname, router, searchParams, totalPages],
-  );
+    return query ? `${pathname}?${query}` : pathname;
+  };
 
   if (totalPages <= 1) return null;
 
@@ -72,14 +66,12 @@ export default function CatalogPagination({
       aria-label='Пагинация каталога'
     >
       {currentPage > 1 && (
-        <button
-          type='button'
+        <Link
+          href={buildPageHref(currentPage - 1)}
           className='typo-h4 bg-primary base-frame lg:base-frame-interactive cursor-pointer px-3 py-1 disabled:opacity-50'
-          onClick={() => goToPage(currentPage - 1)}
-          disabled={currentPage <= 1}
         >
           Назад
-        </button>
+        </Link>
       )}
 
       <div className='flex items-center gap-4'>
@@ -89,30 +81,27 @@ export default function CatalogPagination({
               …
             </span>
           ) : (
-            <button
+            <Link
               key={item}
-              type='button'
+              href={buildPageHref(item)}
               className={`typo-h4 base-frame lg:base-frame-interactive cursor-pointer px-3 py-1 ${
                 item === currentPage ? 'bg-primary' : ''
               }`}
-              onClick={() => goToPage(item)}
               aria-current={item === currentPage ? 'page' : undefined}
             >
               {item}
-            </button>
+            </Link>
           ),
         )}
       </div>
 
       {currentPage < totalPages && (
-        <button
-          type='button'
+        <Link
+          href={buildPageHref(currentPage + 1)}
           className='typo-h4 bg-primary base-frame lg:base-frame-interactive cursor-pointer px-3 py-1 disabled:opacity-50'
-          onClick={() => goToPage(currentPage + 1)}
-          disabled={currentPage >= totalPages}
         >
           Вперёд
-        </button>
+        </Link>
       )}
     </nav>
   );
