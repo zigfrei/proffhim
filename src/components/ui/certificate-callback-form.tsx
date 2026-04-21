@@ -7,6 +7,8 @@ import { CertificateCallBackFormField } from '../../lib/definitions';
 import { BigButton } from '@/components/ui/buttons';
 import { submitCallbackForm } from '@/app/sertifikaty/actions';
 import clsx from 'clsx';
+import Checkbox from '@/components/ui/checkbox';
+import Link from 'next/link';
 
 export function CertificateCallbackForm() {
   const [serverError, setServerError] = useState<string | null>(null);
@@ -25,6 +27,7 @@ export function CertificateCallbackForm() {
       email: '',
       phone: '',
       company: '',
+      policyAgreed: false,
       message: '',
     },
   });
@@ -248,6 +251,41 @@ export function CertificateCallbackForm() {
                 {errors.message?.message}
               </p>
             </div>
+
+            <div className='w-full flex flex-col items-start justify-start'>
+              <Checkbox
+                id='policyAgreed'
+                aria-describedby='policyAgreed-error'
+                aria-invalid={Boolean(errors.policyAgreed)}
+                {...register('policyAgreed', {
+                  required:
+                    'Необходимо ваше согласие с политикой конфиденциальности',
+                })}
+                className='w-full'
+                labelClassName='typo-b3!'
+              >
+                Я ознакомлен(а) с{' '}
+                <Link
+                  href='/politika-konfidencialnosti'
+                  target='_blank'
+                  className='underline'
+                >
+                  Политикой в отношении обработки персональных данных
+                </Link>{' '}
+                и даю согласие ООО «ПроффХим» на обработку моих персональных
+                данных, включая их передачу в мессенджер Telegram, в целях
+                рассмотрения моего обращения.
+              </Checkbox>
+              <p
+                id='policyAgreed-error'
+                className='w-full typo-caption lg:typo-b2 text-tertiary lg:h-10 pt-2 uppercase'
+                aria-live='polite'
+              >
+                {''}
+                {errors.policyAgreed?.message}
+              </p>
+            </div>
+
             {serverError ? (
               <p
                 className='w-full typo-caption lg:typo-b2 text-tertiary h-8 lg:h-10 pt-2 uppercase'

@@ -18,11 +18,22 @@ export default function Cards() {
         <h2 className='typo-h2 px-4 lg:px-0'>Продукция</h2>
 
         <ul className='px-4 lg:px-0 w-full grid grid-flow-col auto-cols-[minmax(280px,85%)] gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-4 lg:overflow-visible'>
-          {products.map((product) => (
-            <li key={product.id} className='card-wrapper'>
-              <Card {...product} />
-            </li>
-          ))}
+          {products.map((product) => {
+            const {
+              productType,
+              foamType,
+              sanitationObjects,
+              contaminationType,
+              labelImage,
+              ...cardProps
+            } = product;
+
+            return (
+              <li key={product.id} className='card-wrapper'>
+                <Card {...cardProps} />
+              </li>
+            );
+          })}
         </ul>
 
         <BigLinkButton href='/produktsiya' className='self-center'>

@@ -21,7 +21,7 @@ export interface Product {
   description?: string;
   image: string;
   slug: string;
-  labelImage: string;
+  labelImage?: string;
   label?: string;
   productType?: ProductTypeKey;
   foamType?: FoamTypeKey;

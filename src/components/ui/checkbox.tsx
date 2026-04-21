@@ -1,15 +1,16 @@
-
 import { CheckIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useId } from 'react';
 
 type CheckboxProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> & {
   label?: React.ReactNode;
+  children?: React.ReactNode;
   labelClassName?: string;
 };
 
 export default function Checkbox({
   label,
+  children,
   className,
   labelClassName,
   id,
@@ -17,12 +18,13 @@ export default function Checkbox({
 }: CheckboxProps) {
   const generatedId = useId();
   const checkboxId = id ?? generatedId;
+  const labelContent = children ?? label;
 
   return (
-    <label htmlFor={checkboxId} className={clsx('group flex items-start gap-2 cursor-pointer', className)}> 
+    <label htmlFor={checkboxId} className={clsx('group flex items-start gap-2 cursor-pointer', className)}>
       <input
         id={checkboxId}
-        type='checkbox' 
+        type='checkbox'
         className='peer sr-only'
         {...rest}
       />
@@ -31,8 +33,8 @@ export default function Checkbox({
         <CheckIcon className='w-4 h-4 text-base-black opacity-0 group-has-[:checked]:opacity-100 transition-opacity' />
       </span>
 
-      {label ? (
-        <span className={clsx('typo-b2 uppercase font-bold', labelClassName)}>{label}</span>
+      {labelContent ? (
+        <span className={clsx('typo-b2 uppercase font-bold', labelClassName)}>{labelContent}</span>
       ) : null}
     </label>
   );
