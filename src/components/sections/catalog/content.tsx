@@ -46,11 +46,22 @@ export default function CatalogContent() {
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className='grid grid-cols-1 lg:grid-cols-3 gap-4 auto-cols-[minmax(280px,85%)]'
         >
-          {pageItems.map((item) => (
-            <li key={item.id} className='card-wrapper'>
-              <Card {...item} />
-            </li>
-          ))}
+          {pageItems.map((product) => {
+            const {
+              productType,
+              foamType,
+              sanitationObjects,
+              contaminationType,
+              labelImage,
+              ...cardProps
+            } = product;
+
+            return (
+              <li key={product.id} className='card-wrapper'>
+                <Card {...cardProps} />
+              </li>
+            );
+          })}
         </motion.ul>
       </AnimatePresence>
       <CatalogPagination currentPage={currentPage} totalPages={totalPages} />
