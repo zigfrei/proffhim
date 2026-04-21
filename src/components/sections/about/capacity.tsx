@@ -1,7 +1,4 @@
 import { SectionBlockSmall } from '@/components/ui/section';
-// import QualityIcon from '@/assets/icons/about/quality.svg';
-// import InnovationIcon from '@/assets/icons/about/innovation.svg';
-// import EcoIcon from '@/assets/icons/about/ecology.svg';
 
 export default function Capacity() {
   return (
@@ -29,10 +26,10 @@ export default function Capacity() {
 
           <div className='w-full flex flex-col items-start gap-2'>
             <p className='typo-h5 text-base-black'>
-              Собстванные лаборатории контроля качества
+              Собственная лаборатория контроля качества
             </p>
             <p className='typo-b2 text-base-black'>
-              Наши лаборатории оснащены современным оборудованием для контроля
+              Наша лаборатория оснащена современным оборудованием для контроля
               качества, что гарантирует соответствие нашей продукции самым
               высоким стандартам.
             </p>
@@ -40,7 +37,7 @@ export default function Capacity() {
 
           <div className='w-full flex flex-col items-start gap-2'>
             <p className='typo-h5 text-base-black'>
-              Высокотехнологические процессы производства
+              Высокотех&shy;нологические процессы производства
             </p>
             <p className='typo-b2 text-base-black'>
               Мы используем передовые технологии и процессы производства, что
