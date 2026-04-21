@@ -50,17 +50,19 @@ export default function ProductMain({ product }: { product: Product }) {
           </div>
 
           <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-4'>
-            <Link
-              href={product.labelImage}
-              target='_blank'
-              className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame lg:base-frame-interactive p-4 bg-primary'
-            >
-              <MagnifyingGlassIcon
-                className='h-6 w-6 [&>path]:stroke-[2]'
-                aria-hidden='true'
-              />{' '}
-              Увеличить этикетку
-            </Link>
+            {product.labelImage && (
+              <Link
+                href={product.labelImage}
+                target='_blank'
+                className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame lg:base-frame-interactive p-4 bg-primary'
+              >
+                <MagnifyingGlassIcon
+                  className='h-6 w-6 [&>path]:stroke-[2]'
+                  aria-hidden='true'
+                />{' '}
+                Увеличить этикетку
+              </Link>
+            )}
             {product.label && (
               <div className='w-full max-w-[500px] lg:max-w-none flex items-center justify-center gap-2 typo-h5 base-frame p-4'>
                 {product.label}
