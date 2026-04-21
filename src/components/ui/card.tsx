@@ -16,8 +16,6 @@ export function Card({
   className,
   ...rest
 }: CardProps) {
-  void [];
-
   return (
     <Link
       {...rest}
