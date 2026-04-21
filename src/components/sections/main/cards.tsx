@@ -30,7 +30,7 @@ export default function Cards() {
 
             return (
               <li key={product.id} className='card-wrapper'>
-                <Card {...cardProps} />
+                <Card {...cardProps} productType={product.productType} />
               </li>
             );
           })}

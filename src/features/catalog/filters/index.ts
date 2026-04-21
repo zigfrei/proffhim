@@ -4,7 +4,12 @@ export type {
   CatalogFilterOption,
 } from './config';
 export {
-  buildSearchParamsFromFilters,
-  parseFiltersFromSearchParams,
+  getCatalogFilterOptionByProductType,
+  getCatalogFilterOptionBySlug,
+  getCatalogHref,
+  getProductHref,
+  getProductTypeBySlug,
+  getProductTypeSlug,
+  isProductInType,
 } from './query';
-export type { CatalogFilterState } from './query';
+export { CATALOG_PRODUCT_TYPE_OPTIONS } from './config';
