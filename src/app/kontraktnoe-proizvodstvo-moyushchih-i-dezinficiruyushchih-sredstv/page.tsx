@@ -11,12 +11,12 @@ export const metadata = {
   title:
     'Контрактное производство моющих и дезинфицирующих средств под брендом (СТМ, Private Label) | ПроффХим',
   description:
-    'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 200 кг. Работаем с клинингом, HoReCa и дистрибьюторами.',
+    'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 5 тонн. Работаем с клинингом, HoReCa и дистрибьюторами.',
   openGraph: {
     title:
       'Контрактное производство моющих и дезинфицирующих средств под брендом (СТМ, Private Label) | ПроффХим',
     description:
-      'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 200 кг. Работаем с клинингом, HoReCa и дистрибьюторами.',
+      'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 5 тонн. Работаем с клинингом, HoReCa и дистрибьюторами.',
     url: 'https://proffhim.by/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
     siteName: 'ПроффХим',
     locale: 'ru_RU',
@@ -35,12 +35,42 @@ export const metadata = {
     title:
       'Контрактное производство моющих и дезинфицирующих средств под брендом (СТМ, Private Label) | ПроффХим',
     description:
-      'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 200 кг. Работаем с клинингом, HoReCa и дистрибьюторами.',
+      'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 5 тонн. Работаем с клинингом, HoReCa и дистрибьюторами.',
     images: ['/twitter-image.png'],
   },
 };
 
 export default function ContractManufacturing() {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Контрактное производство моющих и дезинфицирующих средств',
+    description:
+      'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 5 тонн. Работаем с клинингом, HoReCa и дистрибьюторами.',
+    serviceType:
+      'Контрактное производство моющих и дезинфицирующих средств под брендом (СТМ, Private Label)',
+    provider: {
+      '@type': 'Organization',
+      name: 'ПроффХим',
+      url: 'https://proffhim.by',
+    },
+    areaServed: [
+      {
+        '@type': 'Country',
+        name: 'Беларусь',
+      },
+      {
+        '@type': 'Country',
+        name: 'Россия',
+      },
+      {
+        '@type': 'Country',
+        name: 'Казахстан',
+      },
+    ],
+    url: 'https://proffhim.by/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
+  };
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -58,7 +88,10 @@ export default function ContractManufacturing() {
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
+          __html: JSON.stringify([faqSchema, serviceSchema]).replace(
+            /</g,
+            '\\u003c',
+          ),
         }}
       />
       <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>

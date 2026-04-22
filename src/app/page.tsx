@@ -62,6 +62,10 @@ export default function Home() {
         '@type': 'Country',
         name: 'RU',
       },
+      {
+        '@type': 'Country',
+        name: 'KZ',
+      },
     ],
   };
 

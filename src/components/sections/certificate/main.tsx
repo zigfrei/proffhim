@@ -25,9 +25,9 @@ export default function CertificateMain() {
   return (
     <SectionBlock>
       <div className='flex flex-col w-full items-center lg:items-start justify-center gap-4 lg:gap-8'>
-        <h2 className='w-full max-[420px]:text-lg text-center lg:text-left typo-h2 base-frame-big bg-primary p-4 lg:px-8 lg:py-6'>
+        <h1 className='w-full max-[420px]:text-lg text-center lg:text-left typo-h2 base-frame-big bg-primary p-4 lg:px-8 lg:py-6'>
           Документы и сертификаты качества
-        </h2>
+        </h1>
 
         <div className='w-full max-w-[500px] lg:max-w-none flex flex-col items-center justify-center gap-4 lg:gap-0'>
           {/* Заголовок */}

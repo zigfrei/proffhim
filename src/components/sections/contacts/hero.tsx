@@ -9,9 +9,9 @@ export default function Hero() {
     <SectionBlock>
       <div className='flex flex-col lg:flex-row w-full h-full min-h-0 items-stretch justify-center gap-4 lg:gap-8'>
         <div className=' w-full flex flex-col items-start justify-start gap-4 lg:gap-6'>
-          <h2 className='w-full text-center typo-h2 base-frame-big bg-primary p-4 lg:px-8 lg:py-6'>
+          <h1 className='w-full text-center typo-h2 base-frame-big bg-primary p-4 lg:px-8 lg:py-6'>
             Контакты
-          </h2>
+          </h1>
 
           <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
             Адрес: 231731, Республика Беларусь, Гродненская область, Гродненский район,

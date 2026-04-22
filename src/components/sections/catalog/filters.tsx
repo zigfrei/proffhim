@@ -16,7 +16,7 @@ export default function CatalogFilters({
 
   return (
     <aside className='flex flex-col w-full items-start justify-center base-frame'>
-      <h2 className='w-full text-center typo-h4 p-4 border-b-[2px] border-b-black'>
+      <h2 className='w-full text-center typo-h3 lg:typo-h45 xl:typo-h4 p-4 border-b-[2px] border-b-black'>
         Фильтры
       </h2>
 

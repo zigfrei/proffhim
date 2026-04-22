@@ -1,8 +1,8 @@
 export enum ProductType {
   ACID_CLEANERS = 'Кислотные моющие средства',
-  ALKALINE_AND_DISINFECTING = 'Щелочные моющие и дезинфицирующие средства',
+  ALKALINE_AND_DISINFECTING = 'Щелочные моющие и дезинфици\u00ADрующие средства',
   MILD_ALKALINE_AND_NEUTRAL = 'Нейтральные средства',
-  DISINFECTANTS = 'Дезинфицирующие средства',
+  DISINFECTANTS = 'Дезинфици\u00ADрующие средства',
 }
 
 export type ProductTypeKey = keyof typeof ProductType;
