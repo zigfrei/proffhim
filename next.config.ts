@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import { redirects } from './src/lib/redirects';
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -8,6 +9,9 @@ const nextConfig: NextConfig = {
         as: '*.js',
       },
     },
+  },
+  async redirects() {
+    return redirects;
   },
 };
 

@@ -63,7 +63,7 @@ export default function ProductMain({ product }: { product: Product }) {
               </div>
             </div>
             <div className='w-full flex flex-col items-start justify-start gap-4'>
-              <h2 className='typo-h2'>{product.name}</h2>
+              <h1 className='typo-h2'>{product.name}</h1>
               <ProductDescription product={product} />
             </div>
           </div>
