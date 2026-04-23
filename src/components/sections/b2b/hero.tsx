@@ -15,7 +15,7 @@ export default function Hero() {
             Контрактное производство моющих и дезинфицирующих средств под вашим
             брендом
           </h1>
-          <p className='typo-body border-l-[5px] border-primary pl-4 text-base-white xl:text-base-black'>
+          <p className='leading-tight! xl:leading-normal! typo-body border-l-[5px] border-primary pl-4 text-base-white xl:text-base-black'>
             Контрактное производство бытовой химии под ключ — от рецептуры до
             регистрации
           </p>
