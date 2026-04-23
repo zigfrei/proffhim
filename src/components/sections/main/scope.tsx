@@ -21,7 +21,7 @@ interface ScopeItem {
   subtitle?: string;
   imageSrc: string;
   icon: ComponentType<SVGProps<SVGSVGElement>>;
-  area: string;
+  areaClassName: string;
   mobileBgClassName: string;
   desktopBgClassName?: string;
   layout: ScopeLayout;
@@ -38,7 +38,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Молочная отрасль',
     imageSrc: '/scope/milk.png',
     icon: MilkIcon,
-    area: 'cell1',
+    areaClassName: 'lg:[grid-area:cell1]',
     mobileBgClassName: 'bg-main-background',
     layout: 'icon-leading',
     iconClassName: 'w-22 h-22',
@@ -50,7 +50,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Мясная отрасль',
     imageSrc: '/scope/meat.png',
     icon: MeatIcon,
-    area: 'cell2',
+    areaClassName: 'lg:[grid-area:cell2]',
     mobileBgClassName: 'bg-base-white',
     layout: 'icon-middle',
     iconClassName: 'w-20 h-20',
@@ -62,7 +62,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Переработка птицы',
     imageSrc: '/scope/chicken.png',
     icon: ChickenIcon,
-    area: 'cell3',
+    areaClassName: 'lg:[grid-area:cell3]',
     mobileBgClassName: 'bg-primary',
     layout: 'stacked',
     iconClassName: 'w-12 h-12',
@@ -74,7 +74,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Рыбная отрасль',
     imageSrc: '/scope/fish.png',
     icon: FishIcon,
-    area: 'cell4',
+    areaClassName: 'lg:[grid-area:cell4]',
     mobileBgClassName: 'bg-main-background',
     layout: 'stacked',
     iconClassName: 'w-12 h-12',
@@ -87,7 +87,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Сахарная отрасль',
     imageSrc: '/scope/sugar.png',
     icon: SugarIcon,
-    area: 'cell5',
+    areaClassName: 'lg:[grid-area:cell5]',
     mobileBgClassName: 'bg-primary',
     layout: 'stacked',
     iconClassName: 'w-12 h-12',
@@ -100,7 +100,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Ликероводочная, пивоваренная и безалкогольная отрасль',
     imageSrc: '/scope/brewing.png',
     icon: AlcoholIcon,
-    area: 'cell6',
+    areaClassName: 'lg:[grid-area:cell6]',
     mobileBgClassName: 'bg-base-white',
     layout: 'icon-leading',
     iconClassName: 'w-22 h-22 lg:w-30 lg:h-30',
@@ -112,7 +112,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Хлебобулоч\u00ADная и кондитер\u00ADская отрасль',
     imageSrc: '/scope/cake.png',
     icon: BreadIcon,
-    area: 'cell7',
+    areaClassName: 'lg:[grid-area:cell7]',
     mobileBgClassName: 'bg-main-background',
     desktopBgClassName: 'lg:bg-primary',
     layout: 'stacked',
@@ -127,7 +127,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Агро-промышлен\u00ADные предприятия',
     imageSrc: '/scope/farm.png',
     icon: BarnIcon,
-    area: 'cell8',
+    areaClassName: 'lg:[grid-area:cell8]',
     mobileBgClassName: 'bg-primary',
     layout: 'stacked',
     desktopColumnLayout: true,
@@ -141,7 +141,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Молочно-товарные фермы',
     imageSrc: '/scope/cow.png',
     icon: CowIcon,
-    area: 'cell9',
+    areaClassName: 'lg:[grid-area:cell9]',
     mobileBgClassName: 'bg-base-white',
     layout: 'stacked',
     iconClassName: 'w-12 h-12',
@@ -154,7 +154,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     title: 'Ж/д составы, объекты промышленных предприятий',
     imageSrc: '/scope/train.png',
     icon: FactoryIcon,
-    area: 'cell10',
+    areaClassName: 'lg:[grid-area:cell10]',
     mobileBgClassName: 'bg-main-background',
     desktopBgClassName: 'lg:bg-primary',
     layout: 'stacked',
@@ -190,7 +190,7 @@ function ScopeCard({ item }: { item: ScopeItem }) {
         item.desktopBgClassName,
         'items-center justify-between',
         isDesktopColumnLayout && 'lg:flex-col lg:items-stretch',
-        `lg:[grid-area:${item.area}]`,
+        item.areaClassName,
         item.contentClassName
       )}
     >
@@ -260,7 +260,8 @@ export default function Scope() {
         >
           <div className='w-full p-4 bg-primary base-frame flex items-center justify-center lg:[grid-area:cell11]'>
             <h2 className='typo-h2 lg:[writing-mode:vertical-rl] lg:[text-orientation:mixed] lg:rotate-180'>
-              <span className='block'>Сфера</span>
+              <span className='block'>Сфера </span>
+              {' '}
               <span className='block'>применения</span>
             </h2>
           </div>

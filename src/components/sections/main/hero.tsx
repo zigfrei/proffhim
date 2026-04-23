@@ -29,11 +29,12 @@ export default function Hero() {
         <div className='absolute inset-0 -z-10 w-full h-full xl:relative xl:z-auto xl:flex xl:items-center xl:justify-center'>
           <Image
             src='/hero.png'
-            alt='Hero image'
+            alt='Профессиональные моющие и дезинфицирующие средства ПроффХим'
             fill
             sizes='(min-width: 1280px) 50vw, 100vw'
             className='object-cover xl:w-auto xl:h-auto xl:object-cover xl:base-frame-big'
-            priority
+            loading='eager'
+            fetchPriority='high'
           />
           <div className='absolute inset-0 bg-black/40 xl:hidden' />
         </div>

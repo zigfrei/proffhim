@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import CatalogMain from '@/components/sections/catalog/main';
@@ -99,12 +98,10 @@ export default async function ProductTypePage(props: PageProps) {
 
   return (
     <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
-      <Suspense fallback={null}>
-        <CatalogMain
-          selectedProductType={selectedProductType}
-          selectedTypeSlug={typeSlug}
-        />
-      </Suspense>
+      <CatalogMain
+        selectedProductType={selectedProductType}
+        selectedTypeSlug={typeSlug}
+      />
     </main>
   );
 }
