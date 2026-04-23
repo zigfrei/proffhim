@@ -56,7 +56,7 @@ export default function Hero() {
         </div>
         <div className='absolute inset-0 -z-10 w-full h-full xl:relative xl:z-auto xl:flex xl:items-center xl:justify-center'>
           <Image
-            src='/b2b/hero.png'
+            src='/b2b/hero.webp'
             alt='Контрактное производство моющих и дезинфицирующих средств ПроффХим'
             fill
             loading='eager'
