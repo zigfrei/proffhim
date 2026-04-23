@@ -7,7 +7,7 @@ type DocumentItem = {
   imageUrlEng?: string;
 };
 
-const documents: DocumentItem[] = [
+export const documents: DocumentItem[] = [
   { title: 'Свидетельство о государственной регистрации ПроффХим', imageUrl: '/certificates/svidetelstvo-gosudarstvennoj-registracii-proffhim.jpg' },
   { title: 'Свидетельство о государственной регистрации ПроффХимПлюс', imageUrl: '/certificates/svidetelstvo-gosudarstvennoj-registracii-proffhim-plus.pdf' },
   { title: 'Сертификат продукции собственного производства ПроффХим часть 1', imageUrl: '/certificates/sertifikat-sobstvennogo-proizvodstva-proffhim-chast-1.pdf' },

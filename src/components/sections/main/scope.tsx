@@ -260,7 +260,7 @@ export default function Scope() {
         >
           <div className='w-full p-4 bg-primary base-frame flex items-center justify-center lg:[grid-area:cell11]'>
             <h2 className='typo-h2 lg:[writing-mode:vertical-rl] lg:[text-orientation:mixed] lg:rotate-180'>
-              <span className='block'>Сфера </span>
+              <span className='block'>Сфера</span>
               {' '}
               <span className='block'>применения</span>
             </h2>
