@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
         <div className='absolute inset-0 -z-10 w-full h-full xl:relative xl:z-auto xl:flex xl:items-center xl:justify-center'>
           <Image
-            src='/hero.png'
+            src='/hero.webp'
             alt='Профессиональные моющие и дезинфицирующие средства ПроффХим'
             fill
             sizes='(min-width: 1280px) 50vw, 100vw'
