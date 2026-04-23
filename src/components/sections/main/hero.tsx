@@ -13,7 +13,7 @@ export default function Hero() {
           <h1 className='text-[2rem] lg:text-[3rem] typo-h2 text-base-white xl:text-base-black'>
             Моющие и дезинфици&shy;рующие средства для предприятий и ферм
           </h1>
-          <p className='typo-body border-l-[5px] border-primary pl-4 text-base-white xl:text-base-black'>
+          <p className='leading-none! xl:leading-normal! typo-body border-l-[5px] border-primary pl-4 text-base-white xl:text-base-black'>
             ООО «ПроффХим» производит профессиональные решения для мойки и
             дезинфекции: пенные и беспенные, кислотные и щелочные составы — для
             оборудования, инвентаря и производственных помещений. Стабильный
@@ -36,7 +36,7 @@ export default function Hero() {
             loading='eager'
             fetchPriority='high'
           />
-          <div className='absolute inset-0 bg-black/40 xl:hidden' />
+          <div className='absolute inset-0 bg-black/50 xl:hidden' />
         </div>
       </div>
     </SectionBlock>
