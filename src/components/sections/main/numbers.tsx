@@ -14,7 +14,7 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 2000, bounce: 0 });
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [displayValue, setDisplayValue] = useState(0);
+  const [displayValue, setDisplayValue] = useState(value);
 
   useEffect(() => {
     if (isInView) {

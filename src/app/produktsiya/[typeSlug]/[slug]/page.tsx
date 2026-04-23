@@ -18,6 +18,10 @@ function getProductBySlug(slug: string) {
   return CATALOG_PRODUCTS.find((product) => product.slug === slug);
 }
 
+function getAbsoluteImageUrl(image: string) {
+  return image.startsWith('/') ? `${SITE_URL}${image}` : image;
+}
+
 export function generateStaticParams() {
   return CATALOG_PRODUCTS.map((product) => {
     const typeSlug = getProductTypeSlug(product.productType);
@@ -30,7 +34,9 @@ export function generateStaticParams() {
       typeSlug,
       slug: product.slug,
     };
-  }).filter((params): params is { typeSlug: string; slug: string } => Boolean(params));
+  }).filter((params): params is { typeSlug: string; slug: string } =>
+    Boolean(params),
+  );
 }
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
@@ -47,6 +53,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     return {
       title: 'Товар не найден | ПроффХим',
       description: 'Запрошенный товар не найден в каталоге ПроффХим.',
+      alternates: {
+        canonical: `/produktsiya/${typeSlug}/${slug}`,
+      },
       openGraph: {
         title: 'Товар не найден | ПроффХим',
         description: 'Запрошенный товар не найден в каталоге ПроффХим.',
@@ -75,13 +84,14 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const description =
     product.description ??
     `Карточка товара ${product.name} в каталоге ПроффХим.`;
-  const image = typeof product.image === 'string' && product.image.startsWith('/')
-    ? `${SITE_URL}${product.image}`
-    : '/og-image.png';
+  const image = getAbsoluteImageUrl(product.image);
 
   return {
     title: `${product.name} | ПроффХим`,
     description,
+    alternates: {
+      canonical: `/produktsiya/${typeSlug}/${slug}`,
+    },
     openGraph: {
       title: `${product.name} | ПроффХим`,
       description,
@@ -111,6 +121,7 @@ export default async function ProductPage(props: PageProps) {
   const { typeSlug, slug } = await props.params;
   const selectedProductType = getProductTypeBySlug(typeSlug);
   const product = getProductBySlug(slug);
+  const pageUrl = `${SITE_URL}/produktsiya/${typeSlug}/${slug}`;
 
   if (
     !selectedProductType ||
@@ -120,8 +131,36 @@ export default async function ProductPage(props: PageProps) {
     notFound();
   }
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description:
+      product.description ??
+      `Карточка товара ${product.name} в каталоге ПроффХим.`,
+    image: getAbsoluteImageUrl(product.image),
+    url: pageUrl,
+    brand: {
+      '@type': 'Brand',
+      name: 'ПроффХим',
+    },
+    category: selectedProductType,
+    offers: {
+      '@type': 'Offer',
+      url: pageUrl,
+      availability: 'https://schema.org/InStock',
+      priceCurrency: 'BYN',
+    },
+  };
+
   return (
     <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema).replace(/</g, '\\u003c'),
+        }}
+      />
       <ProductMain product={product} />
     </main>
   );

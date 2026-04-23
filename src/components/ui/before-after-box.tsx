@@ -22,7 +22,6 @@ export default function BeforeAndAfterItem() {
               fill
               sizes='75vw'
               className='object-cover'
-              priority
             />
             <div
               className='absolute inset-0 overflow-hidden'
@@ -34,7 +33,6 @@ export default function BeforeAndAfterItem() {
                 fill
                 sizes='75vw'
                 className='object-cover brightness-[.75] contrast-125 saturate-75'
-                priority
               />
             </div>
 

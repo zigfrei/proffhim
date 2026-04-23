@@ -5,12 +5,9 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <SectionBlock wrapperClassName='p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[780px] bg-[url("/b2b/hero.png")] bg-black/50 bg-blend-multiply xl:bg-none xl:bg-transparent bg-cover bg-center bg-no-repeat'>
-      <div className='w-full flex-1 flex items-start justify-center gap-16'>
+    <SectionBlock wrapperClassName='relative overflow-hidden p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[780px]'>
+      <div className='z-10 w-full flex-1 flex items-start justify-center gap-16'>
         <div className='w-full h-full flex flex-col items-start justify-start gap-4'>
-          {/* <p className='typo-b3 py-2 px-4 xl:p-0 bg-primary xl:bg-transparent text-base-black xl:text-secondary'>
-            Сделано в Беларуси
-          </p> */}
           <h1 className='lg:hidden text-[2rem] typo-h2 text-base-white'>
             Контрактное произ&shy;водство моющих и дезинфи&shy;цирующих средств под вашим
             брендом
@@ -58,14 +55,15 @@ export default function Hero() {
             Связаться с нами
           </BigLinkButton>
         </div>
-        <div className='relative w-full h-full hidden xl:flex items-center justify-center '>
+        <div className='absolute inset-0 -z-10 w-full h-full xl:relative xl:z-auto xl:flex xl:items-center xl:justify-center'>
           <Image
             src='/b2b/hero.png'
             alt='Hero image'
             fill
-            sizes='(min-width: 768px) 70vw, 100vw'
-            className='w-auto h-auto object-cover base-frame-big grayscale'
+            sizes='(min-width: 1280px) 50vw, 100vw'
+            className='object-cover xl:w-auto xl:h-auto xl:object-cover xl:base-frame-big xl:grayscale'
           />
+          <div className='absolute inset-0 bg-black/40 xl:hidden' />
         </div>
       </div>
     </SectionBlock>

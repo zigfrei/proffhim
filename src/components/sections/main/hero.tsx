@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <SectionBlock wrapperClassName='p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[720px] bg-[url("/hero.png")] bg-black/40 bg-blend-multiply xl:bg-none xl:bg-transparent bg-cover bg-center bg-no-repeat'>
-      <div className='w-full flex-1 flex items-start justify-center gap-16'>
+    <SectionBlock wrapperClassName='relative overflow-hidden p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[720px]'>
+      <div className='z-10 w-full flex-1 flex items-start justify-center gap-16'>
         <div className='w-full h-full flex flex-col items-start justify-start gap-4'>
           <p className='typo-b3 py-2 px-4 xl:p-0 bg-primary xl:bg-transparent text-base-black xl:text-secondary'>
             Сделано в Беларуси
@@ -26,14 +26,16 @@ export default function Hero() {
             Связаться с нами
           </BigLinkButton>
         </div>
-        <div className='relative w-full h-full hidden xl:flex items-center justify-center '>
+        <div className='absolute inset-0 -z-10 w-full h-full xl:relative xl:z-auto xl:flex xl:items-center xl:justify-center'>
           <Image
             src='/hero.png'
             alt='Hero image'
             fill
-            sizes='(min-width: 768px) 70vw, 100vw'
-            className='w-auto h-auto object-cover base-frame-big'
+            sizes='(min-width: 1280px) 50vw, 100vw'
+            className='object-cover xl:w-auto xl:h-auto xl:object-cover xl:base-frame-big'
+            priority
           />
+          <div className='absolute inset-0 bg-black/40 xl:hidden' />
         </div>
       </div>
     </SectionBlock>

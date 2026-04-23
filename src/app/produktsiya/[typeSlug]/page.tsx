@@ -28,6 +28,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     return {
       title: 'Категория не найдена | ПроффХим',
       description: 'Запрошенная категория продукции не найдена в каталоге ПроффХим.',
+      alternates: {
+        canonical: `/produktsiya/${typeSlug}`,
+      },
       openGraph: {
         title: 'Категория не найдена | ПроффХим',
         description:
@@ -58,6 +61,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   return {
     title: `${option.label} | ПроффХим`,
     description: option.description,
+    alternates: {
+      canonical: `/produktsiya/${typeSlug}`,
+    },
     openGraph: {
       title: `${option.label} | ПроффХим`,
       description: option.description,
