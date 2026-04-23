@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <SectionBlock wrapperClassName='relative overflow-hidden p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[630px]'>
+    <SectionBlock wrapperClassName='relative overflow-hidden p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[630px] xl:min-h-[930px]'>
       <div className='z-10 w-full flex-1 flex items-start justify-center gap-16'>
         <div className='w-full h-full flex flex-col items-start justify-start gap-4'>
           <h1
