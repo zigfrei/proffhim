@@ -91,8 +91,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 export default async function ProductTypePage(props: PageProps) {
   const { typeSlug } = await props.params;
   const selectedProductType = getProductTypeBySlug(typeSlug);
+  const selectedProductTypeOption = getCatalogFilterOptionBySlug(typeSlug);
 
-  if (!selectedProductType) {
+  if (!selectedProductType || !selectedProductTypeOption) {
     notFound();
   }
 
@@ -101,6 +102,7 @@ export default async function ProductTypePage(props: PageProps) {
       <CatalogMain
         selectedProductType={selectedProductType}
         selectedTypeSlug={typeSlug}
+        title={selectedProductTypeOption.label}
       />
     </main>
   );
