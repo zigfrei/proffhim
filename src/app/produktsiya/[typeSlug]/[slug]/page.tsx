@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ProductMain from '@/components/sections/product/main';
 import {
+  getCatalogFilterOptionByProductType,
   getProductTypeBySlug,
   getProductTypeSlug,
   isProductInType,
@@ -131,6 +132,9 @@ export default async function ProductPage(props: PageProps) {
     notFound();
   }
 
+  const productTypeOption =
+    getCatalogFilterOptionByProductType(selectedProductType);
+
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -144,7 +148,7 @@ export default async function ProductPage(props: PageProps) {
       '@type': 'Brand',
       name: 'ПроффХим',
     },
-    category: selectedProductType,
+    category: productTypeOption?.label,
     offers: {
       '@type': 'Offer',
       url: pageUrl,
