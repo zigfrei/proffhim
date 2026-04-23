@@ -14,6 +14,7 @@ export default async function NotFound() {
       <div className='flex flex-col w-full items-start justify-center gap-4 lg:gap-8'>
         <Breadcrumbs
           className='px-4 lg:px-0'
+          withSchema={false}
           breadcrumbs={[
             { label: 'Каталог', href: '/produktsiya' },
             {

@@ -3,6 +3,9 @@ import PolicyMain from '@/components/sections/policy/main';
 export const metadata = {
   title: "Политика обработки персональных данных | ПроффХим",
   description: "ПОЛИТИКА В ОТНОШЕНИИ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ",
+  alternates: {
+    canonical: '/politika-konfidencialnosti',
+  },
   openGraph: {
     title: 'Политика обработки персональных данных | ПроффХим',
     description:

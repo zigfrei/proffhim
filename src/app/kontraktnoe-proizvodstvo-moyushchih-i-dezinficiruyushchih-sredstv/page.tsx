@@ -12,6 +12,10 @@ export const metadata = {
     'Контрактное производство моющих и дезинфицирующих средств под брендом (СТМ, Private Label) | ПроффХим',
   description:
     'Контрактное производство бытовой химии и дезсредств под вашим брендом. Разработка рецептур, регистрация, производство от 5 тонн. Работаем с клинингом, HoReCa и дистрибьюторами.',
+  alternates: {
+    canonical:
+      '/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
+  },
   openGraph: {
     title:
       'Контрактное производство моющих и дезинфицирующих средств под брендом (СТМ, Private Label) | ПроффХим',

@@ -8,6 +8,9 @@ import Capacity from '@/components/sections/about/capacity';
 export const metadata = {
   title: "О компании ПроффХим",
   description: "ООО «ПроффХим» — белорусский производитель профессиональной химии для предприятий. Собственное производство, современные технологии и контроль качества продукции.",
+  alternates: {
+    canonical: '/o-kompanii',
+  },
   openGraph: {
     title: 'О компании ПроффХим',
     description:
