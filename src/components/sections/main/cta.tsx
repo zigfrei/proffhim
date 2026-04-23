@@ -7,11 +7,12 @@ export default function CTA() {
       <div className='w-full flex flex-col lg:flex-row items-stretch justify-stretch gap-4 lg:gap-16 bg-primary base-frame-big'>
         <div className='w-full flex flex-col items-start justify-start gap-4 p-4 pb-0 lg:pl-16 lg:pr-0 lg:py-16'>
           <h2 className='w-full text-[1.4rem] sm:text-[1.5rem] lg:text-[3rem] typo-h3 text-center lg:text-left'>
-            <span className="lg:block">ГОТОВЫ К</span> СОТРУДНИ&shy;ЧЕСТВУ?
+            <span className='lg:block'>ГОТОВЫ К</span>{' '}
+            <span>СОТРУДНИ&shy;ЧЕСТВУ?</span>
           </h2>
           <p className='typo-body text-center lg:text-left lg:border-l-[5px] lg:border-base-black lg:pl-4'>
-            Мы принимаем вызовы любой сложности. Успех вашего бизнеса
-            начинается с одного точного решения.
+            Мы принимаем вызовы любой сложности. Успех вашего бизнеса начинается
+            с одного точного решения.
           </p>
         </div>
         <div className='self-stretch lg:bg-base-black flex items-center justify-center px-4'>

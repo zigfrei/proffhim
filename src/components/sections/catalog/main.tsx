@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { ProductTypeKey } from '@/features/catalog/products/config';
 import SectionBlock from '@/components/ui/section';
 import CatalogFilters from './filters';
@@ -21,7 +22,9 @@ export default function CatalogMain({
             <CatalogFilters selectedTypeSlug={selectedTypeSlug} />
           </div>
           <div className='lg:col-span-9'>
-            <CatalogContent selectedProductType={selectedProductType} />
+            <Suspense fallback={null}>
+              <CatalogContent selectedProductType={selectedProductType} />
+            </Suspense>
           </div>
         </div>
       </div>

@@ -30,9 +30,9 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
   }, [springValue]);
 
   return (
-    <h2 ref={ref} className='typo-h2 text-primary'>
+    <p ref={ref} className='typo-h2 text-primary'>
       {displayValue}{suffix}
-    </h2>
+    </p>
   );
 }
 
