@@ -48,9 +48,9 @@ export default function Certificates() {
     })),
   };
 
-  const certificationPageSchema = {
+  const certificatesPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'CertificationPage',
+    '@type': 'CollectionPage',
     name: 'Сертификаты и документы на продукцию ПроффХим',
     description:
       'Сертификаты и разрешительные документы на продукцию «ПроффХим». Подтверждение качества и соответствия требованиям для моющих и дезинфицирующих средств.',
@@ -64,7 +64,7 @@ export default function Certificates() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            certificationPageSchema,
+            certificatesPageSchema,
             certificatesItemListSchema,
           ]).replace(/</g, '\\u003c'),
         }}
