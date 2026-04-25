@@ -41,7 +41,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     areaClassName: 'lg:[grid-area:cell1]',
     mobileBgClassName: 'bg-main-background',
     layout: 'icon-leading',
-    iconClassName: 'w-22 h-22',
+    iconClassName: 'w-12 h-12 lg:w-22 lg:h-22',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
   },
@@ -53,7 +53,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     areaClassName: 'lg:[grid-area:cell2]',
     mobileBgClassName: 'bg-base-white',
     layout: 'icon-middle',
-    iconClassName: 'w-20 h-20',
+    iconClassName: 'w-12 h-12 lg:w-20 lg:h-20',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
   },
@@ -103,7 +103,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     areaClassName: 'lg:[grid-area:cell6]',
     mobileBgClassName: 'bg-base-white',
     layout: 'icon-leading',
-    iconClassName: 'w-22 h-22 lg:w-30 lg:h-30',
+    iconClassName: 'w-12 h-12 lg:w-30 lg:h-30',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
   },
@@ -178,8 +178,9 @@ function ScopeItemIcon({
 }
 
 function ScopeCard({ item }: { item: ScopeItem }) {
-  const isStacked = item.layout === 'stacked';
-  const isIconMiddle = item.layout === 'icon-middle';
+  const isDesktopStacked = item.layout === 'stacked';
+  const isDesktopIconLeading = item.layout === 'icon-leading';
+  const isDesktopIconMiddle = item.layout === 'icon-middle';
   const isDesktopColumnLayout = Boolean(item.desktopColumnLayout);
 
   return (
@@ -194,43 +195,53 @@ function ScopeCard({ item }: { item: ScopeItem }) {
         item.contentClassName
       )}
     >
-      {!isIconMiddle && !isStacked && (
-        <ScopeItemIcon item={item} className={item.iconClassName} />
+      {isDesktopIconLeading && (
+        <ScopeItemIcon
+          item={item}
+          className={clsx(item.iconClassName, 'hidden lg:block')}
+        />
       )}
 
       <div
         className={clsx(
           'w-full flex flex-col items-start gap-1',
-          isStacked ? 'justify-between' : 'justify-start',
-          isIconMiddle && 'lg:order-1',
-          isStacked && 'lg:justify-between'
+          'justify-between',
+          !isDesktopStacked && 'lg:justify-start',
+          isDesktopIconMiddle && 'lg:order-1'
         )}
       >
-        {isStacked ? (
-          <div className='w-full flex items-start justify-between gap-2'>
-            <span className='typo-h4'>{item.number}</span>
-            <ScopeItemIcon item={item} className={item.iconClassName} />
-          </div>
-        ) : (
-          <span className='typo-h4'>{item.number}</span>
-        )}
+        <div
+          className={clsx(
+            'w-full flex items-start justify-between gap-2',
+            !isDesktopStacked && 'lg:block'
+          )}
+        >
+          <span className='text-[2rem] typo-h4'>{item.number}</span>
+          <ScopeItemIcon
+            item={item}
+            className={clsx(
+              item.iconClassName,
+              !isDesktopStacked && 'lg:hidden'
+            )}
+          />
+        </div>
 
         <h3 className={clsx('typo-h5', item.titleClassName)}>{item.title}</h3>
 
         {item.subtitle && <p className='typo-b2'>{item.subtitle}</p>}
       </div>
 
-      {isIconMiddle && (
+      {isDesktopIconMiddle && (
         <ScopeItemIcon
           item={item}
-          className={clsx(item.iconClassName, 'lg:order-2')}
+          className={clsx(item.iconClassName, 'hidden lg:block lg:order-2')}
         />
       )}
 
       <div
         className={clsx(
           item.imageWrapperClassName,
-          isIconMiddle && 'lg:order-3',
+          isDesktopIconMiddle && 'lg:order-3',
           isDesktopColumnLayout && 'lg:self-stretch'
         )}
       >
