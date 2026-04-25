@@ -2,14 +2,14 @@ import Hero from '@/components/sections/contacts/hero';
 import Form from '@/components/sections/contacts/form';
 
 export const metadata = {
-  title: 'Контакты компании «ПроффХим»',
+  title: 'Контакты производителя моющих средств ПроффХим',
   description:
     'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
   alternates: {
     canonical: '/kontakty',
   },
   openGraph: {
-    title: 'Контакты компании «ПроффХим»',
+    title: 'Контакты производителя моющих средств ПроффХим',
     description:
       'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
     url: 'https://proffhim.by/kontakty',
@@ -27,7 +27,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Контакты компании «ПроффХим»',
+    title: 'Контакты производителя моющих средств ПроффХим',
     description:
       'Контакты компании: адрес, телефон, email и форма обратной связи. Свяжитесь с нами для получения консультации, заказа продукции или сотрудничества.',
     images: ['/twitter-image.png'],
