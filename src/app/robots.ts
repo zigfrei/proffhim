@@ -1,12 +1,12 @@
 import type { MetadataRoute } from 'next';
 
-const isProduction = process.env.NODE_ENV === 'production';
+const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      ...(isProduction ? { allow: '/' } : { disallow: '/' }),
+      ...(allowIndexing ? { allow: '/' } : { disallow: '/' }),
     },
     sitemap: 'https://proffhim.by/sitemap.xml',
   };
