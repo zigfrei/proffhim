@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 import { redirects } from './src/lib/redirects';
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   turbopack: {
     root: path.resolve(__dirname),
     rules: {
