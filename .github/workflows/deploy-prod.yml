@@ -43,7 +43,7 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           build-args: |
-            NEXT_PUBLIC_ALLOW_INDEXING=${{ vars.NEXT_PUBLIC_ALLOW_INDEXING || 'true' }}
+            NEXT_PUBLIC_ALLOW_INDEXING=${{ vars.NEXT_PUBLIC_ALLOW_INDEXING || 'false' }}
             NEXT_PUBLIC_YANDEX_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_YANDEX_MAPS_API_KEY }}
 
   deploy:
