@@ -18,6 +18,8 @@ const manrope = Manrope({
   display: 'swap',
 });
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://proffhim.by'),
   title: 'Моющие и дезинфицирующие средства для промышленности | ПроффХим',
@@ -26,10 +28,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  // remove this before prod !!!!!!!!!
   robots: {
-    index: false,
-    follow: false,
+    index: isProduction,
+    follow: isProduction,
   },
   openGraph: {
     title: 'Моющие и дезинфицирующие средства для промышленности | ПроффХим',
