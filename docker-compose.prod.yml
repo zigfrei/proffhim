@@ -6,7 +6,7 @@ services:
       args:
         NEXT_PUBLIC_ALLOW_INDEXING: ${NEXT_PUBLIC_ALLOW_INDEXING:-false}
         NEXT_PUBLIC_YANDEX_MAPS_API_KEY: ${NEXT_PUBLIC_YANDEX_MAPS_API_KEY:-}
-    image: proffhim-app:latest
+    image: ${APP_IMAGE:-proffhim-app:latest}
     container_name: proffhim-app
     restart: unless-stopped
     env_file:
@@ -16,4 +16,4 @@ services:
       HOSTNAME: 0.0.0.0
       PORT: 3000
     ports:
-      - "3000:3000"
+      - "${APP_PORT:-127.0.0.1:3000}:3000"
