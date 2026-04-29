@@ -48,7 +48,7 @@ function StatItem({ value, suffix = '', label }: StatItemProps) {
 const STATS: StatItemProps[] = [
   { value: 95, suffix: '+', label: 'Постоянных партнёров' },
   { value: 50, suffix: '+', label: 'Наименований продукции' },
-  { value: 35, suffix: '+', label: 'Лет опыта на рынке' },
+  { value: 25, suffix: '+', label: 'Лет опыта на рынке' },
 ];
 
 export default function Numbers() {
