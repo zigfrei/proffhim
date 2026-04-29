@@ -2,6 +2,9 @@ import Link from 'next/link';
 import LogoBlack from '@/assets/icons/logo-black.svg';
 import InstagramIcon from '@/assets/icons/instagram.svg';
 import VKIcon from '@/assets/icons/vkontakte.svg';
+import TikTokIcon from '@/assets/icons/tiktok.svg';
+import FacebookIcon from '@/assets/icons/facebook.svg';
+import ThreadsIcon from '@/assets/icons/threads.svg';
 
 export function Footer() {
   return (
@@ -22,7 +25,7 @@ export function Footer() {
             <div className='flex flex-col items-start justify-start gap-2'>
               <p className='typo-b3 text-left font-bold'>
                 Адрес: Беларусь, Гродненская область, Гродненский район,
-                Одельский сельсовет, деревня Подлипки, строение 7
+                Одельский сельсовет, д. Подлипки, строение 7
               </p>
               {/* <p className='typo-b3 text-left font-bold'>
                 Телефон/факс: <a href='tel:+375152605277' className='hover:text-base-white transition-colors duration-200'>+375 152 605277</a>
@@ -42,6 +45,20 @@ export function Footer() {
                   className='hover:text-base-white transition-colors duration-200'
                 >
                   +375 (29) 1060587
+                </a>
+                ,{' '}
+                <a
+                  href='tel:+375152605277'
+                  className='hover:text-base-white transition-colors duration-200'
+                >
+                  +375 (152) 605277
+                </a>
+                ,{' '}
+                <a
+                  href='tel:+375152605177'
+                  className='hover:text-base-white transition-colors duration-200'
+                >
+                  +375 (152) 605177
                 </a>
               </p>
             </div>
@@ -114,6 +131,37 @@ export function Footer() {
                   className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
                 >
                   <VKIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.tiktok.com/@proffhim'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <TikTokIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href='https://www.facebook.com/proffhim'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <FacebookIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.threads.net/@proffhim'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <ThreadsIcon className='w-6 h-6 inline-block text-white' />
                 </a>
               </li>
             </ul>

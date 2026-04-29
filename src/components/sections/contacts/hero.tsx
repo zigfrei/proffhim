@@ -1,8 +1,12 @@
 import SectionBlock from '@/components/ui/section';
 import InstagramIcon from '@/assets/icons/instagram.svg';
 import VKIcon from '@/assets/icons/vkontakte.svg';
+import TikTokIcon from '@/assets/icons/tiktok.svg';
+import FacebookIcon from '@/assets/icons/facebook.svg';
+import ThreadsIcon from '@/assets/icons/threads.svg';
 import Map from '@/components/ui/ya-map';
 import { MAP_CUSTOMIZATION } from '@/features/map/variables';
+import { Icon } from '@iconify/react';
 
 export default function Hero() {
   return (
@@ -14,12 +18,24 @@ export default function Hero() {
           </h1>
 
           <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
-            Адрес: 231731, Республика Беларусь, Гродненская область, Гродненский район,
-            Одельский сельсовет, деревня Подлипки, строение&nbsp;7
+            Адрес: 231731, Республика Беларусь, Гродненская область, Гродненский
+            район, Одельский сельсовет, д. Подлипки, строение&nbsp;7
           </p>
-          <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
-            УНП: 591506904
-          </p>
+          <div className='w-full flex flex-col lg:flex-row items-start lg:items-center justify-start gap-2 base-frame-big p-4 lg:px-8 lg:py-6'>
+            <p className='typo-h5'>УНП: 591506904</p>
+            <div className='flex items-center justify-center gap-1'>
+              <Icon
+                icon='material-symbols:mail'
+                className='w-8 h-8 text-base-black'
+              />
+              <a
+                href='mailto:proffhimsale@mail.ru'
+                className='typo-h5 hover:text-primary transition-colors duration-200'
+              >
+                proffhimsale@mail.ru
+              </a>
+            </div>
+          </div>
           <p className='w-full typo-h5 base-frame-big p-4 lg:px-8 lg:py-6'>
             Телефоны:{' '}
             <a
@@ -35,9 +51,21 @@ export default function Hero() {
             >
               +375 (29) 1060587
             </a>
+            ,{' '}
+            <a
+              href='tel:+375152605277'
+              className='hover:text-primary transition-colors duration-200'
+            >
+              +375 (152) 605277
+            </a>
+            ,{' '}
+            <a
+              href='tel:+375152605177'
+              className='hover:text-primary transition-colors duration-200'
+            >
+              +375 (152) 605177
+            </a>
           </p>
-
-
 
           <ul className='w-full flex items-center justify-start base-frame-big p-4 lg:px-8 lg:py-6 gap-2'>
             <li>
@@ -58,6 +86,39 @@ export default function Hero() {
                 className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
               >
                 <VKIcon className='w-6 h-6 inline-block text-white' />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='https://www.tiktok.com/@proffhim'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+              >
+                <TikTokIcon className='w-6 h-6 inline-block text-white' />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='https://www.facebook.com/proffhim'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+              >
+                <FacebookIcon className='w-6 h-6 inline-block text-white' />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='https://www.threads.net/@proffhim'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+              >
+                <ThreadsIcon className='w-6 h-6 inline-block text-white' />
               </a>
             </li>
           </ul>
