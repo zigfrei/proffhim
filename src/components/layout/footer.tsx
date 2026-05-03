@@ -24,6 +24,9 @@ export function Footer() {
             <p className='typo-h5'>КОНТАКТЫ</p>
             <div className='flex flex-col items-start justify-start gap-2'>
               <p className='typo-b3 text-left font-bold'>
+                ООО «ПроффХим» УНП 591506904
+              </p>
+              <p className='typo-b3 text-left font-bold'>
                 Адрес: Беларусь, Гродненская область, Гродненский район,
                 Одельский сельсовет, д. Подлипки, строение 7
               </p>
