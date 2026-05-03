@@ -22,11 +22,11 @@ export const CATALOG_FILTER_GROUPS: CatalogFilterGroup[] = [
     title: 'Тип продукта',
     options: [
       {
-        label: ProductType.ACID_CLEANERS,
-        value: 'ACID_CLEANERS',
-        slug: 'kislotnye-moyushchie-sredstva',
+        label: ProductType.ALKALINE_CLEANERS,
+        value: 'ALKALINE_CLEANERS',
+        slug: 'shchelochnye-moyushchie-sredstva',
         description:
-          'Кислотные моющие средства для удаления накипи и загрязнений с оборудования и поверхностей. Каталог продукции ПроффХим.',
+          'Щелочные моющие средства для удаления жировых, белковых и органических загрязнений с оборудования и поверхностей.',
       },
       {
         label: ProductType.ALKALINE_AND_DISINFECTING,
@@ -36,11 +36,11 @@ export const CATALOG_FILTER_GROUPS: CatalogFilterGroup[] = [
           'Щелочные моющие и дезинфицирующие средства для эффективной очистки и дезинфекции оборудования, инвентаря и поверхностей.',
       },
       {
-        label: ProductType.MILD_ALKALINE_AND_NEUTRAL,
-        value: 'MILD_ALKALINE_AND_NEUTRAL',
-        slug: 'neitralnye-sredstva',
+        label: ProductType.ACID_CLEANERS,
+        value: 'ACID_CLEANERS',
+        slug: 'kislotnye-moyushchie-sredstva',
         description:
-          'Нейтральные моющие средства для деликатной очистки оборудования и поверхностей. Подходят для различных отраслей.',
+          'Кислотные моющие средства для удаления накипи и загрязнений с оборудования и поверхностей. Каталог продукции ПроффХим.',
       },
       {
         label: ProductType.DISINFECTANTS,
@@ -48,6 +48,20 @@ export const CATALOG_FILTER_GROUPS: CatalogFilterGroup[] = [
         slug: 'dezinfitsiruyushchie-sredstva',
         description:
           'Дезинфицирующие средства для обработки оборудования, инвентаря и помещений. Каталог продукции ПроффХим.',
+      },
+      {
+        label: ProductType.MILD_ALKALINE_AND_NEUTRAL,
+        value: 'MILD_ALKALINE_AND_NEUTRAL',
+        slug: 'neitralnye-sredstva',
+        description:
+          'Нейтральные моющие средства для деликатной очистки оборудования и поверхностей. Подходят для различных отраслей.',
+      },
+      {
+        label: ProductType.ZOOGIENIC,
+        value: 'ZOOGIENIC',
+        slug: 'zoogigienicheskie-sredstva',
+        description:
+          'Зоогигиенические средства для ухода, санитарной обработки и защиты животных на предприятиях агропромышленного комплекса.',
       },
     ],
   },

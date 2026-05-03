@@ -83,18 +83,19 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   }
 
   const description =
+    product.seoDescription ??
     product.description ??
     `Карточка товара ${product.name} в каталоге ПроффХим.`;
   const image = getAbsoluteImageUrl(product.image);
 
   return {
-    title: `${product.name} | ПроффХим`,
+    title: `${product.seoName ?? product.name} | ПроффХим`,
     description,
     alternates: {
       canonical: `/produktsiya/${typeSlug}/${slug}`,
     },
     openGraph: {
-      title: `${product.name} | ПроффХим`,
+      title: `${product.seoName ?? product.name} | ПроффХим`,
       description,
       url: pageUrl,
       siteName: 'ПроффХим',
@@ -105,13 +106,13 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
           url: image,
           width: 1200,
           height: 630,
-          alt: product.name,
+          alt: product.seoName ?? product.name,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.name} | ПроффХим`,
+      title: `${product.seoName ?? product.name} | ПроффХим`,
       description,
       images: [image],
     },
@@ -138,7 +139,7 @@ export default async function ProductPage(props: PageProps) {
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: product.name,
+    name: product.seoName ?? product.name,
     description:
       product.description ??
       `Карточка товара ${product.name} в каталоге ПроффХим.`,

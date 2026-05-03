@@ -62,7 +62,7 @@ export default function CatalogPagination({
 
   return (
     <nav
-      className='flex items-center gap-4 self-end'
+      className='flex items-center flex-wrap gap-4 self-end'
       aria-label='Пагинация каталога'
     >
       {currentPage > 1 && (
