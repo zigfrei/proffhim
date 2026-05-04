@@ -12,7 +12,9 @@ type CardProps = Omit<ComponentPropsWithoutRef<'a'>, 'href'> & Product;
 export function Card({
   id,
   name,
+  seoName,
   description,
+  seoDescription,
   image,
   slug,
   label,
@@ -51,9 +53,11 @@ export function Card({
       </div>
       <div className='w-full flex-1 min-h-0 flex flex-col justify-start gap-2 mt-auto'>
         <h3 className='typo-h4'>{name}</h3>
-        <p className='typo-b2 line-clamp-3 font-regular mb-auto'>
-          {description}
-        </p>
+        {description && (
+          <p className='typo-b2 line-clamp-3 font-regular mb-auto'>
+            {description}
+          </p>
+        )}
       </div>
       <div aria-hidden="true" className='flex h-13.5 px-6 py-2 items-center typo-h5 base-frame lg:base-frame-interactive group w-full items-center justify-center gap-2 bg-base-black text-primary shadow-[5px_5px_0_0_var(--color-primary)]! hover:shadow-[4px_4px_0_0_var(--color-primary)]! '>
         Подробнее
