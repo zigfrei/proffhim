@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { YandexMetrika } from '@/components/analytics/yandex-metrika';
+import { GoogleTagManager } from '@/components/analytics/google-tag-manager';
 
 const unbounded = Unbounded({
   variable: '--font-unbounded',
@@ -19,6 +20,7 @@ const manrope = Manrope({
 
 const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true';
 const yandexMetrikaId = process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID;
+const googleTagManagerId = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
 const yandexWebmasterVerification = process.env.YANDEX_WEBMASTER_VERIFICATION;
 
 export const metadata: Metadata = {
@@ -82,6 +84,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} bg-main-background text-base-black flex flex-col items-center justify-center min-h-screen`}
       >
+        {googleTagManagerId ? <GoogleTagManager containerId={googleTagManagerId} /> : null}
         <Header />
         {children}
         <Footer />
