@@ -8,7 +8,7 @@ import { YandexMetrika } from '@/components/analytics/yandex-metrika';
 const unbounded = Unbounded({
   variable: '--font-unbounded',
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap', 
 });
 
 const manrope = Manrope({
