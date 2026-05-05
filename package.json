@@ -12,8 +12,6 @@
     "@heroicons/react": "^2.2.0",
     "@iconify-json/material-symbols": "^1.2.67",
     "@iconify/react": "^6.0.2",
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
     "@yandex/ymaps3-types": "^1.0.19017058",
     "clsx": "^2.1.1",
     "motion": "^12.38.0",

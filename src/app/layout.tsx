@@ -3,8 +3,7 @@ import { Unbounded, Manrope } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { YandexMetrika } from '@/components/analytics/yandex-metrika';
 
 const unbounded = Unbounded({
   variable: '--font-unbounded',
@@ -19,6 +18,8 @@ const manrope = Manrope({
 });
 
 const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true';
+const yandexMetrikaId = process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID;
+const yandexWebmasterVerification = process.env.YANDEX_WEBMASTER_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://proffhim.by'),
@@ -32,6 +33,11 @@ export const metadata: Metadata = {
     index: allowIndexing,
     follow: allowIndexing,
   },
+  verification: yandexWebmasterVerification
+    ? {
+        yandex: yandexWebmasterVerification,
+      }
+    : undefined,
   openGraph: {
     title: 'Моющие и дезинфицирующие средства для промышленности | ПроффХим',
     description:
@@ -79,8 +85,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Analytics />
-        <SpeedInsights />
+        {yandexMetrikaId ? <YandexMetrika counterId={yandexMetrikaId} /> : null}
       </body>
     </html>
   );
