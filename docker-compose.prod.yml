@@ -6,6 +6,8 @@ services:
       args:
         NEXT_PUBLIC_ALLOW_INDEXING: ${NEXT_PUBLIC_ALLOW_INDEXING:-false}
         NEXT_PUBLIC_YANDEX_MAPS_API_KEY: ${NEXT_PUBLIC_YANDEX_MAPS_API_KEY:-}
+        NEXT_PUBLIC_YANDEX_METRIKA_ID: ${NEXT_PUBLIC_YANDEX_METRIKA_ID:-}
+        YANDEX_WEBMASTER_VERIFICATION: ${YANDEX_WEBMASTER_VERIFICATION:-}
     image: ${APP_IMAGE:-proffhim-app:latest}
     container_name: proffhim-app
     restart: unless-stopped

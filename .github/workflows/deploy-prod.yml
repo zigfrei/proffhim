@@ -45,6 +45,8 @@ jobs:
           build-args: |
             NEXT_PUBLIC_ALLOW_INDEXING=${{ vars.NEXT_PUBLIC_ALLOW_INDEXING || 'false' }}
             NEXT_PUBLIC_YANDEX_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_YANDEX_MAPS_API_KEY }}
+            NEXT_PUBLIC_YANDEX_METRIKA_ID=${{ vars.NEXT_PUBLIC_YANDEX_METRIKA_ID }}
+            YANDEX_WEBMASTER_VERIFICATION=${{ vars.YANDEX_WEBMASTER_VERIFICATION }}
 
   deploy:
     name: Deploy to VPS
