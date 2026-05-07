@@ -1,9 +1,13 @@
 import SectionBlock from '@/components/ui/section';
-import InstagramIcon from '@/assets/icons/instagram.svg';
-import VKIcon from '@/assets/icons/vkontakte.svg';
-import TikTokIcon from '@/assets/icons/tiktok.svg';
-import FacebookIcon from '@/assets/icons/facebook.svg';
-import ThreadsIcon from '@/assets/icons/threads.svg';
+// import InstagramIcon from '@/assets/icons/instagram.svg';
+// import VKIcon from '@/assets/icons/vkontakte.svg';
+// import TikTokIcon from '@/assets/icons/tiktok.svg';
+// import FacebookIcon from '@/assets/icons/facebook.svg';
+// import ThreadsIcon from '@/assets/icons/threads.svg';
+import TelegramIcon from '@/assets/icons/telegram.svg';
+import MaxIcon from '@/assets/icons/max.svg';
+import ViberIcon from '@/assets/icons/viber.svg';
+import WhatsappIcon from '@/assets/icons/whatsapp.svg';
 import Map from '@/components/ui/ya-map';
 import { MAP_CUSTOMIZATION } from '@/features/map/variables';
 import { Icon } from '@iconify/react';
@@ -69,6 +73,50 @@ export default function Hero() {
 
           <ul className='w-full flex items-center justify-start base-frame-big p-4 lg:px-8 lg:py-6 gap-2'>
             <li>
+                <a
+                  href='https://t.me/proffhim_ru'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <TelegramIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href='https://max.ru/u/f9LHodD0cOLTiT9h85Bj0wYC2qHqfeO2n7RAIZ4j7T7M6gtB3aIQQ4SJxsw'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <MaxIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href='viber://chat?number=%2B375292684295'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <ViberIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://wa.me/375293317064'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <WhatsappIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+            
+            
+            {/* <li>
               <a
                 href='https://www.instagram.com/proffhim.by/'
                 target='_blank'
@@ -120,7 +168,7 @@ export default function Hero() {
               >
                 <ThreadsIcon className='w-6 h-6 inline-block text-white' />
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className='w-full h-[400px] lg:h-auto self-stretch'>

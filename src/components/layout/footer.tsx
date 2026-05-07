@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import LogoBlack from '@/assets/icons/logo-black.svg';
-import InstagramIcon from '@/assets/icons/instagram.svg';
-import VKIcon from '@/assets/icons/vkontakte.svg';
-import TikTokIcon from '@/assets/icons/tiktok.svg';
-import FacebookIcon from '@/assets/icons/facebook.svg';
-import ThreadsIcon from '@/assets/icons/threads.svg';
+// import InstagramIcon from '@/assets/icons/instagram.svg';
+import TelegramIcon from '@/assets/icons/telegram.svg';
+import MaxIcon from '@/assets/icons/max.svg';
+import ViberIcon from '@/assets/icons/viber.svg';
+import WhatsappIcon from '@/assets/icons/whatsapp.svg';
+// import VKIcon from '@/assets/icons/vkontakte.svg';
+// import TikTokIcon from '@/assets/icons/tiktok.svg';
+// import FacebookIcon from '@/assets/icons/facebook.svg';
+// import ThreadsIcon from '@/assets/icons/threads.svg';
 
 export function Footer() {
   return (
@@ -114,9 +118,52 @@ export function Footer() {
             </nav>
           </div>
           <div className='w-full flex flex-col items-start justify-start gap-4'>
-            <p className='typo-h5'>Социальные сети</p>
+            <p className='typo-h5'>Мессенджеры</p>
             <ul className='flex items-center justify-center gap-2'>
               <li>
+                <a
+                  href='https://t.me/proffhim_ru'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <TelegramIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href='https://max.ru/u/f9LHodD0cOLTiT9h85Bj0wYC2qHqfeO2n7RAIZ4j7T7M6gtB3aIQQ4SJxsw'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <MaxIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href='viber://chat?number=%2B375292684295'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <ViberIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://wa.me/375293317064'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'
+                >
+                  <WhatsappIcon className='w-6 h-6 inline-block text-white' />
+                </a>
+              </li>
+
+              {/* <li>
                 <a
                   href='https://www.instagram.com/proffhim.by/'
                   target='_blank'
@@ -166,7 +213,7 @@ export function Footer() {
                 >
                   <ThreadsIcon className='w-6 h-6 inline-block text-white' />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

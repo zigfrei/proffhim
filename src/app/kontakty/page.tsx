@@ -36,8 +36,9 @@ export const metadata = {
 
 const productionBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'Organization'],
   name: 'Общество с ограниченной ответственностью "ПроффХим"',
+  alternateName: 'ПроффХим, Профф',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'д. Подлипки, строение 7',
@@ -60,8 +61,16 @@ const productionBusinessSchema = {
   },
   email: 'proffhimsale@mail.ru',
 
-  url: 'https://proffhim.by/kontakty',
+  url: 'https://proffhim.by',
+  mainEntityOfPage: 'https://proffhim.by/kontakty',
+  logo: 'https://proffhim.by/logo.png',
   image: 'https://proffhim.by/og-image.png',
+  sameAs: [
+    'https://t.me/proffhim_ru',
+    'https://max.ru/u/f9LHodD0cOLTiT9h85Bj0wYC2qHqfeO2n7RAIZ4j7T7M6gtB3aIQQ4SJxsw',
+    'https://www.instagram.com/proffhim.by/',
+    'https://vk.com/public182349785',
+  ],
   areaServed: [
     {
       '@type': 'Country',
