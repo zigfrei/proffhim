@@ -1,9 +1,9 @@
 import SectionBlock from '@/components/ui/section';
-import InstagramIcon from '@/assets/icons/instagram.svg';
-import VKIcon from '@/assets/icons/vkontakte.svg';
-import TikTokIcon from '@/assets/icons/tiktok.svg';
-import FacebookIcon from '@/assets/icons/facebook.svg';
-import ThreadsIcon from '@/assets/icons/threads.svg';
+// import InstagramIcon from '@/assets/icons/instagram.svg';
+// import VKIcon from '@/assets/icons/vkontakte.svg';
+// import TikTokIcon from '@/assets/icons/tiktok.svg';
+// import FacebookIcon from '@/assets/icons/facebook.svg';
+// import ThreadsIcon from '@/assets/icons/threads.svg';
 import TelegramIcon from '@/assets/icons/telegram.svg';
 import MaxIcon from '@/assets/icons/max.svg';
 import ViberIcon from '@/assets/icons/viber.svg';
