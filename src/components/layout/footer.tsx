@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import LogoBlack from '@/assets/icons/logo-black.svg';
-import InstagramIcon from '@/assets/icons/instagram.svg';
+// import InstagramIcon from '@/assets/icons/instagram.svg';
 import TelegramIcon from '@/assets/icons/telegram.svg';
 import MaxIcon from '@/assets/icons/max.svg';
 import ViberIcon from '@/assets/icons/viber.svg';
 import WhatsappIcon from '@/assets/icons/whatsapp.svg';
-import VKIcon from '@/assets/icons/vkontakte.svg';
-import TikTokIcon from '@/assets/icons/tiktok.svg';
-import FacebookIcon from '@/assets/icons/facebook.svg';
-import ThreadsIcon from '@/assets/icons/threads.svg';
+// import VKIcon from '@/assets/icons/vkontakte.svg';
+// import TikTokIcon from '@/assets/icons/tiktok.svg';
+// import FacebookIcon from '@/assets/icons/facebook.svg';
+// import ThreadsIcon from '@/assets/icons/threads.svg';
 
 export function Footer() {
   return (
