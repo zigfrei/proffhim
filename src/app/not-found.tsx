@@ -1,4 +1,15 @@
 import { BigLinkButton } from '@/components/ui/links';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Страница не найдена | ПроффХим',
+  description:
+    'Запрошенная страница не найдена. Перейдите на главную страницу или в каталог продукции ПроффХим.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function NotFound() {
   return (
@@ -8,21 +19,20 @@ export default function NotFound() {
         Страница не найдена или адрес введён неверно.
       </p>
       <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6'>
-                    <BigLinkButton
-                      href='/'
-                      className='lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center'
-                    >
-                      на главную
-                    </BigLinkButton>
+        <BigLinkButton
+          href='/'
+          className='lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center'
+        >
+          на главную
+        </BigLinkButton>
 
-                                        <BigLinkButton
-                      href='/produktsiya'
-                      className='lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center'
-                    >
-                      в каталог
-                    </BigLinkButton>
+        <BigLinkButton
+          href='/produktsiya'
+          className='lg:mt-4 lg:mb-0 w-full lg:w-auto max-w-[420px] lg:max-w-none justify-center'
+        >
+          в каталог
+        </BigLinkButton>
       </div>
-
     </main>
   );
 }
