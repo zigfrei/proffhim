@@ -144,7 +144,7 @@ export function Footer() {
 
               <li>
                 <a
-                  href='viber://chat?number=%2B375292684295'
+                  href='viber://chat?number=%2B375292659068'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='w-12 h-12 flex items-center justify-center bg-base-black base-frame lg:base-frame-interactive'

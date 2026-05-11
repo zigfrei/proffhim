@@ -9,6 +9,44 @@ import Scope from '@/components/sections/main/scope';
 import Cards from '@/components/sections/main/cards';
 import Documents from '@/components/sections/main/documents';
 import B2B from '@/components/sections/main/b2b';
+// import Quiz from '@/components/sections/main/quiz';
+import type { Metadata } from 'next';
+
+const title = 'Моющие и дезинфицирующие средства для промышленности | ПроффХим';
+const description =
+  'Моющие и дезинфицирующие средства для оборудования, пищевой и агропромышленной отраслей. Щелочные, кислотные и пенные моющие средства для предприятий и ферм.';
+const openGraphDescription =
+  'Производство моющих и дезинфицирующих средств для оборудования, пищевой и агропромышленной отраслей. Щелочные, кислотные и пенные моющие средства для предприятий и ферм.';
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title,
+    description: openGraphDescription,
+    url: 'https://proffhim.by',
+    siteName: 'ПроффХим',
+    locale: 'ru_RU',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'ПроффХим',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description: openGraphDescription,
+    images: ['/twitter-image.png'],
+  },
+};
 
 export default function Home() {
   const faqSchema = {
@@ -85,6 +123,7 @@ export default function Home() {
         <Numbers />
         <Scope />
         <Documents />
+        {/* <Quiz /> */}
         {/* <Partners /> */}
         <BeforeAndAfter />
         <Cards />
