@@ -42,44 +42,4 @@ export const redirects = [
     destination: '/kontakty',
     permanent: true,
   },
-  {
-    source: '/wash_prog.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news_25.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news_24.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news_23.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news_22.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news_21.shtml',
-    destination: '/',
-    permanent: true,
-  },
-  {
-    source: '/news_20.shtml',
-    destination: '/',
-    permanent: true,
-  },
 ] satisfies AppRedirect[];

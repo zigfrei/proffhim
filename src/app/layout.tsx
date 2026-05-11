@@ -25,12 +25,6 @@ const yandexWebmasterVerification = process.env.YANDEX_WEBMASTER_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://proffhim.by'),
-  title: 'Моющие и дезинфицирующие средства для промышленности | ПроффХим',
-  description:
-    'Моющие и дезинфицирующие средства для оборудования, пищевой и агропромышленной отраслей. Щелочные, кислотные и пенные моющие средства для предприятий и ферм.',
-  alternates: {
-    canonical: '/',
-  },
   robots: {
     index: allowIndexing,
     follow: allowIndexing,
@@ -40,29 +34,6 @@ export const metadata: Metadata = {
         yandex: yandexWebmasterVerification,
       }
     : undefined,
-  openGraph: {
-    title: 'Моющие и дезинфицирующие средства для промышленности | ПроффХим',
-    description:
-      'Производство моющих и дезинфицирующих средств для оборудования, пищевой и агропромышленной отраслей. Щелочные, кислотные и пенные моющие средства для предприятий и ферм.',
-    url: 'https://proffhim.by',
-    siteName: 'ПроффХим',
-    locale: 'ru_RU',
-    type: 'website',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'ПроффХим',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Моющие и дезинфицирующие средства для промышленности | ПроффХим',
-    description: 'Производство моющих и дезинфицирующих средств для оборудования, пищевой и агропромышленной отраслей. Щелочные, кислотные и пенные моющие средства для предприятий и ферм.',
-    images: ['/twitter-image.png'],
-  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
