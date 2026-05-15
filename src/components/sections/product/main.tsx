@@ -55,7 +55,7 @@ export default function ProductMain({ product }: { product: Product }) {
               <div className='w-full aspect-square shrink-0 border-2 border-base-black relative'>
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={product.seoName || product.name}
                   fill
                   sizes='(min-width: 768px) 50vw, 100vw'
                   className='object-cover'
