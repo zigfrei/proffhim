@@ -5,6 +5,7 @@ import TelegramIcon from '@/assets/icons/telegram.svg';
 import MaxIcon from '@/assets/icons/max.svg';
 import ViberIcon from '@/assets/icons/viber.svg';
 import WhatsappIcon from '@/assets/icons/whatsapp.svg';
+import { Icon } from '@iconify/react';
 // import VKIcon from '@/assets/icons/vkontakte.svg';
 // import TikTokIcon from '@/assets/icons/tiktok.svg';
 // import FacebookIcon from '@/assets/icons/facebook.svg';
@@ -68,6 +69,18 @@ export function Footer() {
                   +375 (152) 605177
                 </a>
               </p>
+              <div className='flex items-center justify-center gap-1'>
+                <Icon
+                  icon='material-symbols:mail'
+                  className='w-4 h-4 text-base-black'
+                />
+                <a
+                  href='mailto:proffhimsale@mail.ru'
+                  className='typo-b3 hover:text-base-white transition-colors duration-200'
+                >
+                  proffhimsale@mail.ru
+                </a>
+              </div>
             </div>
           </div>
           <div className='w-full flex flex-col items-start justify-start gap-4'>

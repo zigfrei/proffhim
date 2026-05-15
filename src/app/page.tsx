@@ -9,7 +9,7 @@ import Scope from '@/components/sections/main/scope';
 import Cards from '@/components/sections/main/cards';
 import Documents from '@/components/sections/main/documents';
 import B2B from '@/components/sections/main/b2b';
-// import Quiz from '@/components/sections/main/quiz';
+import Quiz from '@/components/sections/main/quiz';
 import type { Metadata } from 'next';
 
 const title = 'Моющие и дезинфицирующие средства для промышленности | ПроффХим';
@@ -123,7 +123,7 @@ export default function Home() {
         <Numbers />
         <Scope />
         <Documents />
-        {/* <Quiz /> */}
+        <Quiz />
         {/* <Partners /> */}
         <BeforeAndAfter />
         <Cards />
