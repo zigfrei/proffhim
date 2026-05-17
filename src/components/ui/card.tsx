@@ -45,7 +45,7 @@ export function Card({
       >
         <Image
           src={image}
-          alt={name}
+          alt={seoName || name}
           fill
           sizes='(min-width: 768px) 50vw, 100vw'
           className={styles.cardImage}

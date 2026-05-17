@@ -14,3 +14,10 @@ export type CertificateCallBackFormField = {
   policyAgreed: boolean;
   message: string;
 };
+
+export type QuizFormField = {
+  email: string;
+  phone: string;
+  policyAgreed: boolean;
+  quizAnswers: Record<string, string>;
+};
