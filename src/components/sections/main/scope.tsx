@@ -1,5 +1,6 @@
 import SectionBlock from '@/components/ui/section';
 import Image from 'next/image';
+import Link from 'next/link';
 import clsx from 'clsx';
 import type { ComponentType, SVGProps } from 'react';
 import CowIcon from '@/assets/icons/scope/cow.svg';
@@ -30,6 +31,7 @@ interface ScopeItem {
   imageWrapperClassName: string;
   contentClassName?: string;
   titleClassName?: string;
+  link?: string;
 }
 
 const SCOPE_ITEMS: ScopeItem[] = [
@@ -44,6 +46,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     iconClassName: 'w-12 h-12 lg:w-22 lg:h-22',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
+    link: '/moyushchie-sredstva-dlya-molochnoj-promyshlennosti',
   },
   {
     number: '02.',
@@ -56,7 +59,8 @@ const SCOPE_ITEMS: ScopeItem[] = [
     iconClassName: 'w-12 h-12 lg:w-20 lg:h-20',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
-  },
+    link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
+    },
   {
     number: '03.',
     title: 'Переработка птицы',
@@ -68,7 +72,8 @@ const SCOPE_ITEMS: ScopeItem[] = [
     iconClassName: 'w-12 h-12',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
-  },
+  link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
+    },
   {
     number: '07.',
     title: 'Рыбная отрасль',
@@ -81,6 +86,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
     titleClassName: 'whitespace-normal break-words',
+  link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
   },
   {
     number: '05.',
@@ -106,7 +112,8 @@ const SCOPE_ITEMS: ScopeItem[] = [
     iconClassName: 'w-12 h-12 lg:w-30 lg:h-30',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
-  },
+    link: '/moyushchie-sredstva-dlya-pivovarennoj-promyshlennosti',
+    },
   {
     number: '04.',
     title: 'Хлебобулоч\u00ADная и кондитер\u00ADская отрасль',
@@ -121,6 +128,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-full lg:h-[40%]',
     titleClassName: 'whitespace-normal break-words',
+     link: '/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti',
   },
   {
     number: '08.',
@@ -182,19 +190,18 @@ function ScopeCard({ item }: { item: ScopeItem }) {
   const isDesktopIconLeading = item.layout === 'icon-leading';
   const isDesktopIconMiddle = item.layout === 'icon-middle';
   const isDesktopColumnLayout = Boolean(item.desktopColumnLayout);
+  const className = clsx(
+    'w-full w-min-0 base-frame flex p-2 gap-4',
+    item.mobileBgClassName,
+    item.desktopBgClassName,
+    'items-center justify-between',
+    isDesktopColumnLayout && 'lg:flex-col lg:items-stretch',
+    item.areaClassName,
+    item.contentClassName
+  );
 
-  return (
-    <div
-      className={clsx(
-        'w-full w-min-0 base-frame flex p-2 gap-4',
-        item.mobileBgClassName,
-        item.desktopBgClassName,
-        'items-center justify-between',
-        isDesktopColumnLayout && 'lg:flex-col lg:items-stretch',
-        item.areaClassName,
-        item.contentClassName
-      )}
-    >
+  const content = (
+    <>
       {isDesktopIconLeading && (
         <ScopeItemIcon
           item={item}
@@ -253,6 +260,26 @@ function ScopeCard({ item }: { item: ScopeItem }) {
           className='object-cover'
         />
       </div>
+    </>
+  );
+
+  if (item.link) {
+    return (
+      <Link
+        href={item.link}
+        className={clsx(
+          className,
+          'lg:base-frame-interactive hover:!bg-secondary'
+        )}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={className}>
+      {content}
     </div>
   );
 }
