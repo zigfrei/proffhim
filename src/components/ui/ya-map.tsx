@@ -156,7 +156,7 @@ const Map = ({ customization }: MapProps) => {
         href={`https://yandex.com/maps/?rtext=~${getMarkerCoordinates(LOCATION)[1]},${getMarkerCoordinates(LOCATION)[0]}&rtt=auto`}
         target='_blank'
         rel='noopener noreferrer'
-        className='absolute top-2 lg:top-auto lg:bottom-2 left-2 typo-h6 bg-base-white px-3 py-1 base-frame lg:base-frame-interactive'
+        className='absolute top-2 left-2 typo-h6 bg-base-white px-3 py-1 base-frame lg:base-frame-interactive'
       >
         проложить маршрут
       </a>
