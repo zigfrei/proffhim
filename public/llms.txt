@@ -1,0 +1,40 @@
+# Proffhim
+
+> Proffhim — белорусский производитель профессиональных моющих, дезинфицирующих и зоогигиенических средств для пищевой промышленности, животноводства и контрактного производства.
+
+Сайт содержит информацию о компании, продукции, отраслевых решениях, сертификатах, контрактном производстве и контактах для консультаций, заказов и сотрудничества.
+
+## Основные страницы
+
+- [Главная](https://proffhim.by/): Основные направления продукции и услуг Proffhim.
+- [Каталог продукции](https://proffhim.by/produktsiya): Основные группы профессиональных моющих, дезинфицирующих и зоогигиенических средств.
+- [О компании](https://proffhim.by/o-kompanii): Информация о компании, производстве и компетенциях.
+- [Сертификаты](https://proffhim.by/sertifikaty): Сертификаты качества и соответствия продукции.
+- [Контакты](https://proffhim.by/kontakty): Контакты для консультаций, заказов и сотрудничества.
+
+## Услуги
+
+- [Контрактное производство](https://proffhim.by/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv): Производство моющих и дезинфицирующих средств под задачи заказчика.
+
+## Отраслевые решения
+
+- [Молочная промышленность](https://proffhim.by/moyushchie-sredstva-dlya-molochnoj-promyshlennosti): Моющие средства и решения для предприятий молочной отрасли.
+- [Мясная промышленность](https://proffhim.by/moyushchie-sredstva-dlya-myasnoj-promyshlennosti): Моющие средства и решения для мясоперерабатывающих предприятий.
+- [Пивоваренная промышленность](https://proffhim.by/moyushchie-sredstva-dlya-pivovarennoj-promyshlennosti): Моющие средства и решения для пивоваренного производства.
+- [Хлебопекарная и кондитерская промышленность](https://proffhim.by/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti): Моющие средства и решения для хлебопекарных и кондитерских производств.
+- [Зоогигиенические средства](https://proffhim.by/zoogigienicheskie-sredstva-dlya-obrabotki-vymeni-i-kopyt): Средства для обработки вымени и копыт в животноводстве.
+
+## Категории продукции
+
+- [Щелочные моющие средства](https://proffhim.by/produktsiya/shchelochnye-moyushchie-sredstva): Профессиональные щелочные средства для мойки оборудования и поверхностей.
+- [Щелочные моющие и дезинфицирующие средства](https://proffhim.by/produktsiya/shchelochnye-moyushchie-i-dezinfitsiruyushchie-sredstva): Средства, совмещающие мойку и дезинфекцию.
+- [Кислотные моющие средства](https://proffhim.by/produktsiya/kislotnye-moyushchie-sredstva): Кислотные средства для удаления минеральных загрязнений и отложений.
+- [Дезинфицирующие средства](https://proffhim.by/produktsiya/dezinfitsiruyushchie-sredstva): Средства для санитарной обработки и дезинфекции.
+- [Нейтральные моющие средства](https://proffhim.by/produktsiya/neitralnye-sredstva): Нейтральные средства для бережной мойки.
+- [Зоогигиенические средства](https://proffhim.by/produktsiya/zoogigienicheskie-sredstva): Средства для гигиены и ухода в животноводстве.
+
+## Служебные файлы
+
+- [Политика конфиденциальности](https://proffhim.by/politika-konfidencialnosti): Правила обработки персональных данных.
+- [robots.txt](https://proffhim.by/robots.txt): Правила индексации для поисковых систем.
+- [sitemap.xml](https://proffhim.by/sitemap.xml): Карта сайта с основными URL.
