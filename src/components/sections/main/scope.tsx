@@ -60,7 +60,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
     link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
-    },
+  },
   {
     number: '03.',
     title: 'Переработка птицы',
@@ -72,8 +72,8 @@ const SCOPE_ITEMS: ScopeItem[] = [
     iconClassName: 'w-12 h-12',
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
-  link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
-    },
+    link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
+  },
   {
     number: '07.',
     title: 'Рыбная отрасль',
@@ -86,7 +86,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
     titleClassName: 'whitespace-normal break-words',
-  link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
+    link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
   },
   {
     number: '05.',
@@ -113,7 +113,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale',
     link: '/moyushchie-sredstva-dlya-pivovarennoj-promyshlennosti',
-    },
+  },
   {
     number: '04.',
     title: 'Хлебобулоч\u00ADная и кондитер\u00ADская отрасль',
@@ -128,7 +128,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-full lg:h-[40%]',
     titleClassName: 'whitespace-normal break-words',
-     link: '/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti',
+    link: '/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti',
   },
   {
     number: '08.',
@@ -143,6 +143,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-full lg:h-[60%]',
     titleClassName: 'whitespace-normal break-words',
+    link: '/zoogigienicheskie-sredstva-dlya-obrabotki-vymeni-i-kopyt',
   },
   {
     number: '09.',
@@ -156,6 +157,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
     titleClassName: 'whitespace-normal break-words',
+    link: '/zoogigienicheskie-sredstva-dlya-obrabotki-vymeni-i-kopyt',
   },
   {
     number: '10.',
@@ -197,7 +199,7 @@ function ScopeCard({ item }: { item: ScopeItem }) {
     'items-center justify-between',
     isDesktopColumnLayout && 'lg:flex-col lg:items-stretch',
     item.areaClassName,
-    item.contentClassName
+    item.contentClassName,
   );
 
   const content = (
@@ -214,13 +216,13 @@ function ScopeCard({ item }: { item: ScopeItem }) {
           'w-full flex flex-col items-start gap-1',
           'justify-between',
           !isDesktopStacked && 'lg:justify-start',
-          isDesktopIconMiddle && 'lg:order-1'
+          isDesktopIconMiddle && 'lg:order-1',
         )}
       >
         <div
           className={clsx(
             'w-full flex items-start justify-between gap-2',
-            !isDesktopStacked && 'lg:block'
+            !isDesktopStacked && 'lg:block',
           )}
         >
           <span className='text-[2rem] typo-h4'>{item.number}</span>
@@ -228,7 +230,7 @@ function ScopeCard({ item }: { item: ScopeItem }) {
             item={item}
             className={clsx(
               item.iconClassName,
-              !isDesktopStacked && 'lg:hidden'
+              !isDesktopStacked && 'lg:hidden',
             )}
           />
         </div>
@@ -249,7 +251,7 @@ function ScopeCard({ item }: { item: ScopeItem }) {
         className={clsx(
           item.imageWrapperClassName,
           isDesktopIconMiddle && 'lg:order-3',
-          isDesktopColumnLayout && 'lg:self-stretch'
+          isDesktopColumnLayout && 'lg:self-stretch',
         )}
       >
         <Image
@@ -269,7 +271,7 @@ function ScopeCard({ item }: { item: ScopeItem }) {
         href={item.link}
         className={clsx(
           className,
-          'lg:base-frame-interactive hover:!bg-secondary'
+          'lg:base-frame-interactive hover:!bg-secondary',
         )}
       >
         {content}
@@ -277,11 +279,7 @@ function ScopeCard({ item }: { item: ScopeItem }) {
     );
   }
 
-  return (
-    <div className={className}>
-      {content}
-    </div>
-  );
+  return <div className={className}>{content}</div>;
 }
 
 export default function Scope() {
@@ -298,8 +296,7 @@ export default function Scope() {
         >
           <div className='w-full p-4 bg-primary base-frame flex items-center justify-center lg:[grid-area:cell11]'>
             <h2 className='typo-h2 lg:[writing-mode:vertical-rl] lg:[text-orientation:mixed] lg:rotate-180'>
-              <span className='block'>Сфера</span>
-              {' '}
+              <span className='block'>Сфера</span>{' '}
               <span className='block'>применения</span>
             </h2>
           </div>
