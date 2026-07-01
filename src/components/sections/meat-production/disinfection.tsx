@@ -14,7 +14,7 @@ export default function Disinfection() {
               <h2 className='w-full typo-h2'>Дезинфи&shy;цирующие средства</h2>
             </Link>
             <h3 className='w-full typo-h4 text-center lg:text-left base-frame p-4 bg-primary'>
-              Контроль микробиологической чистоты
+              Контроль микробио&shy;логической чистоты
             </h3>
             <p className='leading-tight! xl:leading-normal! typo-body border-l-[5px] border-primary pl-4'>
               Финальный этап санитарной обработки после мойки оборудования и
