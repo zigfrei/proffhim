@@ -127,6 +127,14 @@ export function Footer() {
                     Сертификаты
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href='/razrabotka-sredstva-seifgat'
+                    className='uppercase typo-b3 font-bold text-base-black inline-block border-b-[2px] border-transparent hover:border-base-black hover:text-base-black transition-[color,border-color] duration-200'
+                  >
+                    Разработка средства «СейфГат»
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>

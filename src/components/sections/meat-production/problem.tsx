@@ -8,7 +8,7 @@ export default function Problem() {
         <div className='w-full flex items-center lg:items-start flex-col gap-4 bg-primary p-4 lg:p-8 border-b-[5px] border-base-black'>
           <h2 className='w-full typo-h4 text-center lg:text-left'>
             Мясо, птица и рыба создают сложные белково-жировые загрязнения, а
-            также высокий микробиологический риск. Даже незначительные остатки
+            также высокий микробио&shy;логический риск. Даже незначительные остатки
             на оборудовании и поверхностях могут привести к снижению качества
             продукции, сокращению срока хранения и санитарным рискам на
             производстве.
