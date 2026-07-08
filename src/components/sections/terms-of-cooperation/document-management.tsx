@@ -7,7 +7,7 @@ export default function DocumentManagement() {
       <div className='w-full flex-col flex items-stretch justify-stretch base-frame-big'>
         <div className='w-full flex items-center lg:items-start flex-col gap-4 bg-primary p-4 lg:p-8 border-b-[5px] border-base-black'>
           <h2 className='w-full typo-h4 text-center lg:text-left'>
-            По каждой поставке предоставляем комплект сопроводительных и закрывающих документов.
+            По каждой поставке предоставляется комплект сопроводительных и закрывающих документов.
           </h2>
         </div>
         <div className='w-full flex flex-col items-start gap-4 p-4 lg:p-8'>
@@ -18,31 +18,31 @@ export default function DocumentManagement() {
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Счет на оплату.</p>
+                <p className='typo-h5'>Счет на оплату</p>
               </li>
               <li className='flex items-start gap-2'>
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Накладные / УПД.</p>
+                <p className='typo-h5'>Накладные</p>
               </li>
               <li className='flex items-start gap-2'>
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Счета-фактуры, если применимо.</p>
+                <p className='typo-h5'>Счета-фактуры</p>
               </li>
                             <li className='flex items-start gap-2'>
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Акты сверки по запросу или в рамках регулярного сотрудничества.</p>
+                <p className='typo-h5'>Акты сверки по запросу или в рамках регулярного сотрудничества</p>
               </li>
                             <li className='flex items-start gap-2'>
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Сертификаты и иные документы на продукцию.</p>
+                <p className='typo-h5'>Сертификаты и иные документы на продукцию</p>
               </li>
             </ul>
 

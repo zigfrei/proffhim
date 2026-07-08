@@ -18,7 +18,7 @@ export default function Delivery() {
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>География поставок: Беларусь, Россия, Казахстан</p>
+                <p className='typo-h5'>География поставок: Беларусь, Россия, Казахстан и другие страны СНГ.</p>
               </li>
               <li className='flex items-center gap-2'>
                 <div className='flex items-start justify-center p-1 rounded bg-quaternary'>
@@ -30,13 +30,13 @@ export default function Delivery() {
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Для доставки грузов мы сотрудничаем с транспортной компанией «Автолайтэкспресс» и сетью проверенных перевозчиков (ИП), обеспечивая регулярные поставки по Беларуси, а также в Россию и Казахстан.</p>
+                <p className='typo-h5'>Для доставки грузов мы сотрудничаем с транспортными компаниями и сетью проверенных перевозчиков (ИП), обеспечивая регулярные поставки по Беларуси, а также в Россию и Казахстан.</p>
               </li>
                             <li className='flex items-start gap-2'>
                 <div className='flex items-center justify-center p-1 rounded bg-quaternary'>
                   <CheckIcon className='w-3 h-3 lg:h-5 lg:w-5 text-base-white [&>path]:stroke-[2.5]' />
                 </div>
-                <p className='typo-h5'>Самовывоз осуществляется по адресу: Республика Беларусь, Гродненская область, Гродненский район, Одельский сельсовет, д. Подлипки, строение 7 в рабочие дни с 8:30 до 17:00</p>
+                <p className='typo-h5'>Самовывоз осуществляется по адресу: Республика Беларусь, Гродненская область, Гродненский район, Одельский сельсовет, д. Подлипки, строение 7 в рабочие дни с 9:00 до 17:00.</p>
               </li>
             </ul>
 
