@@ -7,10 +7,12 @@ export const dynamic = 'force-static';
 export function GET(): Response {
   const indexingRule = allowIndexing ? 'Allow: /' : 'Disallow: /';
   const body = [
-    'User-Agent: *',
+    'User-agent: *',
     indexingRule,
     '',
-    'Clean-param: etext',
+    'User-agent: Yandex',
+    indexingRule,
+    'Clean-param: etext /',
     '',
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     '',
