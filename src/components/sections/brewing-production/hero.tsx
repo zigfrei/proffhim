@@ -9,12 +9,12 @@ export default function Hero() {
       <div className='z-10 w-full flex-1 flex items-start justify-center gap-16'>
         <div className='w-full h-full flex flex-col items-start justify-start gap-4'>
           <h1
-            className='text-[1.5rem] min-[440px]:text-[1.7rem] lg:text-[3rem] typo-h2 text-base-white xl:text-base-black'
+            className='text-[1.5rem] min-[440px]:text-[1.7rem] lg:text-[2.2rem] typo-h2 text-base-white xl:text-base-black'
             aria-label='Моющие средства для мясной промышленности'
           >
             Моющие средства для пивоварения и напитков
           </h1>
-          <p className='leading-tight! xl:leading-normal! typo-body border-l-[5px] border-primary pl-4 text-base-white xl:text-base-black'>
+          <p className='leading-tight! xl:leading-normal! lg:text-[1.2rem] typo-body border-l-[5px] border-primary pl-4 text-base-white xl:text-base-black'>
             Эффективная мойка и дезинфекция для пивоваренных, ликёро‑водочных и безалкогольных производств. Подберите решения под ваше производство — от варочного цеха до линии розлива:
           </p>
           <div>
