@@ -7,7 +7,7 @@ export default function Hero() {
     <SectionBlock wrapperClassName='relative overflow-hidden p-4! lg:p-12! h-[calc(100vh-76px)] min-h-[720px] xl:min-h-[850px]'>
       <div className='z-10 w-full flex-1 flex items-start justify-center gap-16'>
         <div className='w-full h-full flex flex-col items-start justify-start gap-4'>
-          <p className='typo-b3 py-2 px-4 xl:p-0 bg-primary xl:bg-transparent text-base-black xl:text-secondary'>
+          <p className='typo-b3 py-2 px-4 xl:p-0 bg-primary xl:bg-transparent text-base-black'>
             Сделано в Беларуси
           </p>
           <h1 className='text-[2rem] lg:text-[3rem] typo-h2 text-base-white xl:text-base-black'>
