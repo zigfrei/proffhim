@@ -13,6 +13,7 @@ import AlcoholIcon from '@/assets/icons/scope/alcohol.svg';
 import BreadIcon from '@/assets/icons/scope/bread.svg';
 import BarnIcon from '@/assets/icons/scope/barn.svg';
 import FactoryIcon from '@/assets/icons/scope/factory.svg';
+import CarIcon from '@/assets/icons/scope/car.svg';
 
 type ScopeLayout = 'icon-leading' | 'icon-middle' | 'stacked';
 
@@ -88,11 +89,24 @@ const SCOPE_ITEMS: ScopeItem[] = [
     titleClassName: 'whitespace-normal break-words',
     link: '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
   },
-  {
+  // {
+  //   number: '05.',
+  //   title: 'Сахарная отрасль',
+  //   imageSrc: '/scope/sugar.png',
+  //   icon: SugarIcon,
+  //   areaClassName: 'lg:[grid-area:cell5]',
+  //   mobileBgClassName: 'bg-primary',
+  //   layout: 'stacked',
+  //   iconClassName: 'w-12 h-12',
+  //   imageWrapperClassName:
+  //     'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
+  //   titleClassName: 'whitespace-normal break-words',
+  // },
+    {
     number: '05.',
-    title: 'Сахарная отрасль',
-    imageSrc: '/scope/sugar.png',
-    icon: SugarIcon,
+    title: 'Автомойки и СТО',
+    imageSrc: '/scope/car.webp',
+    icon: CarIcon,
     areaClassName: 'lg:[grid-area:cell5]',
     mobileBgClassName: 'bg-primary',
     layout: 'stacked',
@@ -100,6 +114,7 @@ const SCOPE_ITEMS: ScopeItem[] = [
     imageWrapperClassName:
       'relative w-[20%] shrink-0 self-stretch overflow-hidden border-2 border-base-black grayscale lg:w-[20%]',
     titleClassName: 'whitespace-normal break-words',
+    link: '/professionalnaya-avtohimiya',
   },
   {
     number: '06.',
