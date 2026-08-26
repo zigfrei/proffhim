@@ -8,7 +8,7 @@ export const metadata = {
   title: "Условия сотрудничества",
   description: "Условия сотрудничества с компанией ПроффХим: порядок работы, производство профессиональной химии, оформление заказа, оплата, доставка и поддержка клиентов.",
   alternates: {
-    canonical: '/razrabotka-sredstva-seifgat',
+    canonical: '/usloviya-sotrudnichestva',
   },
   openGraph: {
     title: 'Условия сотрудничества',

@@ -1,9 +1,21 @@
 'use client';
 
 import { useId, useState } from 'react';
-import Image from 'next/image';
+import Image, { type ImageProps } from 'next/image';
 
-export default function BeforeAndAfterItem() {
+type BeforeAndAfterItemProps = {
+  beforeSrc: ImageProps['src'];
+  afterSrc: ImageProps['src'];
+  beforeAlt?: string;
+  afterAlt?: string;
+};
+
+export default function BeforeAndAfterItem({
+  beforeSrc,
+  afterSrc,
+  beforeAlt = 'До',
+  afterAlt = 'После',
+}: BeforeAndAfterItemProps) {
   const [position, setPosition] = useState(50);
   const sliderId = useId();
 
@@ -15,10 +27,10 @@ export default function BeforeAndAfterItem() {
           </div>
           <div className='absolute top-2 right-2 z-2 flex items-center justify-center px-4 py-2 bg-base-black base-shadow'> 
               <p className='typo-h5 text-primary'>После</p>
-          </div>
+            </div>
             <Image
-              src='/after.png'
-              alt='После'
+              src={afterSrc}
+              alt={afterAlt}
               fill
               sizes='75vw'
               className='object-cover'
@@ -28,8 +40,8 @@ export default function BeforeAndAfterItem() {
               style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
             >
               <Image
-                src='/before.png' 
-                alt='До'
+                src={beforeSrc}
+                alt={beforeAlt}
                 fill
                 sizes='75vw'
                 className='object-cover brightness-[.75] contrast-125 saturate-75'
