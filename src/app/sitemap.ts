@@ -8,10 +8,19 @@ const STATIC_PAGES = [
   '',
   '/kontakty',
   '/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
+  '/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti',
+  '/moyushchie-sredstva-dlya-molochnoj-promyshlennosti',
+  '/moyushchie-sredstva-dlya-myasnoj-promyshlennosti',
+  '/moyushchie-sredstva-dlya-pivovarennoj-promyshlennosti',
   '/o-kompanii',
   '/politika-konfidencialnosti',
   '/produktsiya',
+  '/professionalnaya-avtohimiya',
+  '/razrabotka-sredstva-seifgat',
   '/sertifikaty',
+  '/sredstvo-dlya-myagkih-okon',
+  '/usloviya-sotrudnichestva',
+  '/zoogigienicheskie-sredstva-dlya-obrabotki-vymeni-i-kopyt',
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

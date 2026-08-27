@@ -12,9 +12,9 @@ export default function Benefits() {
               icon='material-symbols:charger-outline'
               className='row-span-2 size-12 shrink-0 sm:size-14 xl:size-20'
             />
-            <p className='typo-h5 leading-tight!'>Мощный антистатический эффект</p>
+            <p className='typo-h5 leading-tight!'>Антистатический эффект</p>
             <p className='typo-b3 leading-snug!'>
-              Отталкивает пыль и грязь после нанесения.
+              Помогает уменьшить налипание пыли после очистки.
             </p>
           </li>
           <li className='base-frame grid min-w-0 grid-cols-[3rem_minmax(0,1fr)] items-start gap-x-3 gap-y-1 p-3 sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:p-4 xl:flex xl:flex-col xl:gap-2'>
@@ -24,7 +24,7 @@ export default function Benefits() {
             />
             <p className='typo-h5 leading-tight!'>Без разводов и пятен</p>
             <p className='typo-b3 leading-snug!'>
-              Идеальная чистота даже на большой площади.
+              Чистота и прозрачность мягких окон.
             </p>
           </li>
           <li className='base-frame grid min-w-0 grid-cols-[3rem_minmax(0,1fr)] items-start gap-x-3 gap-y-1 p-3 sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:p-4 xl:flex xl:flex-col xl:gap-2'>
@@ -42,8 +42,8 @@ export default function Benefits() {
               icon='material-symbols:energy-savings-leaf-outline'
               className='row-span-2 size-12 shrink-0 sm:size-14 xl:size-20'
             />
-            <p className='typo-h5 leading-tight!'>Безопасно для ПВХ</p>
-            <p className='typo-b3 leading-snug!'>Не повреждает структуру плёнки.</p>
+            <p className='typo-h5 leading-tight!'>Бережный уход за ПВХ-плёнкой</p>
+            <p className='typo-b3 leading-snug!'>Подходит для регулярной очистки мягких окон и ПВХ-штор.</p>
           </li>
         </ul>
       </div>

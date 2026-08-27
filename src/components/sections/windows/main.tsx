@@ -31,13 +31,13 @@ export default function Hero() {
               Профф SHKLO для мягких окон
             </h1>
             <p className='typo-body border-l-[5px] border-primary pl-4 text-base-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]'>
-              Специальное средство для очистки мягких окон, ПВХ-штор и гибкого стекла. Удаляет повседневную грязь, следы дождя и отпечатки, а антистатический эффект помогает поверхности дольше оставаться чистой.
+              Средство для мытья мягких окон, ПВХ-штор и гибкого стекла. Удаляет грязь, следы дождя и отпечатки без разводов. Антистатический эффект помогает уменьшить налипание пыли — поверхность дольше остаётся чистой.
             </p>
             <BigLinkButton
               href='/kontakty/#obraschenie'
               className='mt-4 w-full max-w-[420px] justify-center self-center lg:w-auto lg:max-w-none lg:self-start'
             >
-              Связаться с нами
+              Узнать цену
             </BigLinkButton>
           </div>
           <div className='hidden w-full lg:block' aria-hidden='true' />

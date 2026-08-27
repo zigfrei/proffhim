@@ -10,7 +10,7 @@ export default function Surfaces() {
     <SectionBlockSmall>
       <div className='mb-8 flex w-full flex-col items-start justify-center gap-4 lg:gap-8'>
         <h3 className='w-full typo-h3'>
-          Одно средство для мягких окон на участке и в бизнесе
+          Средство для мягких окон на веранде, террасе и в беседке
         </h3>
 
         <ul className='grid w-full grid-cols-1 items-stretch gap-4 sm:grid-cols-2 xl:grid-cols-4'>
@@ -36,7 +36,7 @@ export default function Surfaces() {
             <div className='flex min-w-0 flex-col items-start justify-between gap-4 p-3 sm:p-4'>
               <RestoranIcon className='size-14 shrink-0 sm:size-16 xl:size-20' />
               <p className='typo-b2 leading-tight! tracking-normal!'>
-                Террасы ресторанов
+                Террасы кафе и ресторанов
               </p>
             </div>
             <div className='relative min-h-0'>
