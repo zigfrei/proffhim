@@ -12,7 +12,7 @@ export function GET(): Response {
     '',
     'User-agent: Yandex',
     indexingRule,
-    'Clean-param: etext /',
+    'Clean-param: etext&gad_source&gad_campaignid&gbraid&wbraid&gclid /',
     '',
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     '',
