@@ -11,7 +11,7 @@ export default function Production() {
           <div className='w-full flex-1 flex flex-col self-stretch gap-2 base-frame p-4'>
             <Image
               src='/b2b/card1.png'
-              alt=''
+              alt='Моющие средства для кухни, стекол и полов'
               width={300}
               height={300}
               className='w-auto h-auto object-cover border-[5px] border-base-black '
@@ -38,7 +38,7 @@ export default function Production() {
           <div className='w-full flex-1 flex flex-col self-stretch gap-2 base-frame p-4'>
             <Image
               src='/b2b/card2.png'
-              alt=''
+              alt='Дезинфицирующие средства для поверхностей'
               width={300}
               height={300}
               className='w-auto h-auto object-cover border-[5px] border-base-black '
@@ -67,7 +67,7 @@ export default function Production() {
           <div className='w-full flex-1 flex flex-col self-stretch gap-2 base-frame p-4'>
             <Image
               src='/b2b/card3.png'
-              alt=''
+              alt='Специализированная химия для промышленности и клининга'
               width={300}
               height={300}
               className='w-auto h-auto object-cover border-[5px] border-base-black '

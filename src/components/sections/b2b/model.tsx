@@ -49,7 +49,7 @@ export default function Model() {
             </div>
             <Image
               src='/b2b/private-label.png'
-              alt=''
+              alt='Продукция под собственной торговой маркой — Private Label'
               width={300}
               height={200}
               sizes='(min-width: 768px) 50vw, 100vw'
@@ -93,7 +93,7 @@ export default function Model() {
             </div>
             <Image
               src='/b2b/white-label.png'
-              alt=''
+              alt='Продукция по готовым рецептурам — White Label'
               width={300}
               height={200}
               sizes='(min-width: 768px) 50vw, 100vw'
