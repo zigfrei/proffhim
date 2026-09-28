@@ -2,7 +2,7 @@ import Link from 'next/link';
 import LogoBlack from '@/assets/icons/logo-black.svg';
 // import InstagramIcon from '@/assets/icons/instagram.svg';
 import TelegramIcon from '@/assets/icons/telegram.svg';
-import MaxIcon from '@/assets/icons/max.svg';
+// import MaxIcon from '@/assets/icons/max.svg';
 import ViberIcon from '@/assets/icons/viber.svg';
 import WhatsappIcon from '@/assets/icons/whatsapp.svg';
 import { Icon } from '@iconify/react';
@@ -168,7 +168,7 @@ export function Footer() {
                 </a>
               </li>
 
-              <li>
+              {/* <li>
                 <a
                   href='https://max.ru/u/f9LHodD0cOLTiT9h85Bj0wYC2qHqfeO2n7RAIZ4j7T7M6gtB3aIQQ4SJxsw'
                   target='_blank'
@@ -177,7 +177,7 @@ export function Footer() {
                 >
                   <MaxIcon className='w-6 h-6 inline-block text-white' />
                 </a>
-              </li>
+              </li> */}
 
               <li>
                 <a
