@@ -19,6 +19,7 @@ export const documents: DocumentItem[] = [
     imageUrl: '/certificates/sertifikat-sootvetstviya-iso-9001-2015.pdf',
   },
   { title: 'Сертификат соответствия ФАС ПроффХимПлюс', imageUrl: '/certificates/sertifikat-sootvetstviya-fas-proffhim-plus.pdf' },
+  { title: 'Сертификат Халяль на производство моющих и дезинфицирующих средств ПроффХим', imageUrl: '/certificates/sertifikat-khalyal-proizvodstvo-moyushchikh-i-dezinfitsiruyushchikh-sredstv-proffhim.pdf' }
 ];
 
 export default function CertificateMain() {
