@@ -5,6 +5,11 @@ export type AppRedirect = {
 };
 
 export const redirects = [
+  {
+    source: '/produktsiya/dezinfitsiruyushchie-sredstva/proff-oksi',
+    destination: '/produktsiya/dezinfitsiruyushchie-sredstva/proff-mk',
+    permanent: true,
+  },
   // Example:
   // {
   //   source: '/staraya-stranitsa',

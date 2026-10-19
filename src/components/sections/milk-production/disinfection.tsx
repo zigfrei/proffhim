@@ -53,7 +53,7 @@ export default function Disinfection() {
               </div>
             </div>
             <LinkButton
-              href='/produktsiya/dezinfitsiruyushchie-sredstva/proff-oksi'
+              href='/produktsiya/dezinfitsiruyushchie-sredstva/proff-mk'
               className='group flex items-center justify-center gap-2 hidden lg:inline-flex mt-auto w-full'
             >
               Подробнее
@@ -68,8 +68,8 @@ export default function Disinfection() {
               <div className='w-full flex flex-col gap-4'>
                 <div className='w-full aspect-square shrink-0 border-2 border-base-black relative'>
                   <Image
-                    src='/products/oksi.png'
-                    alt='Средство дезинфицирующее кислотное беспенное Профф Окси'
+                    src='/products/mk.png'
+                    alt='Средство дезинфицирующее Профф МК'
                     fill
                     sizes='(min-width: 768px) 50vw, 100vw'
                     className='object-cover'
@@ -77,20 +77,19 @@ export default function Disinfection() {
                 </div>
                 <div className='w-full flex flex-col items-start gap-2'>
                   <h3 className='w-full typo-h5 font-bold'>
-                    Средство дезинфицирующее кислотное беспенное
-                    &laquo;Профф&raquo; марки Окси
+                    Средство дезинфицирующее &laquo;Профф МК&raquo;
                   </h3>
                   <p className='typo-b3'>
-                    Предназначено для комплексной аэрозольной или ручной
-                    «холодной» дезинфекции оборудования и помещений предприятий
-                    пищевой и непищевой промышленности, бытовых и жилых
-                    помещений. Не требует смыва. На основе перекиси водорода и
-                    молочной кислоты (или на основе перекиси водорода и
-                    надуксусной кислоты).
+                    Предназначено для дезинфекции внешних и внутренних
+                    поверхностей оборудования, контактирующего с пищевыми
+                    продуктами, и различных поверхностей на предприятиях пищевой
+                    и непищевой промышленности. Применяется для аэрозольной
+                    дезинфекции воздуха. На основе перекиси водорода и
+                    надмолочной кислоты.
                   </p>
                 </div>
                 <LinkButton
-                  href='/produktsiya/dezinfitsiruyushchie-sredstva/proff-oksi'
+                  href='/produktsiya/dezinfitsiruyushchie-sredstva/proff-mk'
                   className='group flex items-center justify-center gap-2 lg:hidden mt-auto w-full'
                 >
                   Подробнее
