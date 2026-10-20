@@ -1,3 +1,4 @@
+import ArticleSchema from '@/components/structured-data/article-schema';
 import SaifgatMain from '@/components/sections/seifgat/main';
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
   description: "Научно обоснованная разработка отечественного антисептического средства «СейфГат» для обработки дубленого кожевенного полуфабриката, повышения качества шкур и снижения потерь сырья.",
   alternates: {
     canonical: '/razrabotka-sredstva-seifgat',
+    types: { 'text/markdown': '/markdown/razrabotka-sredstva-seifgat.md' },
   },
   openGraph: {
     title: 'Разработка средства «СейфГат» для кожевенной промышленности',
@@ -35,6 +37,12 @@ export const metadata = {
 export default function Saifgat() {
   return (
     <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
+      <ArticleSchema
+        title={metadata.title}
+        description={metadata.description}
+        url={metadata.alternates.canonical}
+        image='/og-image.png'
+      />
       <SaifgatMain />
     </main>
   );

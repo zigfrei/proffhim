@@ -19,8 +19,8 @@ const menuItems: MenuItem[] = [
     label: 'Контакты',
   },
   {
-    href: '/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
-    label: 'Контрактное\nпроизводство',
+    href: '/resheniya',
+    label: 'Наши решения',
   },
 ];
 
