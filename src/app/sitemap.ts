@@ -7,6 +7,7 @@ const SITE_URL = 'https://proffhim.by';
 const STATIC_PAGES = [
   '',
   '/kontakty',
+  '/chem-otmyt-sazhu',
   '/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
   '/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti',
   '/moyushchie-sredstva-dlya-molochnoj-promyshlennosti',
@@ -17,6 +18,7 @@ const STATIC_PAGES = [
   '/produktsiya',
   '/professionalnaya-avtohimiya',
   '/razrabotka-sredstva-seifgat',
+  '/resheniya',
   '/sertifikaty',
   '/sredstvo-dlya-myagkih-okon',
   '/usloviya-sotrudnichestva',

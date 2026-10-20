@@ -1,3 +1,4 @@
+import ArticleSchema from '@/components/structured-data/article-schema';
 import Hero from '@/components/sections/windows/main';
 import Benefits from '@/components/sections/windows/benefits';
 import Surfaces from '@/components/sections/windows/surfaces';
@@ -37,6 +38,12 @@ export const metadata = {
 export default function Partners() {
   return (
     <main className='flex flex-col items-center justify-center w-full pt-19 lg:pt-24'>
+      <ArticleSchema
+        title={metadata.title}
+        description={metadata.description}
+        url={metadata.alternates.canonical}
+        image='/og-image-window.png'
+      />
       <Hero />
       <Benefits />
       <Surfaces />
