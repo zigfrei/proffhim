@@ -66,7 +66,7 @@ export default function ProductBottleViewer() {
   }, []);
 
   return (
-    <div ref={wrapper} className='relative aspect-[3/4] w-full lg:aspect-auto lg:h-full lg:min-h-[640px]'>
+    <div ref={wrapper} className='flex  items-center justify-center relative aspect-[3/4] w-full lg:aspect-auto lg:h-full lg:min-h-[640px]'>
       {failed && (
         <Image src='/products/profitall_anti.png' alt='Средство для стирки PROFFITALL «Антибактериальное», 1,4 л' fill sizes='(min-width: 1024px) 30vw, 100vw' className='object-contain' />
       )}
@@ -75,7 +75,7 @@ export default function ProductBottleViewer() {
           role='group'
           aria-label='3D-модель PROFFITALL. Перетаскивайте для вращения или используйте стрелки влево и вправо.'
           tabIndex={ready ? 0 : -1}
-          className={`absolute inset-x-0 top-0 bottom-16 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base-black ${ready ? 'cursor-grab active:cursor-grabbing' : 'opacity-0'}`}
+          className={`absolute inset-0 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base-black ${ready ? 'cursor-grab active:cursor-grabbing' : 'opacity-0'}`}
           style={{ touchAction: 'pan-y' }}
           onKeyDown={(event) => {
             if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
