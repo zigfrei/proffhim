@@ -14,7 +14,7 @@ export function getMaterialsPage(query: MaterialsQuery, materials: Material[] = 
   const filter: MaterialFilter = ['solution', 'article', 'news'].includes(String(query.type))
     && typeof query.type === 'string' ? query.type as MaterialFilter : 'all';
   const filtered = materials.filter((material) => filter === 'all' || material.type === filter)
-    .sort((a, b) => (a.sortOrder ?? Infinity) - (b.sortOrder ?? Infinity)
+    .sort((a, b) => (b.sortOrder ?? -Infinity) - (a.sortOrder ?? -Infinity)
       || (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '') || a.id.localeCompare(b.id));
   const totalPages = Math.max(1, Math.ceil(filtered.length / MATERIALS_PER_PAGE));
   const requestedPage = typeof query.page === 'string' && /^\d+$/.test(query.page) ? Number(query.page) : 1;

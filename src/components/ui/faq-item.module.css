@@ -24,6 +24,7 @@
   transition: 0.35s;
   width: 21px;
   height: 3px;
+  background-color: var(--color-base-black);
   border-radius: 0;
 }
 

@@ -16,12 +16,24 @@ export interface Material {
   image: string;
   imageAlt: string;
   publishedAt?: string;
+  /** Чем больше значение, тем выше материал в списке. Без значения — после материалов с приоритетом. */
   sortOrder?: number;
   featuredOrder?: number;
 }
 
 // Добавляйте здесь карточки опубликованных материалов. Их страницы могут иметь любой URL.
 export const MATERIALS: Material[] = [
+  {
+    id: 'proffitall-anti',
+    type: 'article',
+    title: 'Как отстирать запах пота с одежды',
+    description: 'Как убрать запах пота с футболок и спортивной формы: обработка подмышек, замачивание и дозировки PROFFITALL для стирки.',
+    href: '/kak-otstirat-zapah-pota-s-odezhdy',
+    image: '/solutions-cards/proffitall-anti.webp',
+    imageAlt: 'PROFFITALL «Антибактериальное» для стирки одежды',
+    publishedAt: '2026-10-21',
+    sortOrder: 4,
+  },
   {
     id: 'soot',
     type: 'article',
