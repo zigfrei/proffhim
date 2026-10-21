@@ -199,14 +199,14 @@ export default function PolicyMain() {
                 этих компаний:
               </p>
               <ul className='mt-2 list-disc list-outside pl-6'>
-                <li>https://yandex.ru/legal/confidential</li>
-                <li>https://policies.google.com/privacy</li>
+                <li><a href='https://yandex.ru/legal/confidential' target='_blank' rel='noopener noreferrer nofollow' className='underline underline-offset-4'>https:/<wbr />/<wbr />yandex.ru/<wbr />legal/<wbr />confidential</a></li>
+                <li><a href='https://policies.google.com/privacy' target='_blank' rel='noopener noreferrer nofollow' className='underline underline-offset-4'>https:/<wbr />/<wbr />policies.google.com/<wbr />privacy</a></li>
               </ul>
               <p className='mt-4'>
                 Пользователь может отказаться от сбора данных аналитическими
                 сервисами, отключив cookie в настройках своего браузера, либо
                 установив плагин отказа от Google Analytics:
-                https://tools.google.com/dlpage/gaoptout
+                <a href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel='noopener noreferrer nofollow' className='underline underline-offset-4'>https:/<wbr />/<wbr />tools.google.com/<wbr />dlpage/<wbr />gaoptout</a>
               </p>
             </div>
 
