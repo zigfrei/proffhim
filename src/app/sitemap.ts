@@ -8,6 +8,7 @@ const STATIC_PAGES = [
   '',
   '/kontakty',
   '/chem-otmyt-sazhu',
+  '/kak-otstirat-zapah-pota-s-odezhdy',
   '/kontraktnoe-proizvodstvo-moyushchih-i-dezinficiruyushchih-sredstv',
   '/moyushchie-sredstva-dlya-hlebobulochnoj-i-konditerskoj-promyshlennosti',
   '/moyushchie-sredstva-dlya-molochnoj-promyshlennosti',
