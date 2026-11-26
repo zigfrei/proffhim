@@ -1,0 +1,43 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flake {
+  position: absolute;
+  top: -12px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px #657a9b52, 0 1px 3px #50678666;
+  animation: fall linear infinite;
+}
+
+.layer[data-paused='true'] .flake {
+  animation-play-state: paused;
+}
+
+@keyframes fall {
+  48% {
+    transform: translate3d(calc(var(--drift) * -0.45), 48dvh, 0);
+  }
+
+  to {
+    transform: translate3d(var(--drift), calc(100dvh + 12px), 0);
+  }
+}
+
+@media (width < 48rem) {
+  .flake:nth-child(n + 37) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer {
+    display: none;
+  }
+}

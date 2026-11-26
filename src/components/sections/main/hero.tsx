@@ -1,6 +1,7 @@
 import SectionBlock from '@/components/ui/section';
 import { BigLinkButton } from '@/components/ui/links';
 import Image from 'next/image';
+import { winterDecorationsEnabled } from '@/components/winter/config';
 
 export default function Hero() {
   return (
@@ -37,6 +38,16 @@ export default function Hero() {
             fetchPriority='high'
           />
           <div className='absolute inset-0 bg-black/50 xl:hidden' />
+          {winterDecorationsEnabled && (
+            <Image
+              src='/winter/frost.webp'
+              alt=''
+              width={1160}
+              height={141}
+              unoptimized
+              className='pointer-events-none absolute inset-x-0 top-0 hidden h-auto w-full xl:block'
+            />
+          )}
         </div>
       </div>
     </SectionBlock>
