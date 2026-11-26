@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { winterDecorationsEnabled } from '@/components/winter/config';
+import { Snowfall } from '@/components/winter/snowfall';
 import LogoBlack from '@/assets/icons/logo-black.svg';
 // import InstagramIcon from '@/assets/icons/instagram.svg';
 import TelegramIcon from '@/assets/icons/telegram.svg';
@@ -17,8 +20,18 @@ export function Footer() {
       <div className='w-full px-4 py-6 lg:px-12 lg:py-16 max-w-[1440px] flex flex-col items-start justify-start mx-auto'>
         <div className='flex flex-col lg:flex-row items-start justify-between mx-auto gap-4 lg:gap-16'>
           <div className='w-full flex flex-col items-start justify-start gap-4'>
-            <Link href='/' aria-label='На главную'>
+            <Link href='/' aria-label='На главную' className='relative'>
               <LogoBlack className='w-[250px] h-[56px] transition-transform duration-300 ease-out hover:scale-105 cursor-pointer' />
+              {winterDecorationsEnabled && (
+                <Image
+                  src='/winter/branch.webp'
+                  alt=''
+                  width={192}
+                  height={124}
+                  unoptimized
+                  className='pointer-events-none absolute -top-3 right-0 h-auto w-10 lg:-right-2'
+                />
+              )}
             </Link>
             <p className='typo-b3 text-left font-bold'>
               Белорусское качество. Европейские стандарты. Эффективные и
@@ -257,6 +270,7 @@ export function Footer() {
           >
             Политика конфиденциальности
           </Link>
+          {winterDecorationsEnabled && <Snowfall />}
         </div>
       </div>
     </footer>

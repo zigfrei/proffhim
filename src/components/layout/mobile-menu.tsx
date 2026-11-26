@@ -6,14 +6,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useId, useState } from 'react';
 import { LinkButton } from '../ui/links';
-import Logo from '@/assets/icons/logo.svg';
+import WinterLogo from '@/assets/icons/logo.svg';
+import StandardLogo from '@/assets/icons/logo-old.svg';
 import { isMenuItemActive, type MenuItem } from './menu-item';
 
 interface MobileMenuProps {
   items: MenuItem[];
+  winterLogo: boolean;
 }
 
-export function MobileMenu({ items }: MobileMenuProps) {
+export function MobileMenu({ items, winterLogo }: MobileMenuProps) {
+  const Logo = winterLogo ? WinterLogo : StandardLogo;
   const animationDurationMs = 300;
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
